@@ -40,7 +40,7 @@ warning: AdS2RST/Global.lean: imports `Mathlib` from package `mathlib`, which is
 warning: AdS2RST/Affine.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 ⚠ [18261/18264] Ran AdS2RST.Affine:irArts
 warning: AdS2RST/Affine.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-ℹ [18262/18264] Replayed AdS2RST
+ℹ [18262/18264] Built AdS2RST (29s)
 info: AdS2RST.lean:22:0: 'AdS2RST.first_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: AdS2RST.lean:23:0: 'AdS2RST.F_hasDerivAt_y' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: AdS2RST.lean:24:0: 'AdS2RST.F_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

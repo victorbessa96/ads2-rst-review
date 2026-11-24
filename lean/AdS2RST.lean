@@ -12,7 +12,7 @@ import AdS2RST.Affine
 * `Profile`    : chiral profile of the Kim-Son state from the constraint, sector formulas.
 * `Cumulative` : total-flux criterion for arbitrary monotone cumulative flux.
 * `Structure`  : zero-flux wall, trapping, symmetries, critical value, affine comparison.
-* `Global`     : two-sided flux, future-set theorem, achronal critical curve, final mass parameter, horizon monotonicity.
+* `Global`     : two-sided flux, future-set theorem, achronal critical curve, normalized late-time identities, horizon monotonicity.
 * `Affine`     : weak-branch bounds and the affine length of both ends.
 
 The axiom audit below lists the headline results.  Only the three standard

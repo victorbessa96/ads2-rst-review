@@ -48,7 +48,7 @@ The cumulative theorem of [11](11-cumulative-flux-generalization.md) is the same
 
 - a mixed ray `y` is captured iff `y < E_tot = sup Q`;
 - the hit is unique and `Q > y` there, so the apparent horizon `x_m = -Q(x_p)` is crossed first;
-- the line `x_m = -E_tot` is the event horizon of the right future region.
+- if `E_tot < infinity`, the line `x_m = -E_tot` is the event horizon of the right future region and rays with `y > E_tot` escape; if `E_tot = infinity`, every mixed outgoing ray is captured and no finite horizon line of this form exists.
 
 What differs from the classical case: the extra `y^2/2` from the retained outgoing state, the offset `mu`, the critical value `Omega_s` in place of `e^{-2 phi} = 0`, and the fact that the proof needs only monotonicity of `Q` (atoms allowed, no density).
 
@@ -74,7 +74,7 @@ Infalling matter has two moments, `P_+(infinity) = int dT_{++} = lambda^2 E_tot`
 
 Lean: `symmetry_pre`, `symmetry_post`, `symmetry_mixed`. Script: group C.
 
-## 5. The AdS2 ends are null and at finite affine distance
+## 5. The AdS2 ends are null-geodesically incomplete
 
 Along a null ray toward the pre-onset ends `|x_p - x_m| -> infinity`:
 
@@ -83,7 +83,7 @@ Along a null ray toward the pre-onset ends `|x_p - x_m| -> infinity`:
 - `e^{-2 phi}` diverges (weak coupling);
 - proper distance along static slices diverges logarithmically.
 
-The leading metric is `ds^2 ~ -2 dx^+ dx^- / (lambda^2 (x^+ - x^-)^2)`, Poincaré AdS2 with `z = (x^+ - x^-)/2`. The ends are at `z -> infinity`, the Poincaré-horizon side. The conformal boundary `z -> 0` would be the throat, where the geometry is not AdS2. The solution has no timelike conformal boundary.
+The leading metric is `ds^2 ~ -2 dx^+ dx^- / (lambda^2 (x^+ - x^-)^2)`, Poincaré AdS2 with `z = (x^+ - x^-)/2`. The ends are at `z -> infinity`, the Poincaré-horizon side. The conformal boundary `z -> 0` would be the throat, where the geometry is not AdS2. The constructed patch has no timelike conformal boundary at these ends, and no extension is constructed.
 
 **Effect on earlier documents.** Language about boundary injection, boundary observers, reflecting walls or baths ([13](13-breakthrough-program.md), [15](15-physical-boundary-injection.md), [17](17-observables-and-universality.md), [18](18-close-out.md) section 4) has no referent in this solution as it stands. Those programs first need an extension or a modified model. The title of document 15 was already qualified for this reason.
 

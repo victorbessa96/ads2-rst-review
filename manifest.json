@@ -1,7 +1,7 @@
 {
   "schema": "ads2-rst.review-package.manifest.v1",
-  "created_at_utc": "2026-11-24T21:45:11.033339+00:00",
-  "file_count": 97,
+  "created_at_utc": "2026-11-24T23:07:34.595753+00:00",
+  "file_count": 98,
   "artifacts": [
     {
       "path": ".gitignore",
@@ -11,8 +11,8 @@
     },
     {
       "path": "00-index.md",
-      "bytes": 10490,
-      "sha256": "f439f1ca0d15867e53c716fea2a1265a1f6e335f2bac20ca3a4a9f30d4877f97",
+      "bytes": 10648,
+      "sha256": "3145c43369eae9ff0ba1008d76567f1f9132c56a9592a34cde53986082a7c02e",
       "role": "review-document"
     },
     {
@@ -65,8 +65,8 @@
     },
     {
       "path": "09-independent-reviews.md",
-      "bytes": 15035,
-      "sha256": "26903c3e316cfeab8608953deeb11afcbe8e491a9699e29fb797e3cabbda3e0a",
+      "bytes": 15509,
+      "sha256": "2fe76c93a9a66fd1d30083fca7b57dd590f2658e372287d29fd66b6a2e1ebb45",
       "role": "review-document"
     },
     {
@@ -119,26 +119,26 @@
     },
     {
       "path": "18-close-out.md",
-      "bytes": 5102,
-      "sha256": "3ee958dfc2fdcb3182bdaafb1a4b2372f19518c1ba3ecec3a268c1bb70caacf1",
+      "bytes": 5128,
+      "sha256": "0295fab681df2b4028c87943b2bf51ebf55927a266c06afbb7828fb9c941892a",
       "role": "review-document"
     },
     {
       "path": "19-global-structure.md",
-      "bytes": 9397,
-      "sha256": "afebb3fe756e41d3cb33b67ec33da8c0dc8889c7cb1e3d41651f94940664d54a",
+      "bytes": 9611,
+      "sha256": "971e2dd17ddb184cafa01cdbbdc1e87ac8d4d39c2392f2d65fc88f48ef77da7f",
       "role": "review-document"
     },
     {
       "path": "20-causal-structure-and-final-state.md",
-      "bytes": 9137,
-      "sha256": "94ff0aabed3fa5b23b424c308c45783e356d19cb99df8796e1b601d4130a515d",
+      "bytes": 9719,
+      "sha256": "037ae9e69d508892c78f6b6c7181acd42c7bdea1634f0ddd9c8ae9c9f860d62a",
       "role": "review-document"
     },
     {
       "path": "README.md",
-      "bytes": 11938,
-      "sha256": "404bf85dd29bfb644684b4e9249978964c145f8b484cd89fea03b865349c28ed",
+      "bytes": 12791,
+      "sha256": "dd970cc2c0b5f36f6f8291e39462f9bb0206d474143fe0ada8487e65ae487b3d",
       "role": "review-document"
     },
     {
@@ -197,14 +197,14 @@
     },
     {
       "path": "lean/AdS2RST.lean",
-      "bytes": 3952,
-      "sha256": "4f72417bc9e6ecbd1f6041bff11f1c442fa8d42985211bb8de81f1912f67c549",
+      "bytes": 3963,
+      "sha256": "e6be249d08e580ef65f1c2a82940c3906b287f986f23e30a90565831af2e9757",
       "role": "package-artifact"
     },
     {
       "path": "lean/README.md",
-      "bytes": 5045,
-      "sha256": "31f1cea1cd25edfe4b22f3f66a9a29be4cdb9324f64917833de944fbb919a689",
+      "bytes": 5237,
+      "sha256": "8b020df8706ea9748a177aa745a6da10bfb445a01c4e6a151ac09451e91d58e5",
       "role": "review-document"
     },
     {
@@ -281,14 +281,14 @@
     },
     {
       "path": "manuscript/ads2-rst-one-sided-flux.pdf",
-      "bytes": 171888,
-      "sha256": "942e586b2acfd301f5a8b57037412d8a593cfa39ea34c9c16a59357a484b2e81",
+      "bytes": 174976,
+      "sha256": "51e1d5a1fc25031c7134a58dde15834c9b3ce9f37c1d9cbefbcecb140c1d3f08",
       "role": "package-artifact"
     },
     {
       "path": "manuscript/ads2-rst-one-sided-flux.tex",
-      "bytes": 54522,
-      "sha256": "eb3c0532d8ab00500054d0cd053c2682974a58e068a1a95125246e30ae025301",
+      "bytes": 55874,
+      "sha256": "f3f0cdb52c32a0844c609151e5cd2ab824da8df587c9c953283821684f7f7257",
       "role": "package-artifact"
     },
     {
@@ -318,13 +318,13 @@
     {
       "path": "outputs/lean-build.json",
       "bytes": 565,
-      "sha256": "fc433661a058316c857868a9cb15014762f3c58bb4ae1c182ad08784e9080aad",
+      "sha256": "9a16de6ca00d2cc494c56408811e796a3e5b5990362e5c98af809c1a09450bc4",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/lean-build.out",
-      "bytes": 12308,
-      "sha256": "738030b99afa041cd35015c35a00ffd612b7b1d6c5eaf70a283c1e43f32e5dc3",
+      "bytes": 12311,
+      "sha256": "42fbbd7ac311dc0aa6e6a863c3d421d88d83014059e74683e7036a756878cd09",
       "role": "execution-receipt"
     },
     {
@@ -378,13 +378,13 @@
     {
       "path": "outputs/tectonic-build.json",
       "bytes": 479,
-      "sha256": "bc5564b8990f7635ec26c698fec4e8775fa2f9663cf6cfcffc9191fe6a9c9aa5",
+      "sha256": "173800ae299553cd4dfd2a5112cd58ecd3e00d34f9175866a91874a4779a5718",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/tectonic-build.out",
-      "bytes": 10023,
-      "sha256": "dda56a883f6e4d55c8e3b8150ad308625c8a7abc98b8fb2727b44f47cb0e70af",
+      "bytes": 10020,
+      "sha256": "05ea4b5b32b5ffb8ce8f8635dc8494e20c96c6751c0564db5a14a2848f2148e9",
       "role": "execution-receipt"
     },
     {
@@ -520,6 +520,12 @@
       "role": "review-evidence"
     },
     {
+      "path": "reviews/reviewer-19-33-doc-audit.md",
+      "bytes": 2344,
+      "sha256": "96314252fd170bb880c1b3adbb76c8bd6e90b46aff547c7bb650e5bded6f1a0e",
+      "role": "review-evidence"
+    },
+    {
       "path": "reviews/reviewer-22-06-recheck.md",
       "bytes": 7824,
       "sha256": "3cdc9b3e7df891184761f9dd1f418de2ee52869c3e9f1bb78f6cdc5efe717e5b",
@@ -597,7 +603,7 @@
   "source_reference_sha256": "8906ec46e685404da151c8b7d52a325c4053ee8c8f17964df7264c69baf58872",
   "source_mode": "external-links",
   "linked_markdown": {
-    "links": 242,
+    "links": 243,
     "unresolved": [],
     "per_note": {
       "00-index.md": 40,
@@ -609,7 +615,7 @@
       "06-finite-pulse.md": 1,
       "07-evidence-and-reproduction.md": 19,
       "08-review-adjudication.md": 10,
-      "09-independent-reviews.md": 33,
+      "09-independent-reviews.md": 34,
       "10-formal-signoff.md": 15,
       "11-cumulative-flux-generalization.md": 5,
       "12-signed-net-focusing.md": 4,
@@ -644,6 +650,7 @@
       "reviews/reviewer-16-56-formal-evaluation.md": 0,
       "reviews/reviewer-16-56-onset-atom-review.md": 0,
       "reviews/reviewer-16-57-package-evaluation.md": 0,
+      "reviews/reviewer-19-33-doc-audit.md": 0,
       "reviews/reviewer-22-06-recheck.md": 0,
       "reviews/reviewer-22-18-formal-evaluation.md": 0,
       "reviews/reviewer-22-21-evaluation.md": 0,

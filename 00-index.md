@@ -13,7 +13,7 @@ status: autonomous-ai-research-human-oversight-independent-review-pending
 ## 1. Verified result in one paragraph
 
 > [!note] Reframing, 2026-11-24
-> Read [19 Global structure](19-global-structure.md) and [20 Causal structure and final state](20-causal-structure-and-final-state.md) first. With no classical matter the Kim-Son solution already contains a black hole (the Hartle-Hawking RST black hole to the future of the switch-off point). The flux theorems below decide which outgoing rays from the wormhole region are captured: exactly those with `y < E_tot`. That criterion is the Kim-Son-state analogue of the standard RST/Thorlacius general-infall horizon formula. The AdS2 ends are null and at finite affine distance, and there is no timelike boundary.
+> Read [19 Global structure](19-global-structure.md) and [20 Causal structure and final state](20-causal-structure-and-final-state.md) first. With no classical matter the Kim-Son solution already contains a black hole (the Hartle-Hawking RST black hole to the future of the switch-off point). The flux theorems below decide which outgoing rays from the wormhole region are captured: exactly those with `y < E_tot`. That criterion is the Kim-Son-state analogue of the standard RST/Thorlacius general-infall horizon formula. The AdS2 ends are null-geodesically incomplete; the constructed patch has no timelike conformal boundary there, and no extension is constructed.
 
 For the Kim-Son past-asymptotically-AdS2 RST branch with retained `t_pm` and one-sided classical flux constant in Kruskal `x_p`, every specified mixed-region ray `x_m=-y`, `y>0`, reaches `Omega=Omega_s` at finite `x_p`. This retained-state every-ray statement is equivalent to an alternate `t_+`-on problem with `p_eff=1+p`: the step-off supplies the critical `lambda^2` in that comparison. It is not an arbitrary-state or observer-frame energy claim. The edge is spacelike and lies behind an apparent horizon. The ray also reaches the edge at finite forward affine parameter. Explicit interior constant-`sigma_1` timelike curves reach it at finite proper time from any finite earlier point. A finite-Kruskal-support pulse on `0<x_p<x_s` has a spacelike wall exactly on the ray band `0<y<E`, where `E=p*x_s`; rays with `y>=E` have no wall. Finite support in this Kruskal coordinate is not finite duration in an observer-adapted time coordinate. The follow-on phase work adds the exact `p=q` state boundary, a retarded closing-window law with no energy-only threshold, an explicit conformal-scalar realization, and a precise RST-like universality boundary. These remain fixed-model results, not arbitrary-state absorber or future-asymptotic-observer theorems.
 
@@ -31,8 +31,8 @@ For the Kim-Son past-asymptotically-AdS2 RST branch with retained `t_pm` and one
 | Interior observers | Three quadrature rows | Finite `sigma_0` hit and finite proper time |
 | Finite pulse | Twelve existence rows | Exact `0<y<E` cutoff reproduced |
 | Literature | Thirteen primary documents | Exact target not found in that bounded corpus, no priority claim |
-| Lean 4 | **Six modules, no `sorry`, 77 axiom audits** | State profile from the constraint, sector formulas, total-flux criterion for monotone `Q`, zero-flux structure, symmetries, global causal theorem for two-sided flux, final mass parameter, horizon monotonicity, affine-length theorems; see [lean/README.md](lean/README.md) |
-| LaTeX | **PDF compiled** | Manuscript by Razul (AI agent) and Victor Bessa: derivation, zero-flux theorem, total-flux criterion, global causal structure, final state, ends and clocks, Lean correspondence table |
+| Lean 4 | **Six modules, no `sorry`, 77 axiom audits** | State profile from the constraint, sector formulas, total-flux criterion for monotone `Q`, zero-flux structure, symmetries, global causal theorem for two-sided flux, normalized late-exterior identities, `Fhat` monotonicity, conditional affine-length theorems; see [lean/README.md](lean/README.md) |
+| LaTeX | **PDF compiled** | Manuscript by Razul under Victor Bessa's direction, corrections, and release oversight: derivation, zero-flux theorem, total-flux criterion, global causal structure, final state, ends and clocks, Lean correspondence table |
 | Package validation | **13/13 PASS** | Includes fresh relocation, advanced and structure checks, axiom audit, Lean/PDF freshness, archive currency, links, provenance, and manifest |
 
 See [Evidence and reproduction](07-evidence-and-reproduction.md) and the raw [verification summary](outputs/verification-summary.json).
@@ -93,7 +93,7 @@ The producers use package-relative inputs and write only under `outputs/`; the v
 ## 5. Binding non-claims
 
 - No general AdS2 instability or pure-JT result is inferred.
-- No transparent, reflecting, or coupled future absorber is constructed, and the solution has no timelike boundary on which to place one.
+- No transparent, reflecting, or coupled future absorber is constructed; the constructed patch has no timelike conformal boundary at its null AdS2 ends on which to place one.
 - The collapse is not caused by the classical matter; it is present at zero flux.
 - Interior timelike curves are not future-asymptotic boundary observers.
 - A bounded literature search is not exhaustive publication-priority proof.

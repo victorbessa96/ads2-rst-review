@@ -38,7 +38,7 @@ type: research-disposition
 - Advanced consistency producer: **22/22** (ten rows that could not fail removed).
 - Structure producer: **45/45**.
 - Package validation: **13/13**.
-- Lean: six modules, cumulative theorem for monotone `Q`, zero-flux structure, symmetries, global causal theorem, final mass parameter, horizon monotonicity, affine-length theorems; no placeholders; 77 axiom audits.
+- Lean: six modules, cumulative theorem for monotone `Q`, zero-flux structure, symmetries, global causal theorem, normalized late-exterior identities, `Fhat` monotonicity, conditional affine-length theorems; no placeholders; 77 axiom audits.
 - PDF: compiled manuscript with state and boundary-time results.
 - Archive: verified, checksum sidecar external, no self-nested ZIP.
 - Fresh relocated reproduction and read-only validation: pass.
