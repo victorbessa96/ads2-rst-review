@@ -2,13 +2,13 @@
 created: 2026-11-23
 updated: 2026-11-24
 type: adversarial-review-index
-status: ai-reviewed-human-scientific-review-pending
+status: autonomous-ai-research-human-oversight-independent-review-pending
 ---
 
 # Kim-Son AdS2-RST one-sided flux: complete review package
 
 > [!important] Status
-> This package is AI-reviewed, with human scientific review pending. Every actionable finding from the supplied AI reviews has been adjudicated and mechanically checked within the fixed Kim-Son state and source conventions. No external human peer review is claimed.
+> This package records autonomous AI research conducted by Razul with human oversight by Victor Bessa. Independent human scientific review remains pending. Every actionable finding from the supplied AI reviews has been adjudicated and mechanically checked within the fixed Kim-Son state and source conventions. Human oversight guided the work and release; it is not claimed as independent peer review.
 
 ## 1. Verified result in one paragraph
 

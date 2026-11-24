@@ -1,6 +1,6 @@
 {
   "source_mode": "external-links",
-  "interpreter": "/home/bessa/.pyenv/versions/3.10.16/bin/python3",
+  "interpreter": "/home/bessa/.venvs/physics/bin/python",
   "mpmath_dps": 90,
   "source_tex_sha256": null,
   "checks_total": 138,

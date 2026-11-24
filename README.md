@@ -2,9 +2,13 @@
 
 **An exactly solvable, machine-checked account of how a two-dimensional semiclassical wormhole turns into a black hole.**
 
-Authors: **Razul (AI agent)** and **Victor Bessa**
+Research: **Razul (autonomous AI research agent), with human oversight by Victor Bessa**
 
 Paper: [manuscript/ads2-rst-one-sided-flux.pdf](manuscript/ads2-rst-one-sided-flux.pdf) · Proofs: [lean/](lean/README.md) (Lean 4 + Mathlib, 77 audited results, no `sorry`) · Status: **independent human scientific review pending**
+
+## Research mode
+
+This was **autonomous AI research watched over by a human**. Razul selected and executed the research program, derivations, formalization, numerical checks, and manuscript revisions. Victor Bessa supplied direction, corrections, and release oversight. That human oversight is not independent specialist peer review, and it is not represented as such.
 
 ---
 
@@ -23,10 +27,10 @@ All statements are theorems about the RST equations in Kruskal gauge with the Ki
 | 1 | **The black hole is there with no matter at all.** With zero classical flux the region to the future of the switch-off point is exactly the interior of the eternal RST black hole in the Hartle–Hawking state. | The wormhole collapses because its supporting state is switched off, not because matter falls in. Kim and Son attribute the collapse to the shell. | yes |
 | 2 | **Total-flux criterion.** For any nonnegative incoming flux (continuous, pulsed or impulsive), an outgoing ray `x^- = -y` is captured if and only if `y < E_tot`, the total Kruskal null momentum over `lambda^2`. The hit is unique and lies behind the apparent horizon; `x^- = -E_tot` is the event horizon. | One inequality replaces the case-by-case formulas. It is the Kim–Son-state analogue of the classical RST/Thorlacius horizon formula and is credited as such. | yes |
 | 3 | **Global causal structure.** With nonnegative flux in both directions, the singular set is a future set: the singularity is acausal, future-trapped and never naked. | Unlike the evaporating RST black hole, no boundary condition at the singularity is needed: the exact solution is fixed by the data on the past null boundaries. | yes |
-| 4 | **Final state.** After the flux ends, the exterior is again a Kim–Son zero-flux exterior with a larger parameter. The mass parameter grows by `M_inf + P_+^2/(2 lambda)`. | The first term is the classical mass. The second is new and comes from the wormhole's own supporting state. | yes |
+| 4 | **Final state.** After the flux ends, the exterior is again a Kim–Son zero-flux exterior with a larger parameter. The mass parameter grows by `M_inf + P_+^2/(2 lambda)`. | The first term is the classical mass. The second is the state-specific contribution from the wormhole's supporting state. | yes |
 | 5 | **Horizon monotonicity.** `e^{-2 phi}` (the dilaton-gravity analogue of area) never decreases to the future along the event horizon, and grows outward along the apparent horizon. | An area-theorem-type statement on the event horizon for the full semiclassical solution. | yes |
 | 6 | **Outgoing radiation.** The flux at future infinity that Kim and Son computed for one shell holds for every matter profile, with the shell strength replaced by `E_tot`. In the asymptotically flat frame it is the Hawking value `kappa lambda^2/4` minus a decaying transient `lambda^4 e^{-2 lambda sigma^-}`. | The transient is the wormhole's negative energy leaving (Kim and Son already identify it as background, not radiation). The black hole does not evaporate: it is in equilibrium with incoming thermal radiation. | no (paper + numerics) |
-| 7 | **The AdS₂ ends are not boundaries.** They are null, reached at finite affine distance (at most `2/lambda^2` beyond unit separation), with bounded curvature. There is no timelike conformal boundary. | Holographic notions (boundary observers, reflecting walls, baths) have no referent in this solution without further construction. | yes, given the dilaton branch |
+| 7 | **The AdS₂ ends are null, not timelike conformal boundaries.** They are reached at finite affine distance (at most `2/lambda^2` beyond unit separation), with bounded curvature. | Holographic notions (boundary observers, reflecting walls, baths) have no referent in this solution without further construction. | yes, given the dilaton branch |
 | 8 | **State dependence.** If the incoming part of the supporting state is kept, sustained matter closes the wormhole only above the threshold `P > lambda^2`. | The "arbitrarily weak flux closes the wormhole" statement is a property of the switch-off convention. | yes |
 
 A short guide to the physics is in [19-global-structure.md](19-global-structure.md) and [20-causal-structure-and-final-state.md](20-causal-structure-and-final-state.md).
@@ -35,7 +39,7 @@ A short guide to the physics is in [19-global-structure.md](19-global-structure.
 
 - **Credit.** Results 2, 3 and the first term of 4 extend standard results of the classical model (CGHS, RST, Thorlacius, Strominger). The Kruskal-frame formula in result 6 is Kim and Son's for the shell. Result 1 is the semiclassical counterpart of a classical observation by Hayward, Kim and Lee. The manuscript states this where each result appears.
 - **Novelty.** A bounded literature search (the INSPIRE citation record of the Kim–Son paper and the RST/CGHS literature cited in the manuscript) did not find results 1, 2, 7 and 8 for this solution. Results 3 to 6 were added afterwards and were checked only against the sources already collected for that search, not by a new one. No priority is claimed beyond that search.
-- **Review.** The work was produced by an AI agent working with a human author and checked by machine. **No independent human specialist has reviewed it.** AI reviews kept under [reviews/](reviews/) are history, not peer review.
+- **Review.** The work was conducted autonomously by an AI agent with human oversight and checked by machine. **No independent human specialist has reviewed it.** Human oversight guided the work and release; it did not constitute an independent mathematical re-derivation. AI reviews kept under [reviews/](reviews/) are history, not peer review.
 - **Mathematical difficulty.** The theorems are elementary. Their interest is in what they say about the model.
 
 ## What "machine-checked" means here
@@ -111,4 +115,4 @@ Cite the original model first:
 
 Then this repository, with the commit used:
 
-> Razul (AI agent) and V. Bessa, *Collapse of the Kim–Son AdS₂ wormhole in the RST model: zero-flux black hole, total-flux criterion, and global causal structure*, 2026. Research manuscript, human scientific review pending.
+> Razul (autonomous AI research agent), with human oversight by V. Bessa, *Collapse of the Kim–Son AdS₂ wormhole in the RST model: zero-flux black hole, total-flux criterion, and global causal structure*, 2026. Research manuscript, human scientific review pending.
