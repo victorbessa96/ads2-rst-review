@@ -1,6 +1,6 @@
 {
   "schema": "ads2-rst.review-package.manifest.v1",
-  "created_at_utc": "2026-11-24T19:52:46.937308+00:00",
+  "created_at_utc": "2026-11-24T21:16:44.429687+00:00",
   "file_count": 97,
   "artifacts": [
     {
@@ -131,14 +131,14 @@
     },
     {
       "path": "20-causal-structure-and-final-state.md",
-      "bytes": 8163,
-      "sha256": "c4377bac59ee8cf908517dfd6273e91f97ea0f095294374ba543082e946a0384",
+      "bytes": 9137,
+      "sha256": "94ff0aabed3fa5b23b424c308c45783e356d19cb99df8796e1b601d4130a515d",
       "role": "review-document"
     },
     {
       "path": "README.md",
-      "bytes": 10927,
-      "sha256": "2c2f044d6bad27835b3be566cdc4ca55a8cbe5277adc7fc5ea06f034a3a30a21",
+      "bytes": 11380,
+      "sha256": "8f3e4daa1c4261295bc1133801108bab16b8e122848bb1d913d275764e1e3850",
       "role": "review-document"
     },
     {
@@ -203,8 +203,8 @@
     },
     {
       "path": "lean/README.md",
-      "bytes": 4926,
-      "sha256": "c043968ddda5be56223363f5ff2ab99a4981ae65e4a46754faf53acc1f9a9e4f",
+      "bytes": 5045,
+      "sha256": "31f1cea1cd25edfe4b22f3f66a9a29be4cdb9324f64917833de944fbb919a689",
       "role": "review-document"
     },
     {
@@ -281,14 +281,14 @@
     },
     {
       "path": "manuscript/ads2-rst-one-sided-flux.pdf",
-      "bytes": 169952,
-      "sha256": "51385cbfe391565e7140c642fd055aed4949dc072025ce5f81f0e90e18d1b5bf",
+      "bytes": 171507,
+      "sha256": "b180760ca46edd9e428fec702f95a5483bf966697fe72cdf6ddad383465cd75a",
       "role": "package-artifact"
     },
     {
       "path": "manuscript/ads2-rst-one-sided-flux.tex",
-      "bytes": 52865,
-      "sha256": "6123e3467065604cd8c19d42ff39eb7c33a916901aa6753ff52728b1b3808c80",
+      "bytes": 54281,
+      "sha256": "2d2f11f8521152d61a831082b5fe056ed87918e43540b6969983ff7f4e805963",
       "role": "package-artifact"
     },
     {
@@ -318,13 +318,13 @@
     {
       "path": "outputs/lean-build.json",
       "bytes": 565,
-      "sha256": "65fcccdbfba8471cd9ad21bb031357ff4cd4667e66147249593778157eb88273",
+      "sha256": "074ad6774cb5a9205e717742c5f489f6a3fccd781ec6240d7350c00667ca3526",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/lean-build.out",
-      "bytes": 12311,
-      "sha256": "a0498aca0e5c7543cc02513eaca5af820ddadecd80c9d4f255a4278072c3e0fd",
+      "bytes": 12308,
+      "sha256": "738030b99afa041cd35015c35a00ffd612b7b1d6c5eaf70a283c1e43f32e5dc3",
       "role": "execution-receipt"
     },
     {
@@ -378,13 +378,13 @@
     {
       "path": "outputs/tectonic-build.json",
       "bytes": 479,
-      "sha256": "98c6c86535ef9e3aa526c35921cc06e2d78ce38ba83c3667f5effae1c11c4d2d",
+      "sha256": "6c1f7c28eb9af16d9a3a637493738d1185167670f955bc8683e008bcb2ad88cc",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/tectonic-build.out",
       "bytes": 10019,
-      "sha256": "a2111ac4b6c25720d1bd7901cad86d700ad16af263ae84b1f3231b685c827af7",
+      "sha256": "b0c56244fd73d1219b4f2ba5a9063ead6fa1239a148d4e9ac90df4d96f3b7ba9",
       "role": "execution-receipt"
     },
     {

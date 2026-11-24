@@ -1,7 +1,7 @@
 {
   "schema": "ads2-rst.review-package.final-validation.v1",
-  "captured_at_utc": "2026-11-24T19:52:49.921365+00:00",
-  "manifest_sha256": "a1a50694a36aa3775b10636ab544dae74c6010b94e9c0e1b995a41fe23bdebe6",
+  "captured_at_utc": "2026-11-24T21:16:46.890542+00:00",
+  "manifest_sha256": "4ca2d0ce7921c4e5ae4566d4b8bf01c9e1d752520040565409d5e6717c036db3",
   "checks": [
     {
       "check": "required_artifacts",
@@ -61,7 +61,7 @@
     {
       "check": "manuscript_pdf_receipt",
       "pass": true,
-      "evidence": "pdf_bytes=169952; receipt_fresh=True"
+      "evidence": "pdf_bytes=171507; receipt_fresh=True"
     },
     {
       "check": "manifest_readback",

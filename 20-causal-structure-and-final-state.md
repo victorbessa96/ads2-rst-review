@@ -27,15 +27,15 @@ Consequences:
 1. `{Fhat > 0}` is a past set, connected, and contains the wormhole region. It is the spacetime.
 2. No two distinct points of the critical curve are causally related. The curve is a strictly decreasing graph in null coordinates, spacelike where differentiable, with both null derivatives of `Fhat` negative on it.
 3. No causal curve leaves the critical curve into the spacetime. No boundary condition at the singularity is needed, for any nonnegative flux profile in either sector, including impulsive shells.
-4. The event horizons are `x_m = -E_+` and `x_p = -E_-`. The black-hole region contains the throat points with static time `t >= -min(E_+, E_-)`.
+4. The event horizons are `x_m = -E_+` and `x_p = -E_-`. The region `x_m >= -E_+`, `x_p >= -E_-`, from which neither future infinity can be reached, contains the throat points with static time `t >= -min(E_+, E_-)`.
 
-**Why this matters.** In the evaporating black holes of the RST paper the critical curve turns timelike and naked at the endpoint of evaporation, and the solution beyond depends on a boundary condition imposed there. On the Kim-Son state this never happens. The reason is that the state to the future of the switch-off is the equilibrium one (`t_pm = 0`) and the classical flux is nonnegative, so nothing can raise `Fhat` along a future null direction once it has reached zero. The collapse of the Kim-Son wormhole is therefore a globally well-posed, exactly solvable semiclassical process. The price is that the black hole does not evaporate (section 5).
+**Why this matters.** In the evaporating black holes of the RST paper the critical curve turns timelike and naked at the endpoint of evaporation, and the solution beyond depends on a boundary condition imposed there. On the Kim-Son state this never happens. The reason is that the state to the future of the switch-off is the equilibrium one (`t_pm = 0`) and the classical flux is nonnegative, so nothing can raise `Fhat` along a future null direction once it has reached zero. The exact solution is therefore fixed by the data on the past null boundaries, with nothing to be supplied at the singularity. This says nothing about data beyond the null AdS2 ends of document 19. The price is that the black hole does not evaporate (section 5).
 
 **Credit.** That the singularity formed by positive-energy infall is spacelike is standard in the classical CGHS model. The statement here is the corresponding one for the full semiclassical solution on this state, with two-sided flux and atoms.
 
-**Traversability.** Outgoing rays start at the left AdS2 end, cross the throat at static time `t = -y` and reach right future infinity iff `y >= E_+`. With no matter the last traversing ray crosses the throat at `t = 0`. Infalling matter advances this by exactly `E_+ = P_+(infinity)/lambda^2` in static time, whatever its profile.
+**Traversability.** Outgoing rays start at the left AdS2 end, cross the throat at static time `t = -y` and reach right future infinity iff `y > E_+`; the ray `y = E_+` is the horizon generator. With no matter the traversing rays are those crossing the throat before `t = 0`. Infalling matter advances this by exactly `E_+ = P_+(infinity)/lambda^2` in static time, whatever its profile.
 
-Lean: `singular_future`, `regular_past`, `critical_curve_achronal`, `Fhat2_neg_after_p`. The Lean theorem is an order statement on the Kruskal plane; that the causal order of the spacetime is the coordinate order is the standard conformal-gauge fact and is not formalized. Script: checks F2 (about 12,000 random causally related point pairs, two-sided fluxes with atoms, zero violations) and F3.
+Lean: `singular_future`, `regular_past` (past-set property), `critical_curve_achronal` (first sentence of consequence 2), `Fhat2_neg_after_p`. Connectedness, the derivative statements, consequence 3 and the horizon sentences of consequence 4 are paper arguments. The Lean theorem is an order statement on the Kruskal plane; that the causal order of the spacetime is the coordinate order is the standard conformal-gauge fact and is not formalized. Script: checks F2 (about 12,000 random causally related point pairs, two-sided fluxes with atoms, zero violations) and F3.
 
 ## 3. Final exterior and the mass formula
 
@@ -55,7 +55,7 @@ Lean: `Fray_late`, `late_exterior_eq_zero_flux`, `first_moment_nonneg`. Script: 
 
 ## 4. Monotonicity along the horizons
 
-`Fhat`, hence `Omega` and `e^{-2 phi}`, is nondecreasing to the future along the event horizon, where `Fhat = mu + E_tot^2/2 + int_0^x (E_tot - Q)` rises to `mu_f`, and along the apparent horizon `x_m = -Q(x_p)`. Since `e^{-2 phi}` plays the role of the area in dilaton gravity, this has the form of an area theorem for both horizons. No entropy is attached to it here.
+`Fhat`, hence `Omega` and `e^{-2 phi}`, is nondecreasing to the future along the event horizon, where `Fhat = mu + E_tot^2/2 + int_0^x (E_tot - Q)` rises to `mu_f`. It is also nondecreasing with increasing `x_p` along the apparent horizon `x_m = -Q(x_p)`; that curve is spacelike where `Q` increases, so this is an outward statement, not one about time evolution. Since `e^{-2 phi}` plays the role of the area in dilaton gravity, the event-horizon statement has the form of an area theorem. No entropy is attached to it here.
 
 Lean: `event_horizon_mono`, `apparent_horizon_mono`. Script: G4.
 
@@ -65,7 +65,7 @@ For `y > E_tot`, along the outgoing ray as `x_p -> infinity`,
 
 $$\langle T_{--}\rangle\to-\lambda^2+\frac{\kappa}{4(y-E_{\rm tot})^2},\qquad \langle T_{\sigma^-\sigma^-}\rangle\to\frac{\kappa\lambda^2}{4}-\lambda^4e^{-2\lambda\sigma^-}.$$
 
-The first form is Kim and Son's expression for the impulsive shell with `A/lambda^2` replaced by `E_tot`. In the asymptotic frame the result is the same for every flux profile: the Hawking flux of the model, here the outgoing half of the equilibrium state, minus a decaying transient that is the negative energy of the wormhole state leaving the system. The flux does not decay, so the black hole does not evaporate.
+The first form is Kim and Son's expression for the impulsive shell with `A/lambda^2` replaced by `E_tot`; they already note that the `-lambda^2` term is the background of the wormhole state and not radiation. What is added is the extension to every flux profile and the asymptotic-frame form. In the asymptotic frame the result is the same for every flux profile: the Hawking flux of the model, here the outgoing half of the equilibrium state, minus a decaying transient that is the negative energy of the wormhole state leaving the system. The flux does not decay, so the black hole does not evaporate.
 
 Paper argument plus script (G5, G6). Not formalized.
 
@@ -90,6 +90,6 @@ Lean: `weak_branch_lower'`, `weak_branch_upper`, `affine_finite_of_quadratic`, `
 
 ## 8. Novelty
 
-Within the bounded search described in document 19, sections 2 to 5 were not found stated for this solution. Section 2 and the first term of the mass formula extend standard classical results and are credited as such. No priority is claimed. Human scientific review is pending.
+The bounded search described in document 19 predates these results. They were checked only against the sources already collected for it (Kim-Son, RST, CGHS, Thorlacius, Strominger and the others cited in the manuscript), where sections 2 to 4 were not found stated for this solution; no new search was run. Section 2 and the first term of the mass formula extend standard classical results, and the Kruskal-frame formula of section 5 is Kim and Son's for the shell. No priority is claimed. Human scientific review is pending.
 
 [Back to index](00-index.md)

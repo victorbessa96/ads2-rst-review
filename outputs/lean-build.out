@@ -32,14 +32,14 @@ warning: AdS2RST/Cumulative.lean: imports `Mathlib` from package `mathlib`, whic
 warning: AdS2RST/Structure.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 ⚠ [18257/18264] Ran AdS2RST.Structure:irArts
 warning: AdS2RST/Structure.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [18258/18264] Replayed AdS2RST.Affine
-warning: AdS2RST/Affine.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [18259/18264] Ran AdS2RST.Affine:irArts
-warning: AdS2RST/Affine.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [18260/18264] Built AdS2RST.Global (52s)
+⚠ [18258/18264] Replayed AdS2RST.Global
 warning: AdS2RST/Global.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [18261/18264] Ran AdS2RST.Global:irArts
+⚠ [18259/18264] Ran AdS2RST.Global:irArts
 warning: AdS2RST/Global.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18260/18264] Replayed AdS2RST.Affine
+warning: AdS2RST/Affine.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18261/18264] Ran AdS2RST.Affine:irArts
+warning: AdS2RST/Affine.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 ℹ [18262/18264] Replayed AdS2RST
 info: AdS2RST.lean:22:0: 'AdS2RST.first_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: AdS2RST.lean:23:0: 'AdS2RST.F_hasDerivAt_y' depends on axioms: [propext, Classical.choice, Quot.sound]
