@@ -5,6 +5,9 @@ type: state-sensitivity-frame-and-novelty
 
 # State, frame, impulsive comparison, and novelty
 
+> [!note] Reading note, 2026-11-24
+> Novelty statements here predate the comparison with the RST/Thorlacius general-infall formula and the zero-flux result; see [19](19-global-structure.md), sections 2, 3 and 7.
+
 ## 1. Alternate state data: the mixed-ray threshold is real but scoped
 
 Claude FR-01 asks what happens if `t_+` remains on after onset. Then

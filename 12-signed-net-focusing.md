@@ -5,6 +5,9 @@ type: signed-net-focusing-theorem
 
 # Signed net focusing, first hits, and finite-sigma pulses
 
+> [!note] Reading note, 2026-11-24
+> Signed effective sources are a formal extension. Only `first_hit_iff` is formalized in Lean for them. The finite-sigma pulses use the logarithmic clock discussed in [19](19-global-structure.md), section 4.
+
 ## 1. Effective source and exact accumulated-excess form
 
 Retain the same pre-onset branch and matching conventions, but allow signed state and classical contributions. Define

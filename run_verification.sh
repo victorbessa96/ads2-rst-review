@@ -5,6 +5,7 @@ PYTHON="${PHYSICS_PYTHON:-python3}"
 "$PYTHON" verify.py
 "$PYTHON" independent_symbolic.py
 "$PYTHON" advanced_checks.py
+"$PYTHON" structure_checks.py
 if [[ "${RUN_LEAN:-0}" == "1" ]]; then
   LAKE="${LAKE_BIN:-$(command -v lake || true)}"
   TECTONIC="${TECTONIC_BIN:-$(command -v tectonic || true)}"
@@ -19,12 +20,17 @@ import datetime, hashlib, json
 root = Path.cwd()
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
-source = root / "lean/AdS2RST.lean"
+sources = ("lean/AdS2RST.lean", "lean/AdS2RST/Core.lean", "lean/AdS2RST/Profile.lean", "lean/AdS2RST/Cumulative.lean", "lean/AdS2RST/Structure.lean", "lean/AdS2RST/Global.lean", "lean/AdS2RST/Affine.lean")
+digest = hashlib.sha256()
+for name in sources:
+    digest.update(name.encode())
+    digest.update((root / name).read_bytes())
 log = root / "outputs/lean-build.out"
 receipt = {
-    "schema": "ads2-rst.lean-build-receipt.v1",
+    "schema": "ads2-rst.lean-build-receipt.v2",
+    "sources": list(sources),
     "created_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-    "source_sha256": sha(source),
+    "source_sha256": digest.hexdigest(),
     "log_sha256": sha(log),
     "command": "lake build",
     "status": "PASS" if "Build completed successfully" in log.read_text() else "FAIL",
@@ -54,4 +60,11 @@ receipt = {
 (root / "outputs/tectonic-build.json").write_text(json.dumps(receipt, indent=2) + "\n")
 PY
 fi
-SKIP_PRODUCERS=1 "$PYTHON" validate_package.py
+# The validator writes the manifest and also checks the archive, so the archive
+# is rebuilt around it: refresh manifest, build, validate, rebuild with the final
+# receipt, then confirm read-only.  The last command decides the exit status.
+SKIP_PRODUCERS=1 "$PYTHON" validate_package.py > /dev/null 2>&1 || true
+"$PYTHON" build_archive.py
+SKIP_PRODUCERS=1 "$PYTHON" validate_package.py > /dev/null
+"$PYTHON" build_archive.py
+READ_ONLY=1 "$PYTHON" validate_package.py

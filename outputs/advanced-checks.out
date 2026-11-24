@@ -3,31 +3,21 @@ PASS | state phase other root negative
 PASS | state phase horizon gap
 PASS | state phase r=0 has no mixed hit
 PASS | state phase r<0 has no mixed hit
-PASS | same classical P has different state outcomes
 PASS | finite state pulse cannot prevent sustained classical focusing
 PASS | alternate q=1 is retained state with shifted p
-PASS | onset atom has post-onset Q jump but F(0) is unchanged
 PASS | onset atom generalized trapping crossing when alpha>=y
-PASS | boundary Q starts at zero and ends at E
 PASS | boundary during-pulse concavity
 PASS | boundary after-pulse root residual
 PASS | boundary after-pulse root is beyond b
 PASS | boundary shutoff equality F_b=0
 PASS | boundary y>=E gives no post-pulse root
 PASS | same unit energy has early and late focusing examples
-PASS | early-late pulses have same injected energy
 PASS | early boundary timing diverges
 PASS | late boundary timing vanishes
 PASS | closing-window threshold matches retarded ray label
 PASS | closing-window translation covariance
 PASS | same physical ray is hit early and missed late
-PASS | general boundary focusing identity
 PASS | matter wavepacket reproduces prescribed stress
-PASS | matter stress is conserved
-PASS | wavepacket is continuous at pulse endpoints
 PASS | wavepacket physical energy is finite
-PASS | free conformal two-point function has no explicit Omega_s term
 PASS | chiral-system accumulated-excess derivative
-PASS | outgoing flux is independent of incoming f_plus
-PASS | incoming-sector energy recovery is not an outgoing observable
-ADVANCED: 32/32 PASS
+ADVANCED: 22/22 PASS

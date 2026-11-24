@@ -6,6 +6,9 @@ type: cumulative-flux-generalization
 
 # General cumulative-flux termination theorem
 
+> [!note] Reading note, 2026-11-24
+> This theorem is now formalized in Lean for arbitrary monotone `Q` (`hit_iff`, `existsUnique_hit`). It is the Kim-Son-state analogue of the general-infall horizon formula of RST (eqs. 4.1 to 4.4) and Thorlacius (hep-th/9411020, eqs. 13 to 18); see [19](19-global-structure.md), section 3.
+
 ## 1. Fixed state and general nonnegative source
 
 Retain the Kim-Son state `t_\pm=(\lambda^2/\kappa)\Theta(-x^\pm)` and the same pre-onset matching conventions. The theorem concerns **mixed outgoing rays** `x_m=-y`, `y>0`; it is not a classification of every both-positive wall.

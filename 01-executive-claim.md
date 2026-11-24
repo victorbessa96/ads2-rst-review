@@ -5,6 +5,9 @@ type: executive-claim-and-scope
 
 # Executive claim and scope
 
+> [!note] Reading note, 2026-11-24
+> This document predates [19 Global structure](19-global-structure.md). Its formulas stand. Two points of reading change: (a) rays with `x_m > 0` reach the critical curve with no classical flux at all, so the theorems here concern which rays with `x_m < 0` are captured; (b) the cumulative criterion is the Kim-Son-state analogue of the RST/Thorlacius general-infall formula. In the table of section 5, "Proved" means derived on paper and, as of 2026-11-24, formalized in Lean where [lean/README.md](lean/README.md) says so; items 3 and 4 of section 1 (affine parameter, interior curves) are paper and numerical results only.
+
 ## 1. Contribution, narrowed to what is actually new
 
 The contribution is not the first discovery of a singularity on a past-AdS2 RST branch. Kim-Son already has an impulsive positive-shock singularity, and the impulse already produces a spacelike wall on a restricted mixed-ray band.
@@ -84,6 +87,8 @@ All wall branches and first derivatives match at `x_s`. The full formulas and de
 | Transparent or reflecting absorber theorem | Not established |
 | All singular walls vanish for alternate `t_+` data when `p<=1` | False; only the mixed-ray hit is excluded there |
 | Literature-wide priority | Not claimed |
+| Black hole present at zero classical flux (both-positive quadrant) | Proved, Lean `zero_flux_wall_iff`; see document 19 |
+| Timelike AdS boundary exists | False; the AdS2 ends are null at finite affine distance |
 | External human peer review | Not performed |
 
 ## 6. Why this matters

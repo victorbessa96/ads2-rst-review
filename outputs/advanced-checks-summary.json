@@ -1,6 +1,6 @@
 {
-  "checks_total": 32,
-  "checks_passed": 32,
+  "checks_total": 22,
+  "checks_passed": 22,
   "checks_failed": 0,
   "checks": [
     {
@@ -29,11 +29,6 @@
       "detail": ""
     },
     {
-      "name": "same classical P has different state outcomes",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
       "name": "finite state pulse cannot prevent sustained classical focusing",
       "status": "PASS",
       "detail": ""
@@ -44,17 +39,7 @@
       "detail": ""
     },
     {
-      "name": "onset atom has post-onset Q jump but F(0) is unchanged",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
       "name": "onset atom generalized trapping crossing when alpha>=y",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
-      "name": "boundary Q starts at zero and ends at E",
       "status": "PASS",
       "detail": ""
     },
@@ -89,11 +74,6 @@
       "detail": ""
     },
     {
-      "name": "early-late pulses have same injected energy",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
       "name": "early boundary timing diverges",
       "status": "PASS",
       "detail": ""
@@ -119,22 +99,7 @@
       "detail": ""
     },
     {
-      "name": "general boundary focusing identity",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
       "name": "matter wavepacket reproduces prescribed stress",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
-      "name": "matter stress is conserved",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
-      "name": "wavepacket is continuous at pulse endpoints",
       "status": "PASS",
       "detail": ""
     },
@@ -144,22 +109,7 @@
       "detail": ""
     },
     {
-      "name": "free conformal two-point function has no explicit Omega_s term",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
       "name": "chiral-system accumulated-excess derivative",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
-      "name": "outgoing flux is independent of incoming f_plus",
-      "status": "PASS",
-      "detail": ""
-    },
-    {
-      "name": "incoming-sector energy recovery is not an outgoing observable",
       "status": "PASS",
       "detail": ""
     }

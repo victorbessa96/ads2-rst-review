@@ -10,8 +10,11 @@ type: evidence-and-reproduction-record
 1. **Source-level derivations** carry the theorem. Start with [Primary source and derivation](02-source-and-derivation.md).
 2. **Exact SymPy identities** check roots, signs, matching conditions, horizon relations, and observer coordinates.
 3. **90-digit mpmath controls** check sampled behavior and quadrature. Grids do not prove universal statements.
-4. **Independent fresh-agent review** supplies additional scrutiny, not external human peer review.
-5. **Documentation and hash gates** establish package integrity only.
+4. **Lean 4 formalization** machine-checks the statements listed in [lean/README.md](lean/README.md). It is the strongest evidence in the package for those statements and says nothing about the ones it does not cover.
+5. **AI review** supplies scrutiny, not external human peer review. A review by an AI system that later contributed to the package is not independent evidence.
+6. **Documentation and hash gates** establish package integrity only.
+
+`independent_symbolic.py` is a second implementation of the same formulas, not an independent derivation. `structure_checks.py` (45 checks) integrates the constraints sector by sector and checks the zero-flux, symmetry and geometry statements of [document 19](19-global-structure.md) and the causal-structure, mass, monotonicity and radiation statements of [document 20](20-causal-structure-and-final-state.md). Ten rows of `advanced_checks.py` that could not fail were removed on 2026-11-24.
 
 ## 2. Fresh executed results
 
@@ -62,7 +65,7 @@ Receipt generation and read-only verification are separate:
 READ_ONLY=1 python3 validate_package.py
 ```
 
-A relocated-copy test copied the entire package to a fresh scratch directory, ran all three producers there, and obtained **138/138**, **39/39**, and **32/32** again. The relocated main output is byte-identical to the package output. Normal validator runs now perform this relocation fresh; `READ_ONLY=1` uses the existing receipt without executing anything. See [portability-receipt.json](outputs/portability-receipt.json). This proves same-interpreter filesystem portability, not independent environment setup or container portability.
+A relocated-copy test copied the entire package to a fresh scratch directory, ran all four producers there, and obtained **138/138**, **39/39**, **22/22**, and **45/45** again. The relocated main output is byte-identical to the package output. Normal validator runs now perform this relocation fresh; `READ_ONLY=1` uses the existing receipt without executing anything. See [portability-receipt.json](outputs/portability-receipt.json). This proves same-interpreter filesystem portability, not independent environment setup or container portability.
 
 Validated environment:
 
@@ -108,7 +111,9 @@ Package map:
 | Path | Role |
 |---|---|
 | `verify.py` | Main 138-check producer |
-| `independent_symbolic.py` | Separate 39-check producer |
+| `independent_symbolic.py` | Separate 39-check producer (second implementation, not a second derivation) |
+| `structure_checks.py` | 45-check producer for derivation, zero-flux structure, symmetries, geometry, global causal structure and final state |
+| `build_archive.py` | Rebuilds `Archive.zip` and its checksum from the manifest; called by `run_verification.sh` |
 | `advanced_checks.py` | Advanced 32-check producer for state phases, onset atoms, closing-window law, matter, and universality |
 | `sources/` | Primary tar, TeX, figure, and bibliographic note |
 | `legacy/` | Original producer, canonical outputs, red history, and internal reviews |

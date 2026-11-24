@@ -5,6 +5,9 @@ type: state-pulse-phase-diagram
 
 # State-pulse phase diagram for constant post-onset state data
 
+> [!note] Reading note, 2026-11-24
+> The threshold `p = q` is the statement that capture is decided by net null flux, matter plus state ([19](19-global-structure.md), section 6). "Same energy, different outcome" compares different states, and the `q = 0` state already has a black hole at zero flux.
+
 ## 1. One state parameter, three exact regimes
 
 Let the post-onset state function be constant in units of the RST anomaly scale:

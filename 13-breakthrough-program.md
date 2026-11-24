@@ -3,7 +3,10 @@ created: 2026-11-24
 type: ambitious-research-program
 ---
 
-# From exact wall formulas to a genuine breakthrough
+# Research program beyond the exact wall formulas
+
+> [!note] Reading note, 2026-11-24
+> This program was written before [19 Global structure](19-global-structure.md). Its central question presupposes a timelike AdS boundary and a matter-driven collapse. Neither holds for the Kim-Son solution: the ends are null at finite affine distance and the black hole is present at zero flux. The program is kept as a record; any continuation must start from an extended or modified model.
 
 ## 1. The target
 

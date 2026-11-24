@@ -1,0 +1,278 @@
+{
+  "checks_total": 45,
+  "checks_passed": 45,
+  "checks_failed": 0,
+  "mpmath_dps": 40,
+  "checks": [
+    {
+      "name": "A1 constraint reduces to sqrt(kappa) d^2 Omega in Kruskal gauge",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": "kappa t = sqrt(kappa) Omega'' + T"
+    },
+    {
+      "name": "A2 general solution solves d_+ d_- Omega = -lambda^2/sqrt(kappa)",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "A3 state profile from t = (lambda^2/kappa) theta(-x)",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": "x<0: z**2/2; x>0: 0"
+    },
+    {
+      "name": "A4 sustained matter profile from T_++ = p lambda^2 theta(x)",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": "x>0: -p*z**2/2"
+    },
+    {
+      "name": "A5 profiles are C^1 at the onset point",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": "value and first derivative vanish on both sides"
+    },
+    {
+      "name": "A6 pre-onset sector is the static wormhole",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": "mu + x_m**2/2 - x_m*x_p + x_p**2/2"
+    },
+    {
+      "name": "A7 mixed sector formula",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": "mu - p*x_p**2/2 + x_m**2/2 - x_m*x_p"
+    },
+    {
+      "name": "A8 both-positive sector formula",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": "mu - p*x_p**2/2 - x_m*x_p"
+    },
+    {
+      "name": "A9 Kim-Son printed impulsive solution follows from the constraints in all four sectors",
+      "group": "derivation",
+      "status": "PASS",
+      "detail": "C_pm = lambda^2 x0/sqrt(kappa), D fixed by M"
+    },
+    {
+      "name": "B1 zero-flux both-positive sector is mu - x_p x_m",
+      "group": "zero-flux",
+      "status": "PASS",
+      "detail": "mu - x_m*x_p"
+    },
+    {
+      "name": "B2 zero-flux wall is the hyperbola x_p x_m = mu",
+      "group": "zero-flux",
+      "status": "PASS",
+      "detail": "x_m = mu/x_p"
+    },
+    {
+      "name": "B3 both-positive quadrant is trapped at zero flux",
+      "group": "zero-flux",
+      "status": "PASS",
+      "detail": "d_+ = -x_m < 0, d_- = -x_p < 0"
+    },
+    {
+      "name": "B4 zero-flux mixed sector is regular",
+      "group": "zero-flux",
+      "status": "PASS",
+      "detail": "mu + x*y + y**2/2"
+    },
+    {
+      "name": "B5 without the state switch-off the wormhole is eternal and regular",
+      "group": "zero-flux",
+      "status": "PASS",
+      "detail": "Fhat >= mu > 0 on the whole plane"
+    },
+    {
+      "name": "B6 zero-flux wall is spacelike",
+      "group": "zero-flux",
+      "status": "PASS",
+      "detail": "dx_m/dx_p = -mu/x_p^2 < 0"
+    },
+    {
+      "name": "B7 both-positive sector equals the t=0 static RST black hole",
+      "group": "zero-flux",
+      "status": "PASS",
+      "detail": "M_bh/(lambda sqrt(kappa)) = Omega_s + M/lambda"
+    },
+    {
+      "name": "B8 linear dilaton vacuum has t_+ = 1/(4 x_p^2), so t = 0 is not the vacuum",
+      "group": "zero-flux",
+      "status": "PASS",
+      "detail": "kappa t_+ = sqrt(kappa) d_+^2 Omega"
+    },
+    {
+      "name": "C1 pre-onset wormhole: translation only",
+      "group": "symmetry",
+      "status": "PASS",
+      "detail": "[{a: b, c: 0}]"
+    },
+    {
+      "name": "C2 zero-flux mixed sector: no symmetry",
+      "group": "symmetry",
+      "status": "PASS",
+      "detail": "[{a: 0, b: 0, c: 0}]"
+    },
+    {
+      "name": "C3 zero-flux both-positive sector: boost only",
+      "group": "symmetry",
+      "status": "PASS",
+      "detail": "[{a: 0, b: 0}]"
+    },
+    {
+      "name": "D1 after any pulse the mixed excess is linear with slope y - E_tot",
+      "group": "criterion",
+      "status": "PASS",
+      "detail": "slope independent of the delay d"
+    },
+    {
+      "name": "D2 double-integral identity behind the CGHS mass and momentum functions",
+      "group": "criterion",
+      "status": "PASS",
+      "detail": "d^2/dx^2 int_0^x (x-s) tau(s) ds = tau(x)"
+    },
+    {
+      "name": "D3 sigma-frame energy of a fixed Kruskal pulse depends on its position",
+      "group": "criterion",
+      "status": "PASS",
+      "detail": "E_sigma = lambda**3*p*s*(2*d + s)/2; E_tot = p s"
+    },
+    {
+      "name": "E1 Lambert-W inversion reproduces Omega(phi)",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "E2 conformal factor bound e^{2 rho} <= 1/(sqrt(kappa) Omega) at weak coupling",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "holds wherever phi <= 0"
+    },
+    {
+      "name": "E3 pre-onset conformal factor tends to 2/(lambda^2 (x_p - x_m)^2)",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "['0.999415138634', '0.999999895431', '0.999999999985']"
+    },
+    {
+      "name": "E4 curvature tends to -4 lambda^2 at the AdS2 ends and stays finite",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "['-3.9698752', '-3.9963199', '-3.9994933']"
+    },
+    {
+      "name": "E5 null rays reach the AdS2 end at finite affine parameter",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "['2.44229716594', '2.44427716028', '2.44429696028']"
+    },
+    {
+      "name": "E6 the same end is at infinite proper distance along static slices (logarithmic growth)",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "['4.0322254', '7.2885413', '10.544888']"
+    },
+    {
+      "name": "E7 the dilaton field diverges at the AdS2 end (weak coupling)",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "-13.468937"
+    },
+    {
+      "name": "E8 escaping rays end in a linear-dilaton region: e^{2 rho} lambda^2 x_p (y - E) -> 1",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "['0.996115661536', '0.999994374579', '0.999999999991']"
+    },
+    {
+      "name": "E9 the future end is at infinite affine parameter (logarithmic divergence)",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "['5.592067955', '12.49568818', '19.40343759']"
+    },
+    {
+      "name": "E10 event horizon of the pulse spacetime is x_m = -E_tot",
+      "group": "geometry",
+      "status": "PASS",
+      "detail": "hits at ['1.1375', '2.475', '57.005']; y >= E escape"
+    },
+    {
+      "name": "F1 two-sided solution satisfies field equation and both constraints in all four sectors",
+      "group": "global",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "F2 the non-positive set is a future set (causal future of F<=0 has F<0), two-sided random fluxes with atoms",
+      "group": "global",
+      "status": "PASS",
+      "detail": "12016 point pairs, 0 violations"
+    },
+    {
+      "name": "F3 both null gradients of F are negative on the critical curve (spacelike, future-trapped)",
+      "group": "global",
+      "status": "PASS",
+      "detail": "3315 zeros, 0 exceptions"
+    },
+    {
+      "name": "F4 mirror sector: the ray x_p=-y' is captured iff y' < E_tot of the outgoing flux",
+      "group": "global",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "G1 after a uniform pulse the mixed sector is the zero-flux form with mu_f = mu + m1 + E^2/2 in shifted coordinates",
+      "group": "mass",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "G2 first moment of the uniform pulse: int_0^s x p dx = E s/2",
+      "group": "mass",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "G3 impulsive shell: mu_f = mu + alpha^2/2 (m1 = 0)",
+      "group": "mass",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "G4 F is nondecreasing along the event horizon and along the apparent horizon",
+      "group": "mass",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "G5 outgoing flux at right future infinity: -lambda^2 + kappa/(4 (y - E_tot)^2), Kim-Son's formula with A/lambda^2 -> E_tot",
+      "group": "mass",
+      "status": "PASS",
+      "detail": "residuals at x_p=1e16: ['7.49e-16', '3.51e-13', '4.86e-17'], decreasing in x_p"
+    },
+    {
+      "name": "G6 asymptotic frame: outgoing flux is kappa lambda^2/4 - lambda^4 exp(-2 lambda sigma^-), Hawking value plus decaying transient",
+      "group": "mass",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "H1 weak branch: kappa/4 + lambda^2 Fhat <= e^{-2 phi} <= 2 sqrt(kappa) Omega + (kappa/2)(ln(kappa/2) - 1)",
+      "group": "affine",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "H2 affine length of the AdS2 end beyond unit distance is at most 2/lambda^2",
+      "group": "affine",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

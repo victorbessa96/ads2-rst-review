@@ -5,6 +5,9 @@ type: conformal-matter-realization
 
 # Explicit conformal-matter realization of the injection
 
+> [!note] Reading note, 2026-11-24
+> The wavepacket is posed in the logarithmic clock, which is natural at the future end only ([19](19-global-structure.md), section 4).
+
 ## 1. RST-normalized stress tensor and conservation
 
 Use a free conformal scalar in two dimensions. The source convention is fixed by Kim-Son, not guessed from a different Hilbert-stress normalization. Their constraint and matter solution use

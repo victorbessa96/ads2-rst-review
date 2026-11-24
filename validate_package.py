@@ -25,7 +25,16 @@ ARCHIVE_SHA = ROOT / "Archive.zip.sha256"
 LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\s]+)(?:\s+['\"][^)'\"]*['\"])?\)")
 SKIP_SCHEMES = ("http://", "https://", "mailto:", "data:")
 # Pinned acceptance contract, not a claim of independent derivations.
-EXPECTED_SCIENCE = {"verify": 138, "independent": 39, "advanced": 32}
+EXPECTED_SCIENCE = {"verify": 138, "independent": 39, "advanced": 22, "structure": 45}
+LEAN_SOURCES = ("lean/AdS2RST.lean", "lean/AdS2RST/Core.lean", "lean/AdS2RST/Profile.lean", "lean/AdS2RST/Cumulative.lean", "lean/AdS2RST/Structure.lean", "lean/AdS2RST/Global.lean", "lean/AdS2RST/Affine.lean")
+
+
+def lean_sources_sha(root):
+    digest = hashlib.sha256()
+    for name in LEAN_SOURCES:
+        digest.update(name.encode())
+        digest.update((root / name).read_bytes())
+    return digest.hexdigest()
 
 
 def sha(path):
@@ -86,7 +95,7 @@ def main():
     read_only = os.environ.get("READ_ONLY", "0") == "1"
     python = os.environ.get("PHYSICS_PYTHON", sys.executable)
     if not read_only and os.environ.get("SKIP_PRODUCERS", "0") != "1":
-        for producer in ("verify.py", "independent_symbolic.py", "advanced_checks.py"):
+        for producer in ("verify.py", "independent_symbolic.py", "advanced_checks.py", "structure_checks.py"):
             proc = subprocess.run([python, str(ROOT / producer)], cwd=ROOT, capture_output=True, text=True, timeout=240)
             if proc.returncode != 0:
                 print(proc.stdout)
@@ -99,7 +108,9 @@ def main():
         "05-state-frame-and-novelty.md", "06-finite-pulse.md",
         "07-evidence-and-reproduction.md", "08-review-adjudication.md",
         "09-independent-reviews.md", "10-formal-signoff.md", "11-cumulative-flux-generalization.md", "README.md",
-        "verify.py", "independent_symbolic.py", "advanced_checks.py", "run_verification.sh", "requirements.txt",
+        "verify.py", "independent_symbolic.py", "advanced_checks.py", "structure_checks.py", "run_verification.sh", "requirements.txt",
+        "19-global-structure.md", "outputs/structure-checks.out", "outputs/structure-checks-summary.json",
+        "lean/AdS2RST/Core.lean", "lean/AdS2RST/Profile.lean", "lean/AdS2RST/Cumulative.lean", "lean/AdS2RST/Structure.lean", "lean/AdS2RST/Global.lean", "lean/AdS2RST/Affine.lean", "build_archive.py",
         "sources/wormholeRST_jhep.tex", "sources/gr-qc-0404098.tar", "outputs/verify.out",
         "outputs/verification-summary.json", "outputs/independent_symbolic.out", "outputs/advanced-checks.out", "outputs/advanced-checks-summary.json",
         "outputs/independent-symbolic-summary.json", "outputs/lean-build.out", "outputs/lean-build.json",
@@ -116,6 +127,7 @@ def main():
     science = json.loads((ROOT / "outputs/verification-summary.json").read_text())
     independent = json.loads((ROOT / "outputs/independent-symbolic-summary.json").read_text())
     advanced = json.loads((ROOT / "outputs/advanced-checks-summary.json").read_text())
+    structure = json.loads((ROOT / "outputs/structure-checks-summary.json").read_text())
     if external_source:
         source_note = (ROOT / "sources" / "README.md").read_text(encoding="utf-8")
         source_ok = ("https://arxiv.org/abs/gr-qc/0404098v2" in source_note
@@ -135,7 +147,7 @@ def main():
                 copy = Path(temp) / "package"
                 shutil.copytree(ROOT, copy, ignore=shutil.ignore_patterns("__pycache__", ".lake", "Archive.zip", "Archive.zip.sha256", "manifest.json", "validation.json"))
                 results = {}
-                for producer in ("verify.py", "independent_symbolic.py", "advanced_checks.py"):
+                for producer in ("verify.py", "independent_symbolic.py", "advanced_checks.py", "structure_checks.py"):
                     proc = subprocess.run([python, str(copy / producer)], cwd=copy, capture_output=True, text=True, timeout=240)
                     results[producer] = proc
                 copied_main = json.loads((copy / "outputs/verification-summary.json").read_text())
@@ -143,16 +155,19 @@ def main():
                 copied_advanced = json.loads((copy / "outputs/advanced-checks-summary.json").read_text())
                 main_ok = results["verify.py"].returncode == 0 and (copied_main["checks_total"], copied_main["checks_passed"], copied_main["checks_failed"]) == (EXPECTED_SCIENCE["verify"], EXPECTED_SCIENCE["verify"], 0)
                 independent_ok = results["independent_symbolic.py"].returncode == 0 and (copied_independent["checks_total"], copied_independent["checks_passed"], copied_independent["checks_failed"]) == (EXPECTED_SCIENCE["independent"], EXPECTED_SCIENCE["independent"], 0)
+                copied_structure = json.loads((copy / "outputs/structure-checks-summary.json").read_text())
+                structure_ok = results["structure_checks.py"].returncode == 0 and (copied_structure["checks_total"], copied_structure["checks_passed"], copied_structure["checks_failed"]) == (EXPECTED_SCIENCE["structure"], EXPECTED_SCIENCE["structure"], 0)
                 advanced_ok = results["advanced_checks.py"].returncode == 0 and (copied_advanced["checks_total"], copied_advanced["checks_passed"], copied_advanced["checks_failed"]) == (EXPECTED_SCIENCE["advanced"], EXPECTED_SCIENCE["advanced"], 0)
                 identical = (copy / "outputs/verify.out").read_bytes() == (ROOT / "outputs/verify.out").read_bytes()
                 portability = {
-                    "status": "PASS" if main_ok and independent_ok and advanced_ok and identical else "FAIL",
+                    "status": "PASS" if main_ok and independent_ok and advanced_ok and structure_ok and identical else "FAIL",
                     "verify_exit": results["verify.py"].returncode,
                     "independent_exit": results["independent_symbolic.py"].returncode,
                     "advanced_exit": results["advanced_checks.py"].returncode,
                     "main_checks": f"{copied_main['checks_passed']}/{copied_main['checks_total']}",
                     "independent_checks": f"{copied_independent['checks_passed']}/{copied_independent['checks_total']}",
                     "advanced_checks": f"{copied_advanced['checks_passed']}/{copied_advanced['checks_total']}",
+                    "structure_checks": f"{copied_structure['checks_passed']}/{copied_structure['checks_total']}",
                     "main_output_byte_identical": identical,
                     "main_output_sha256": sha(copy / "outputs/verify.out"),
                 }
@@ -201,7 +216,7 @@ def main():
     if archive_present:
         with zipfile.ZipFile(archive) as bundle:
             names = set(bundle.namelist())
-            for name in ("11-cumulative-flux-generalization.md", "lean/AdS2RST.lean", "manuscript/ads2-rst-one-sided-flux.tex", "manuscript/ads2-rst-one-sided-flux.pdf"):
+            for name in ("11-cumulative-flux-generalization.md", "19-global-structure.md", "structure_checks.py", *LEAN_SOURCES, "manuscript/ads2-rst-one-sided-flux.tex", "manuscript/ads2-rst-one-sided-flux.pdf"):
                 member_name = "To review/" + name
                 if member_name not in names:
                     archive_missing.append(member_name)
@@ -219,6 +234,8 @@ def main():
            f"{independent['checks_passed']}/{independent['checks_total']} PASS; failed={independent['checks_failed']}")
     record("advanced_science_counts", (advanced["checks_total"], advanced["checks_passed"], advanced["checks_failed"]) == (EXPECTED_SCIENCE["advanced"], EXPECTED_SCIENCE["advanced"], 0),
            f"{advanced['checks_passed']}/{advanced['checks_total']} PASS; failed={advanced['checks_failed']}")
+    record("structure_science_counts", (structure["checks_total"], structure["checks_passed"], structure["checks_failed"]) == (EXPECTED_SCIENCE["structure"], EXPECTED_SCIENCE["structure"], 0),
+           f"{structure['checks_passed']}/{structure['checks_total']} PASS; failed={structure['checks_failed']}")
     record("source_tar_identity", source_ok and (external_source or source_sha == "8906ec46e685404da151c8b7d52a325c4053ee8c8f17964df7264c69baf58872"),
            "external-source-links; original tar not redistributed" if external_source else source_sha)
     red_first = json.loads((ROOT / "outputs/red-first-summary.json").read_text())
@@ -232,18 +249,20 @@ def main():
     portable_hash_ok = portability.get("main_output_sha256") == sha(ROOT / "outputs/verify.out")
     record("relocated_reproduction", portability.get("status") == "PASS" and portability.get("main_output_byte_identical") is True and portable_hash_ok,
            f"fresh={not read_only}; status={portability.get('status')}; byte_identical={portability.get('main_output_byte_identical')}; receipt_hash_matches={portable_hash_ok}")
-    lean_source = ROOT / "lean/AdS2RST.lean"
     lean_log = ROOT / "outputs/lean-build.out"
     lean_text = lean_log.read_text()
-    lean_code = re.sub(r"/-.*?-/", "", lean_source.read_text(), flags=re.S)
+    lean_code = "\n".join((ROOT / name).read_text() for name in LEAN_SOURCES)
+    lean_code = re.sub(r"/-.*?-/", "", lean_code, flags=re.S)
     lean_code = re.sub(r"--.*", "", lean_code)
     no_placeholders = not re.search(r"\b(sorry|admit|axiom)\b", lean_code) and "declaration uses 'sorry'" not in lean_text
+    axiom_lines = re.findall(r"depends on axioms: \[([^\]]*)\]", lean_text)
+    axioms_ok = len(axiom_lines) >= 77 and all(set(x.strip() for x in line.split(",")) <= {"propext", "Classical.choice", "Quot.sound"} for line in axiom_lines)
     lean_receipt = json.loads((ROOT / "outputs/lean-build.json").read_text())
-    lean_fresh = (lean_receipt.get("source_sha256") == sha(lean_source)
+    lean_fresh = (lean_receipt.get("source_sha256") == lean_sources_sha(ROOT)
                   and lean_receipt.get("log_sha256") == sha(lean_log)
                   and lean_receipt.get("status") == "PASS")
-    record("lean_build_receipt", "Build completed successfully" in lean_text and "sorryAx" not in lean_text and no_placeholders and lean_fresh,
-           f"Lean algebraic-core build; no placeholders={no_placeholders}; receipt_fresh={lean_fresh}")
+    record("lean_build_receipt", "Build completed successfully" in lean_text and "sorryAx" not in lean_text and no_placeholders and axioms_ok and lean_fresh,
+           f"Lean build of {len(LEAN_SOURCES)} sources; no placeholders={no_placeholders}; axiom audits={len(axiom_lines)} standard-only={axioms_ok}; receipt_fresh={lean_fresh}")
     pdf = ROOT / "manuscript/ads2-rst-one-sided-flux.pdf"
     tex = ROOT / "manuscript/ads2-rst-one-sided-flux.tex"
     tectonic_log = ROOT / "outputs/tectonic-build.out"

@@ -11,7 +11,7 @@ type: formal-acceptance-and-signoff
 |---|---|---|---|
 | R1 | Source identity and bibliographic scope | [Source bundle](sources/README.md), [Source derivation](02-source-and-derivation.md), tar/TeX SHA-256 match | [x] |
 | R2 | Four-sector exact solution and matching | [Exact derivation](02-source-and-derivation.md#2-constraints-and-chiral-integration), canonical residuals | [x] |
-| R3 | Root uniqueness and physical-side exclusion | [Unique first hit](03-sustained-flux-theorem.md#1-unique-first-hit) | [x] |
+| R3 | Root uniqueness and physical-side exclusion | [Unique first hit](03-sustained-flux-theorem.md#1-unique-positive-post-onset-hit) | [x] |
 | R4 | Causal character and branch coverage | [Spacelike edge](03-sustained-flux-theorem.md#2-spacelike-edge-and-global-representation), both-positive and fourth-sector checks | [x] |
 | R5 | Apparent-horizon ordering | [Horizon census](04-horizon-and-causal-structure.md), `x_hit-x_AH=D/p>0` | [x] |
 | R6 | Alternate-state and frame sensitivity | [State and frame](05-state-frame-and-novelty.md) | [x] |
@@ -22,7 +22,9 @@ type: formal-acceptance-and-signoff
 | R11 | Bounded literature position | [Thirteen-document check](reviews/literature-check.md) | [x] |
 | R12 | Main reproduction | `verify.py`: 138/138 PASS | [x] |
 | R13 | Independent reproduction | `independent_symbolic.py`: 39/39 PASS | [x] |
-| R13A | Advanced research reproduction | `advanced_checks.py`: 32/32 PASS | [x] |
+| R13A | Advanced consistency reproduction | `advanced_checks.py`: 22/22 PASS | [x] |
+| R13B | Structure reproduction | `structure_checks.py`: 45/45 PASS | [x] |
+| R13C | Lean build | Six modules, no `sorry`, 77 axiom audits standard only | [x] |
 | R14 | Red history preserved | [Red-run record](07-evidence-and-reproduction.md#4-red-run-history-and-instrument-corrections) | [x] |
 | R15 | Portable review bundle | Package-relative inputs and commands, no network | [x] |
 | R16 | Review findings adjudicated | [FR-01 through FR-11 and second-review obligations](08-review-adjudication.md) | [x] |

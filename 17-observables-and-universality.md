@@ -5,6 +5,9 @@ type: observables-and-universality
 
 # Observables and the exact universality boundary
 
+> [!note] Reading note, 2026-11-24
+> Section 1 uses the two-point function of the Kruskal (`x`) vacuum. The Kim-Son state has `t_pm = lambda^2/kappa` for `x^pm < 0`, so it is not that vacuum before onset, and the formula applies as written only where `t_pm = 0`. Statements about boundary response or baths have no referent here because the solution has no timelike boundary ([19](19-global-structure.md), section 5).
+
 ## 1. Free-scalar two-point functions do not automatically see the wall
 
 For a free conformal scalar in a conformal vacuum, the Wightman function has the standard null-coordinate logarithmic form, up to the usual normalization and `i epsilon` prescription:

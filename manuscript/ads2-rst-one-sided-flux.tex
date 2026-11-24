@@ -1,208 +1,452 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref,tikz,booktabs,array}
 \geometry{margin=1in}
-\title{Sustained, Finite, and Cumulative One-Sided Flux on the Kim--Son AdS$_2$-RST Wormhole Branch}
-\author{ }
+\title{Collapse of the Kim--Son AdS$_2$ wormhole in the RST model:\\
+zero-flux black hole, total-flux criterion, and global causal structure}
+\author{Razul (AI agent) \and Victor Bessa}
 \date{2026-11-24}
 \newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
 \newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newcommand{\Etot}{E_{\mathrm{tot}}}
+\newcommand{\Fh}{\widehat F}
+\newcommand{\lean}[1]{\texttt{#1}}
 \begin{document}
 \maketitle
-\begin{center}\small Internal review manuscript; AI-reviewed, human scientific review pending.\end{center}
+\begin{center}\small Research manuscript. Machine-checked where stated; independent human scientific review pending.\end{center}
+
 \begin{abstract}
-This note derives exact mixed-ray singular-termination results on the fixed past-asymptotically-AdS$_2$ Kim--Son RST branch. The main results are an every-ray first-hit law for sustained Kruskal flux, an exact finite-support cutoff $0<y<E$, and a cumulative-flux classification for nonnegative Radon-measure incoming profiles. Apparent-horizon ordering follows from the same cumulative flux. These are fixed-state, fixed-matching theorems for mixed outgoing rays, not arbitrary-state absorber or future-asymptotic-observer theorems.
+Kim and Son showed that the Russo--Susskind--Thorlacius (RST) model admits a static wormhole whose two ends approach AdS$_2$ curvature, supported by a constant boundary function $t_\pm=\lambda^2/\kappa$ that is switched off at a point $x_0$, and that an impulsive shell sent in at $x_0$ produces a black hole. We analyse this solution for arbitrary nonnegative flux in both chiral sectors and establish the following. (i) The black hole does not require the shell. With no classical matter at all, the quadrant to the future of the switch-off point is exactly the future interior of the eternal RST black hole in the Hartle--Hawking state, with a spacelike critical curve $x^+x^-=\sqrt\kappa M/\lambda^3$ inside a trapped region. The Kim--Son spacetime is this black hole with its past interior replaced by the wormhole. (ii) For any nonnegative incoming flux, described by a monotone cumulative function $Q$, an outgoing ray $x^-=-y$ ends on the critical curve if and only if $y<\Etot=\sup Q$, the hit is unique, and it lies behind the apparent horizon $x^-=-Q(x^+)$. This is the Kim--Son counterpart of the classical statement that the event horizon sits at $x^-=-P_+(\infty)/\lambda^2$. Sustained flux, finite pulses and the impulsive band are special cases. (iii) The outcome is controlled by the null momentum $P_+$ of the infalling matter and not by its mass moment, which is the content of the previously reported absence of an energy threshold in logarithmic time. (iv) The AdS$_2$ ends are reached by null geodesics at finite affine parameter with bounded curvature and divergent $e^{-2\phi}$; they resemble the Poincar\'e-horizon end of AdS$_2$ and the solution has no timelike conformal boundary. (v) For every nonnegative two-sided flux the singular set is a future set: the critical curve is acausal and future-trapped, no part of it is naked, and no boundary condition at the singularity is needed, in contrast with evaporating RST black holes. (vi) Once the flux has stopped, the exterior is again a Kim--Son zero-flux exterior with a larger parameter; in RST normalization the mass parameter grows by $M_\infty+P_+(\infty)^2/(2\lambda)$, the second term being the contribution of the retained wormhole state, and $e^{-2\phi}$ is nondecreasing along both the event horizon and the apparent horizon. (vii) At the right future infinity the outgoing flux tends to the Hawking value $\kappa\lambda^2/4$ minus a transient $\lambda^4e^{-2\lambda\sigma^-}$, for every flux profile. The statements (i), (ii), (v), (vi) and the affine-length bounds behind (iv) are formalized in Lean~4 with Mathlib (77 audited results, no \texttt{sorry}, standard axioms only).
 \end{abstract}
 
-\section{Fixed model and chiral solution}
-Let $\lambda>0$, $\kappa>0$, $P>0$, $M\ge0$. Retain $t_\pm=(\lambda^2/\kappa)\Theta(-x^\pm)$ and set $L=\lambda^2/\sqrt\kappa$. With onset at $x_0=0$,
-\[
-T^f_{++}=P\Theta(x_p),\qquad T^f_{--}=0.
-\]
-The Kruskal-gauge solution is $\Omega=-Lx_px_m+a_+(x_p)+a_-(x_m)$, with
-\[
-a_+(x_p)=\frac L2x_p^2\Theta(-x_p)-\frac{P}{2\sqrt\kappa}x_p^2\Theta(x_p),
-\qquad a_-(x_m)=\frac L2x_m^2\Theta(-x_m).
-\]
-The chiral constraint is $a_\pm''=\sqrt\kappa t_\pm-T^f_{\pm\pm}/\sqrt\kappa$, directly from Kim--Son's \texttt{kruskal:cons} equation and its integrated \texttt{omegasol} form, including sign and normalization~\cite{KimSon}. Define
-\[
-\Omega_s=\frac{\sqrt\kappa}{4}\left(1-\ln\frac\kappa4\right),\qquad B=\frac M\lambda+\Omega_s.
-\]
-All four sectors obey $\partial_p\partial_m\Omega=-L$ and have continuous values and first derivatives at the onset axes. At the RST minimum, $e^{-2\phi}=\kappa/4$ and $e^{2\rho}=4/\kappa$ is finite and nonzero. On the weak Lambert branch $W=W_{-1}\le-1$, $e^{-2\phi}=-\kappa W/4$, hence $e^{2\rho}=-4/(\kappa W)$ and $0<e^{2\rho}\le4/\kappa$.
+\section{Introduction}
 
-\section{Sustained-flux theorem}
-Set $p=P/\lambda^2$, $\mu=\sqrt\kappa M/\lambda^3$, $y=-x_m>0$. The normalized excess is
-\[
-F(x_p,y)=\mu+\frac{y^2}{2}+x_py-\frac p2x_p^2.
-\]
-Define $D=\sqrt{(1+p)y^2+2p\mu}$. Since $D>y$, the other root $(y-D)/p$ is negative and
-\[
-\boxed{x_{p,\mathrm{hit}}=\frac{y+D}{p}}
-\]
-is the unique positive post-onset hit. The factorization
-\[
-F=-\frac p2(x-x_{\mathrm{hit}})(x-x_-),\qquad x_-=\frac{y-D}{p}<0,
-\]
-proves $F>0$ before the hit and $F<0$ after it. Implicit differentiation gives
-\[
-\frac{dx_m}{dx_p}=-\frac{D}{x_{p,\mathrm{hit}}+y}<0,
-\]
-so the edge is spacelike. For $\mu>0$, the both-positive branch is $x_m=\mu/x_p-px_p/2$ for $0<x_p<\sqrt{2\mu/p}$, with position and slope matching at $x_p=\sqrt{2\mu/p}$. For $\mu=0$, the pre-onset line $x_p=x_m$ is already singular, so first hit means first positive post-onset hit, not first singularity globally.
+The RST model \cite{RST} is the exactly soluble semiclassical completion of the dilaton gravity of Callan, Giddings, Harvey and Strominger \cite{CGHS}. In Kruskal gauge its field equations reduce to a free equation for a single function $\Omega(x^+,x^-)$, and the quantum state of the matter enters through two chiral boundary functions $t_\pm(x^\pm)$. The familiar choices are $t_\pm=1/(4(x^\pm)^2)$, which gives the linear dilaton vacuum and evaporating black holes, and $t_\pm=0$, which gives the eternal black hole in equilibrium with thermal radiation \cite{RST,FPST,Solodukhin}.
 
-The apparent horizon on each ray is $x_{p,\mathrm{AH}}=y/p$ and
-\[
-\boxed{x_{p,\mathrm{hit}}-x_{p,\mathrm{AH}}=D/p>0.}
-\]
-The appropriate description is spacelike RST singular termination behind an apparent horizon.
+Kim and Son \cite{KimSon} observed that a third choice, a constant $t_\pm=\lambda^2/\kappa$, produces a static wormhole: $\Omega$ depends on $(x^+-x^-)^2$, the two apparent horizons coincide on the throat $x^+=x^-$, and the curvature tends to $-4\lambda^2$ far from the throat. They switched the constant off at a point, $t_\pm=(\lambda^2/\kappa)\theta(x_0-x^\pm)$, sent in an impulsive shell $T_{++}=A\,\delta(x^+-x_0)$, and found a black hole to the future. Their text attributes the collapse to the infalling matter.
 
-\begin{corollary}[Retained-state mixed-sector equivalence]
-In the alternate $t_+$-on problem, set $p_{\mathrm{eff}}=1+p$. Then $(1-p_{\mathrm{eff}})/2=-p/2$, exactly the retained Kim--Son coefficient. The step-off supplies the critical $\lambda^2$ in this comparison, so every $p>0$ corresponds to $p_{\mathrm{eff}}>1$. This is a mixed-sector coefficient equivalence, not a proof that every sector of two spacetime solutions coincides.
+This paper asks what the solution does for general incoming flux, and what its global structure is. The answers are elementary but, as far as a bounded literature search shows, they are not stated in the literature, and two of them change how the Kim--Son solution should be read.
+
+\paragraph{Results.}
+\begin{enumerate}
+\item \emph{Derivation} (Section~\ref{sec:model}). The solution in all four sectors is derived from the constraint equations, with every integration constant fixed. The printed Kim--Son solution is recovered.
+\item \emph{Zero-flux structure} (Theorem~\ref{thm:zero}). With $A=0$ the spacetime already contains a black hole. The switch-off of $t_\pm$ is the cause of the collapse.
+\item \emph{Total-flux criterion} (Theorem~\ref{thm:flux}). For monotone cumulative flux $Q$, the ray $x^-=-y$ is captured iff $y<\Etot$. Corollaries give closed formulas for sustained flux, finite pulses and impulsive shells, the spacelike character of the critical curve, and the position of the event horizon.
+\item \emph{State dependence} (Proposition~\ref{prop:state}). If $t_+$ is not switched off, a sustained flux captures outgoing rays iff it exceeds the critical value $P=\lambda^2$.
+\item \emph{Global causal structure} (Theorem~\ref{thm:global}). With nonnegative flux in both chiral sectors, the causal future of any point with $\Fh\le0$ has $\Fh<0$. The critical curve is acausal and never naked, so the solution is determined without a boundary condition at the singularity. Both event horizons are located.
+\item \emph{Final state} (Propositions~\ref{prop:late}, \ref{prop:mono} and~\ref{prop:radiation}). After the flux ends the exterior is a zero-flux Kim--Son exterior with parameter $\mu_f=\mu+m_1+\Etot^2/2$. The value of $\Omega$ is monotone along both horizons. The outgoing flux at future infinity is thermal up to a universal decaying transient.
+\item \emph{Ends and clocks} (Propositions~\ref{prop:affine} and~\ref{prop:sym}). The AdS$_2$ ends are at finite affine distance, at most $2/\lambda^2$ beyond unit coordinate separation. The static time of the wormhole is linear in $x^\pm$, while the logarithmic time is natural only at the future linear-dilaton end.
+\end{enumerate}
+
+\paragraph{Relation to earlier work.}
+The general-infall solution of the classical model, with mass function $M(x^+)$ and momentum function $P_+(x^+)$, apparent horizon $x^-=-P_+(x^+)/\lambda^2$ and event horizon $x^-=-P_+(\infty)/\lambda^2$, is standard \cite{RST,Thorlacius,Strominger}. Theorem~\ref{thm:flux} is its analogue on the Kim--Son state, and the first term of the mass formula in Proposition~\ref{prop:late} is the classical mass function \cite{Thorlacius}. That the singularity of a black hole formed by positive-energy infall is spacelike is likewise standard in the classical model \cite{CGHS,Strominger}; Theorem~\ref{thm:global} is the corresponding statement here, where it holds for the full semiclassical solution because the state to the future of the switch-off is the equilibrium one. In the evaporating solutions of \cite{RST} the critical curve instead becomes timelike and a boundary condition is required. The difference lies in the term $y^2/2$ contributed by the retained outgoing state, in the critical value $\Omega_s$ replacing $e^{-2\phi}=0$, and in the treatment of measures with atoms. Hayward, Kim and Lee \cite{HKL} found that a classical dilatonic wormhole supported by ghost radiation collapses under an arbitrarily weak pulse of positive energy, and also when the ghost radiation is turned off; see also \cite{Koyama}. Theorem~\ref{thm:zero} is the semiclassical counterpart of the second statement, with the constant $t_\pm$ in the role of the ghost radiation. Hybrid choices of $t_\pm$ in the RST model are studied in \cite{Potaux}. A companion wormhole solution is given in \cite{KimSonYoon}, and AdS$_2$ geometries in the CGHS model are discussed in \cite{KimAdS}. INSPIRE lists two papers citing \cite{KimSon}; neither addresses the questions treated here. We make no claim of priority beyond this bounded search.
+
+\paragraph{Conventions.} $\lambda>0$, $\kappa>0$, and
+\[
+L=\frac{\lambda^2}{\sqrt\kappa},\qquad \Omega_s=\frac{\sqrt\kappa}{4}\Bigl(1-\ln\frac\kappa4\Bigr),\qquad \mu=\frac{\sqrt\kappa\,M}{\lambda^3}>0 .
+\]
+We write $x_p=x^+$ and $x_m=x^-$, place the switch-off point at $x_0=0$, and use $y=-x_m>0$ on outgoing rays that start in the wormhole region.
+
+\section{Model and derivation from the constraints}\label{sec:model}
+
+In conformal gauge $ds^2=-e^{2\rho}dx^+dx^-$ the RST action is free in the variables \cite{RST,KimSon}
+\[
+\Omega=\frac{\sqrt\kappa}{2}\phi+\frac{e^{-2\phi}}{\sqrt\kappa},\qquad \chi=\sqrt\kappa\,\rho-\frac{\sqrt\kappa}{2}\phi+\frac{e^{-2\phi}}{\sqrt\kappa},
+\]
+with $\partial_+\partial_-(\chi-\Omega)=0$. In Kruskal gauge $\chi=\Omega$, that is $\rho=\phi$, the equations of motion and constraints become
+\begin{equation}\label{eq:eom}
+\partial_+\partial_-\Omega=-L,\qquad \kappa\,t_\pm(x^\pm)=\sqrt\kappa\,\partial_\pm^2\Omega+T^f_{\pm\pm},\qquad T^f_{\pm\pm}=\tfrac12\sum_i(\partial_\pm f_i)^2 .
+\end{equation}
+
+\begin{lemma}[Range of $\Omega$]\label{lem:omega}
+The function $\phi\mapsto\Omega(\phi)$ has a unique critical point at $e^{-2\phi_s}=\kappa/4$, where $\Omega(\phi_s)=\Omega_s$, and $\Omega(\phi)\ge\Omega_s$ for all $\phi$. On the weak-coupling branch $\phi\le\phi_s$ one has $e^{2\rho}=e^{2\phi}\le 4/\kappa$, and
+\begin{equation}\label{eq:bound}
+e^{2\rho}\le\frac{1}{\sqrt\kappa\,\Omega}\qquad\text{whenever }\phi\le0<\Omega .
+\end{equation}
+Moreover, for every $\kappa>0$, on the weak-coupling branch and with $\Omega=\Omega_s+L\Fh$,
+\begin{equation}\label{eq:branch}
+\frac\kappa4+\lambda^2\Fh\;\le\;e^{-2\phi}\;\le\;2\sqrt\kappa\,\Omega+\frac\kappa2\Bigl(\ln\frac\kappa2-1\Bigr),
+\qquad\text{so}\qquad e^{2\rho}\le\frac{1}{\kappa/4+\lambda^2\Fh}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+$\Omega'(\phi)=\sqrt\kappa/2-2e^{-2\phi}/\sqrt\kappa$ vanishes only at $e^{-2\phi}=\kappa/4$. From $e^{t}\ge1+t$ with $t=-2\phi-\ln(\kappa/4)$ one gets $e^{-2\phi}\ge(\kappa/4)(1-2\phi-\ln(\kappa/4))$, which is $\Omega\ge\Omega_s$. For \eqref{eq:bound}, $\sqrt\kappa\,\Omega=\kappa\phi/2+e^{-2\phi}\le e^{-2\phi}$ when $\phi\le0$. For \eqref{eq:branch} put $u=e^{-2\phi}\ge\kappa/4$, so that $u-(\kappa/4)\ln u=\sqrt\kappa\,\Omega=(\kappa/4)(1-\ln(\kappa/4))+\lambda^2\Fh$. The lower bound follows from $\ln u\ge\ln(\kappa/4)$. The upper bound follows from $\ln(2u/\kappa)\le2u/\kappa-1$, which gives $(\kappa/4)\ln u\le u/2+(\kappa/4)(\ln(\kappa/2)-1)$.
+\end{proof}
+
+Here $\Fh$ anticipates the notation introduced next. Solutions exist only where $\Omega\ge\Omega_s$. The curve $\Omega=\Omega_s$ is the edge of the weak-coupling branch; the curvature diverges there wherever $\partial_+\Omega\,\partial_-\Omega\neq0$ \cite{RST}. We call it the \emph{critical curve}, and we write
+\[
+\Omega=\Omega_s+L\,\Fh ,
+\]
+so that the solution exists where $\Fh\ge0$ and the critical curve is $\Fh=0$.
+
+\begin{proposition}[Chiral integration]\label{prop:chiral}
+Let $t_\pm=(\lambda^2/\kappa)\theta(-x^\pm)$, $T^f_{--}=0$, and let the incoming flux be a nonnegative measure $dT_{++}$ supported in $x_p\ge0$, with cumulative function
+\[
+Q(x)=\frac1{\lambda^2}\int_{[0,x]}dT_{++},\qquad A(x)=\int_0^xQ(s)\,ds .
+\]
+The solution of \eqref{eq:eom} that is $C^1$ across $x_m=0$, continuous across $x_p=0$, and equal to the static Kim--Son wormhole of throat parameter $M$ for $x_p,x_m<0$ is
+\begin{equation}\label{eq:Fhat}
+\Fh(x_p,x_m)=\mu-x_px_m+a(x_p)+a(x_m)-A(x_p),\qquad a(x)=\tfrac12x^2\,\theta(-x).
+\end{equation}
+Explicitly,
+\begin{align}
+\text{pre-onset }(x_p,x_m\le0):&\quad \Fh=\mu+\tfrac12(x_p-x_m)^2, \label{eq:pre}\\
+\text{mixed }(x_p\ge0,\ x_m=-y\le0):&\quad \Fh=\mu+\tfrac12y^2+y\,x_p-A(x_p), \label{eq:mixed}\\
+\text{both-positive }(x_p,x_m\ge0):&\quad \Fh=\mu-x_px_m-A(x_p), \label{eq:post}\\
+\text{mirror }(x_p\le0\le x_m):&\quad \Fh=\mu-x_px_m+\tfrac12x_p^2 . \label{eq:mirror}
+\end{align}
+\end{proposition}
+\begin{proof}
+The general solution of the first equation in \eqref{eq:eom} is $\Omega=-Lx_px_m+a_+(x_p)+a_-(x_m)$. Dividing the constraint by $\sqrt\kappa L$ gives $a_\pm''/L=(\kappa/\lambda^2)t_\pm-T^f_{\pm\pm}/\lambda^2$, so $a_-''/L=\theta(-x_m)$ and $a_+''/L=\theta(-x_p)-dT_{++}/\lambda^2$. The function $a(x)=\tfrac12x^2\theta(-x)$ has $a'(x)=\min(x,0)$, which is continuous, and $a''=\theta(-x)$ away from $0$. The function $A$ is continuous, vanishes for $x\le0$, and has distributional second derivative $dT_{++}/\lambda^2$. The remaining freedom is an affine function of $x_p$ and of $x_m$. Matching \eqref{eq:pre}, which is Kim and Son's static solution with $D$ eliminated in favour of $M$, fixes it to the constant $\mu$ and no linear terms. An atom of $dT_{++}$ at $x_p$ makes $\partial_p\Fh$ jump by minus its weight, as it must.
+\end{proof}
+
+For $dT_{++}=A_{\rm KS}\,\delta(x_p)$ one has $Q=\alpha\,\theta(x)$ with $\alpha=A_{\rm KS}/\lambda^2$ and $A(x)=\alpha x\,\theta(x)$, and \eqref{eq:Fhat} is the solution printed in \cite{KimSon} after the shift $x^\pm\to x^\pm-x_0$. For constant density $T_{++}=P\,\theta(x_p)$ one has $Q=px$, $A=px^2/2$ with $p=P/\lambda^2$.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=0.82]
+\clip (-5.2,-4.2) rectangle (5.2,5.2);
+% coordinates: (X,T) = (xp - xm, xp + xm)
+\fill[gray!12] (0,0) -- (-6,-6) -- (6,-6) -- cycle;
+\draw[thick] (-6,-6) -- (6,6);
+\draw[thick] (6,-6) -- (-6,6);
+\node[rotate=45] at (-3.45,-2.95) {\small $x_m=0$};
+\node[rotate=-45] at (3.45,-2.95) {\small $x_p=0$};
+\draw[dashed] (0,0) -- (0,-6);
+\node[right] at (0,-3.4) {\small throat $x_p=x_m$};
+\node at (-0.95,-2.0) {\small wormhole};
+\node at (-2.9,-0.3) {\small mirror};
+\node at (3.1,-1.3) {\small mixed};
+% zero-flux wall: xp*xm = mu = 1 : T^2 - X^2 = 4
+\draw[very thick,dashed,domain=-4.6:4.6,samples=80,variable=\t] plot ({\t},{sqrt(4+\t*\t)});
+\node at (0,3.35) {\small no matter: $x_px_m=\mu$};
+% impulse alpha = 1, mu = 1: both-positive z = 1/x - 1, x in (0.19,1]; mixed x = (1+y^2/2)/(1-y)
+\draw[very thick,domain=0.19:1,samples=60,variable=\t] plot ({\t-(1/\t-1)},{\t+(1/\t-1)});
+\draw[very thick,domain=0:0.72,samples=60,variable=\t] plot ({(1+\t*\t/2)/(1-\t)+\t},{(1+\t*\t/2)/(1-\t)-\t});
+\node (shell) at (1.62,0.5) {\footnotesize shell: $\Fh=0$};
+\draw[->,thin] (shell) -- (1.5,1.05);
+% event horizon x_m = -alpha = -1 : T = X - 2
+\draw[thick,dotted] (0.5,-1.5) -- (7,5);
+\node[rotate=45] at (3.95,1.35) {\small $x_m=-\Etot$};
+\end{tikzpicture}
+\caption{Kruskal plane with $x_p$ increasing to the upper right and $x_m$ to the upper left ($\mu=1$). Shaded: the static wormhole region. Dashed curve: the critical curve with no classical matter, $x_px_m=\mu$ (Theorem~\ref{thm:zero}). Solid curve: the critical curve for an impulsive shell with $\Etot=\alpha=1$ sent in along $x_p=0$. Dotted line: the event horizon $x_m=-\Etot$ of Corollary~\ref{cor:horizon}. Outgoing rays with $0<y<\Etot$ end on the solid curve; rays with $y>\Etot$ escape to the right.}
+\label{fig:plane}
+\end{figure}
+
+\section{No classical matter: the wormhole is glued to a black hole}\label{sec:zero}
+
+\begin{theorem}[Zero-flux structure]\label{thm:zero}
+Let $dT_{++}=0$ and $\mu>0$. Then:
+\begin{enumerate}
+\item The solution is
+\begin{equation}\label{eq:glue}
+\Omega=\underbrace{\Omega_s+L(\mu-x_px_m)}_{\Omega_{\rm BH}}+\frac L2\Bigl[x_p^2\,\theta(-x_p)+x_m^2\,\theta(-x_m)\Bigr],
+\end{equation}
+where $\Omega_{\rm BH}$ is the static $t_\pm=0$ solution of the RST model, the eternal black hole in the Hartle--Hawking state, with mass parameter $M_{\rm BH}/(\lambda\sqrt\kappa)=\Omega_s+M/\lambda$.
+\item In the quadrant $x_p>0$, $x_m>0$ the solution coincides with $\Omega_{\rm BH}$. The critical curve there is the hyperbola $x_m=\mu/x_p$, which is spacelike, and the quadrant is trapped: $\partial_+\Omega=-Lx_m<0$ and $\partial_-\Omega=-Lx_p<0$.
+\item The pre-onset, mixed and mirror sectors are regular: $\Fh\ge\mu>0$ there.
+\item If $t_\pm$ are not switched off, $\Fh=\mu+\tfrac12(x_p-x_m)^2$ on the whole plane and there is no critical curve.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Item 1 is \eqref{eq:Fhat} with $A=0$; the $t_\pm=0$ static family of \cite{RST} is $\Omega=-Lx_px_m+M_{\rm BH}/(\lambda\sqrt\kappa)$, identified as the thermal-equilibrium (Hartle--Hawking) black hole in \cite{RST,FPST,Solodukhin}. Item 2: $\Fh=\mu-x_px_m$ by \eqref{eq:post}, so $\Fh=0$ iff $x_m=\mu/x_p$, with slope $dx_m/dx_p=-\mu/x_p^2<0$; a curve in null coordinates is spacelike iff its slope is negative. Since $\Omega$ is strictly decreasing in $\phi$ on the weak branch, $\partial_\pm\Omega<0$ means $e^{-2\phi}$ decreases along both future null directions. Item 3 follows from \eqref{eq:pre}, \eqref{eq:mixed} and \eqref{eq:mirror} with $A=0$, since $y\,x_p\ge0$ and $-x_px_m\ge0$ in the respective sectors. Item 4: with $t_\pm=\lambda^2/\kappa$ everywhere, $a(x)=x^2/2$ for all $x$.
+\end{proof}
+
+Equation \eqref{eq:glue} says that the Kim--Son spacetime, before any matter is added, is the Hartle--Hawking black hole modified only in $x^\pm<0$. The modification replaces the past interior and its singularity by the regular static wormhole and deforms the two exterior wedges. The future interior is untouched. The black hole that Kim and Son find after the shell is therefore already present without it. The shell moves the horizon from $x_m=0$ to $x_m=-\alpha$ and extends the critical curve into the mixed sector (Figure~\ref{fig:plane}).
+
+The physical reading is direct. Kim and Son find $\langle T^f_{--}\rangle\to-\lambda^2\,\theta(x_0-x^-)$ at the past null boundary they call $\mathcal I^-_L$, a constant negative value in Kruskal coordinates wherever $t_-=\lambda^2/\kappa$ \cite{KimSon}. That negative flux holds the throat open. Its removal at $x^\pm=0$, and not the arrival of matter, is what closes the wormhole. This is the semiclassical counterpart of the classical result of \cite{HKL} that a dilatonic wormhole collapses when its supporting ghost radiation is turned off.
+
+\begin{remark}
+The state $t_\pm=0$ for $x^\pm>0$ is not the vacuum at the future end: the linear dilaton vacuum has $t_\pm=1/(4(x^\pm)^2)$. The future region contains the thermal radiation of the Hartle--Hawking state. Whether the switch-off at a point is a physically admissible state is a separate question that we do not address.
+\end{remark}
+
+\section{The total-flux criterion}\label{sec:flux}
+
+Positivity of the incoming flux is the statement that $Q$ is monotone. Jumps of $Q$ are impulsive shells. We set
+\[
+C=\mu+\tfrac12y^2,\qquad F(x)=\Fh(x,-y)=C+y\,x-\int_0^xQ(s)\,ds,\qquad \Etot=\sup_xQ(x)\in[0,\infty].
+\]
+
+\begin{theorem}[Total-flux criterion]\label{thm:flux}
+Let $Q:\mathbb R\to\mathbb R$ be monotone and let $C>0$. Then:
+\begin{enumerate}
+\item If $F(a)\le0$ for some $a\ge0$, then $Q(a)>y$, and $F(b)<0$ for every $b>a$.
+\item There is $x>0$ with $F(x)=0$ if and only if $Q(s)>y$ for some $s$, that is, iff $y<\Etot$.
+\item When it exists, the zero $x_{\rm hit}$ is unique, $F>0$ on $[0,x_{\rm hit})$ and $F<0$ on $(x_{\rm hit},\infty)$.
+\item If $Q\le y$ everywhere, then $F(x)\ge C>0$ for all $x\ge0$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+For $a\le b$, $F(b)-F(a)=\int_a^b(y-Q)$. (1) If $Q(a)\le y$ then $Q\le y$ on $[0,a]$ by monotonicity, so $F(a)\ge F(0)=C>0$. Hence $F(a)\le0$ forces $Q(a)>y$, and then $F(b)-F(a)\le(y-Q(a))(b-a)<0$. (4) is the first sentence applied to every $a$. (2) If $F(x)=0$ then $Q(x)>y$ by (1). Conversely let $Q(s)>y$ and $a=\max(s,0)$. For $b\ge a$, $F(b)\le F(a)-(Q(a)-y)(b-a)$, which is negative for large $b$. $F$ is continuous because $Q$ is locally integrable, and $F(0)=C>0$, so $F$ has a zero in $(0,b)$. (3) Two zeros $a<b$ would contradict (1), and $F(x)\le0$ at some $x<x_{\rm hit}$ would give $F(x_{\rm hit})<0$.
+\end{proof}
+
+No continuity, density or compact-support hypothesis on the flux is used. The proof is formalized as \lean{hit\_iff}, \lean{existsUnique\_hit}, \lean{Fray\_neg\_after}, \lean{Fray\_pos\_before}, \lean{Q\_gt\_of\_Fray\_nonpos} and \lean{no\_hit\_of\_le}.
+
+\begin{corollary}[Critical curve, apparent horizon, event horizon]\label{cor:horizon}
+In the mixed sector:
+\begin{enumerate}
+\item The apparent horizon $\partial_+\Omega=0$ is the curve $x_m=-Q(x_p)$. Every captured ray crosses it strictly before reaching the critical curve.
+\item Where $Q$ is continuous the critical curve has slope $dx_m/dx_p=-(Q-y)/(x_p+y)<0$. It is spacelike.
+\item Along a captured ray the affine parameter to the critical curve is at most $4x_{\rm hit}/\kappa$.
+\item If $\Etot<\infty$, the outgoing rays with $y>\Etot$ reach $x_p\to\infty$ at infinite affine parameter, and those with $0<y<\Etot$ do not. The line $x_m=-\Etot$ is the event horizon of the right future infinity. If $\Etot=\infty$ no outgoing ray from the wormhole region escapes.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(1) $\partial_p\Fh=y-Q(x_p)$ in the mixed sector, positive at $x_p=0^-$ and negative at the hit by Theorem~\ref{thm:flux}(1). (2) Implicit differentiation of $\Fh(x_p,x_m)=0$ with $\partial_m\Fh=-(x_p+y)$. (3) The affine parameter is $\int e^{2\rho}dx_p$ and $e^{2\rho}\le4/\kappa$ by Lemma~\ref{lem:omega}. (4) For $y>\Etot$, $C+(y-\Etot)x\le F(x)\le C+y\,x$, and completeness follows from Proposition~\ref{prop:affine}(2). For $y<\Etot$ the ray is captured by Theorem~\ref{thm:flux}. The ray $y=\Etot$ itself has $F\ge C>0$ and is not captured.
+\end{proof}
+
+Items 1 and 4 are the direct analogues of the classical formulas $x^-_A=-P_+(x^+)/\lambda^2$ and $x^-_H=-P_+(\infty)/\lambda^2$ \cite{Thorlacius}: here $Q=P_+/\lambda^2$.
+
+\begin{corollary}[Sustained flux]\label{cor:sustained}
+For $T_{++}=P\,\theta(x_p)$ with $p=P/\lambda^2>0$, every outgoing ray $y>0$ is captured, at
+\begin{equation}\label{eq:xhit}
+x_{\rm hit}=\frac{y+D}{p},\qquad D=\sqrt{(1+p)y^2+2p\mu},
+\end{equation}
+after crossing the apparent horizon at $x_p=y/p<x_{\rm hit}$. The slope of the critical curve is $-D/(x_{\rm hit}+y)$. As $p\to0^+$ at fixed $y$, $x_{\rm hit}\sim 2y/p\to\infty$.
+\end{corollary}
+\begin{proof}
+$Q=px$ is unbounded, so Theorem~\ref{thm:flux} applies to every $y$. $F=C+yx-px^2/2$ has roots $(y\pm D)/p$ and $D>y$, so only the upper root is positive. $y-px_{\rm hit}=-D$.
+\end{proof}
+
+\begin{corollary}[Finite pulse]\label{cor:pulse}
+For $T_{++}=P$ on $0\le x_p\le s$ and zero afterwards, $\Etot=ps$. Rays with $y\ge\Etot$ escape. Rays with $0<y<\Etot$ are captured: during the pulse, at \eqref{eq:xhit}, if $y\le y_{\max}=-s+\sqrt{(1+p)s^2-2\mu}$ (a nonempty range iff $ps^2>2\mu$), and otherwise after it, at
+\[
+x_{\rm after}=\frac{\mu+\tfrac12y^2+\tfrac12\Etot s}{\Etot-y}>s .
+\]
+\end{corollary}
+\begin{proof}
+For $x\ge s$, $\int_0^xQ=\Etot(x-s/2)$, so $F$ is linear with slope $y-\Etot$. The ray is captured during the pulse iff $F(s)\le0$, which is $y^2/2+ys+\mu-ps^2/2\le0$.
+\end{proof}
+
+\begin{corollary}[Impulsive shell]\label{cor:impulse}
+For $dT_{++}=\alpha\lambda^2\,\delta(x_p)$ the ray $y$ is captured iff $y<\alpha$, at $x_{\rm hit}=(\mu+y^2/2)/(\alpha-y)$. This is the Kim--Son black hole \cite{KimSon}.
 \end{corollary}
 
-\section{Finite forward null affine parameter and interior controls}
-For a fixed-$x_m$ null geodesic,
-\[
-\frac{dx_p}{d\ell}=Ce^{-2\rho},\qquad d\ell=\frac{e^{2\rho}}C dx_p.
-\]
-On $W_{-1}\le-1$, $0<e^{2\rho}\le4/\kappa$, hence
-\[
-\ell_{\mathrm{hit}}-\ell_i=\frac1C\int_{x_i}^{x_{\mathrm{hit}}}e^{2\rho}dx_p\le\frac{4(x_{\mathrm{hit}}-x_i)}{C\kappa}<\infty.
-\]
-Use
-\[
-x_p=e^{\lambda(\sigma_0+\sigma_1)},\qquad x_m=-e^{-\lambda(\sigma_0-\sigma_1)}.
-\]
-Then
-\[
-ds^2=-\lambda^2K e^{2\rho}(d\sigma_0^2-d\sigma_1^2),\qquad K=e^{2\lambda\sigma_1}.
-\]
-Constant-$\sigma_1$ curves are timelike with $d\tau=\lambda\sqrt K e^\rho d\sigma_0$. With $R=-x_m/x_p=e^{-2\lambda\sigma_0}$, the wall root is
-\[
-R_w=\sqrt{(1+\mu/K)^2+p}-(1+\mu/K),\qquad \sigma_{0,w}=-\frac{\ln R_w}{2\lambda}.
-\]
-Every such interior curve reaches the wall at finite $\sigma_0$ and finite proper time from any finite earlier coordinate. These are generally accelerated, already trapped interior curves. The result is a consistency control, not an all-geodesics or future-asymptotic-observer theorem.
+\begin{proposition}[Rays in the both-positive quadrant]\label{prop:post}
+Every ray $x_m=z>0$ reaches the critical curve, at the unique $x_p>0$ with $x_pz+A(x_p)=\mu$, for any nonnegative flux including none.
+\end{proposition}
+\begin{proof}
+By \eqref{eq:post}, $\Fh=\mu-x_pz-A(x_p)$, and $x\mapsto xz+A(x)$ is continuous and strictly increasing from $0$ to $\infty$.
+\end{proof}
 
-\section{Finite Kruskal-support pulse}
-For $s=x_s>0$, prescribe
-\[
-T^f_{++}=P[\Theta(x_p)-\Theta(x_p-s)],\qquad T^f_{--}=0.
-\]
-The $C^1$ chiral function is
-\[
-a_+(x)=\begin{cases}
-(L/2)x^2,&x<0,\\
--(P/2\sqrt\kappa)x^2,&0<x<s,\\
--(Ps/\sqrt\kappa)(x-s/2),&x>s.
-\end{cases}
-\]
-Set $E=ps$. On $x_m=-y$,
-\[
-F(x,y)=\begin{cases}
-\mu+y^2/2+xy-px^2/2,&0<x<s,\\
-\mu+y^2/2+Es/2+x(y-E),&x>s.
-\end{cases}
-\]
-A unique positive post-onset hit exists exactly for $0<y<E$. During the pulse, $x_{p,d}=(y+D)/p$. Define $y_{\max}=\sqrt{(1+p)s^2-2\mu}-s$. Then $0<y<y_{\max}$ hits before shutoff, $y=y_{\max}$ hits at shutoff, and $y>y_{\max}$ with $y<E$ hits afterward:
-\[
-x_{p,a}=\frac{\mu+y^2/2+Es/2}{E-y}>s,\qquad x_{p,a}-s=\frac{F_d(s)}{E-y}.
-\]
-Necessity is direct: a pre-shutoff hit requires $y<y_{\max}<E$; if no hit has occurred by $s$, the after branch is linear with positive value at $s$ and can cross zero only when its slope $y-E$ is negative. If the radicand is negative or $y_{\max}\le0$, all rays in $0<y<E$ hit afterward. After shutoff, $dx_m/dx_p=(y-E)/(x_{p,a}+y)<0$, so the wall remains spacelike.
+Theorem~\ref{thm:flux} and Proposition~\ref{prop:post} together describe the whole future of the wormhole. The role of the classical matter is quantitative: it decides which outgoing rays that start in the wormhole region are captured.
 
-For $\mu>0$, the both-positive formulas are
+\section{Two-sided flux and the global causal structure}\label{sec:global}
+
+Let the outgoing sector carry matter as well: a nonnegative measure $dT_{--}$ supported in $x_m\ge0$, with cumulative function $Q_-$ and $A_-(x)=\int_0^xQ_-$. Write $Q_+=Q$ and $A_+=A$ for the incoming sector. The integration of Proposition~\ref{prop:chiral} is unchanged and gives
+\begin{equation}\label{eq:two}
+\Fh(x_p,x_m)=\mu-x_px_m+a(x_p)+a(x_m)-A_+(x_p)-A_-(x_m),
+\end{equation}
+which is symmetric under $x_p\leftrightarrow x_m$, $Q_+\leftrightarrow Q_-$. In the mixed sector $A_-(x_m)=0$, so Theorem~\ref{thm:flux} holds as stated. In the mirror sector the same theorem applies to the ingoing ray $x_p=-y'$ with $Q_-$ in place of $Q$. Write $E_\pm=\sup Q_\pm$.
+
+\begin{theorem}[Global causal structure]\label{thm:global}
+Let $Q_\pm$ be monotone with $Q_\pm(0)\ge0$ and let $\mu>0$. If $\Fh(x_1,z_1)\le0$, $x_1\le x_2$, $z_1\le z_2$ and $(x_1,z_1)\ne(x_2,z_2)$, then $\Fh(x_2,z_2)<0$.
+\end{theorem}
+\begin{proof}
+It suffices to treat a step along one null direction, since the two steps can be composed and the statement is symmetric. Let $\Fh(a,z)\le0$ and $b>a$. If $z>0$, then $x\mapsto\Fh(x,z)$ is strictly decreasing, because $-xz$ is strictly decreasing and $a(x)$, $-A_+(\max(x,0))$ are nonincreasing. If $z\le0$, then $a>0$, since \eqref{eq:pre} gives $\Fh\ge\mu>0$ for $x_p\le0$; so both points lie in the mixed sector, where $\Fh(x,z)=F(x)$ with $y=-z$, and Theorem~\ref{thm:flux}(1) gives $F(b)<0$.
+\end{proof}
+
+\begin{corollary}\label{cor:global}
+Under the hypotheses of Theorem~\ref{thm:global}:
+\begin{enumerate}
+\item The region $\{\Fh>0\}$ is a past set. It is connected and contains the wormhole region; it is the spacetime.
+\item No two distinct points of the critical curve $\{\Fh=0\}$ are causally related. The curve is the graph of a strictly decreasing function, with both one-sided null derivatives of $\Fh$ negative on it. It is spacelike wherever it is differentiable and it lies in a future-trapped region.
+\item No future-directed causal curve leaves the critical curve into the spacetime. The solution in $\{\Fh>0\}$ is therefore fixed by the data on the past null boundaries alone, with no boundary condition imposed at the critical curve.
+\item The ingoing ray $x_p=-y'$, $y'\ge0$, is captured iff $y'<E_-$. The lines $x_m=-E_+$ and $x_p=-E_-$ are the event horizons of the right and left future infinities. The black-hole region $\{x_m\ge-E_+,\ x_p\ge-E_-\}$ contains the throat points with static time $t=(x_p+x_m)/2\ge-\min(E_+,E_-)$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(1) is the contrapositive of the theorem; every point of $\{\Fh>0\}$ has points of the pre-onset quadrant in its past, and that quadrant is connected with $\Fh\ge\mu$. (2) The first sentence is the theorem with $\Fh(x_2,z_2)=0$. At a critical point with $x_m>0$, $\partial_p\Fh\le-x_m<0$ from either side; at one with $x_m\le0$, $\partial_p\Fh=y-Q(x_p^\pm)<0$ by Theorem~\ref{thm:flux}(1); the same holds for $\partial_m$. (3) restates the theorem. (4) is Theorem~\ref{thm:flux} and Corollary~\ref{cor:horizon}(4) under the exchange symmetry.
+\end{proof}
+
+In Lean the theorem is \lean{singular\_future}. Items 1, 2 and 4 of the corollary are \lean{regular\_past}, \lean{critical\_curve\_achronal} and \lean{mirror\_hit\_iff}; the Lean statement of item 2 is its first sentence, which is acausality.
+
+\paragraph{Contrast with evaporation.} In the evaporating black holes of \cite{RST} the critical curve is spacelike only until it meets the apparent horizon. Beyond that point it is timelike and naked, and the solution to its future depends on a boundary condition that has to be supplied there. Theorem~\ref{thm:global} shows that nothing of this kind happens on the Kim--Son state, for any nonnegative flux in either sector, impulsive or not. The reason is visible in \eqref{eq:two}: to the future of the switch-off the boundary functions vanish, which is the equilibrium state, and the classical flux is nonnegative, so no term can raise $\Fh$ along a future null direction once the critical curve has been reached. The collapse of the Kim--Son wormhole is in this sense a complete and self-contained exactly solvable process. The price is that the black hole does not evaporate (Proposition~\ref{prop:radiation}).
+
+\paragraph{How long the wormhole is traversable.} Outgoing rays start at the left AdS$_2$ end, cross the throat at static time $t=-y$, and by Theorem~\ref{thm:flux} reach the right future infinity iff $y\ge E_+$. With no matter the last ray to traverse crosses the throat at $t=0$, the switch-off time. Infalling matter with total null momentum $P_+(\infty)$ advances this by exactly $E_+=P_+(\infty)/\lambda^2$ in static time, whatever its profile; outgoing matter does the same for the opposite direction with $E_-$.
+
+\section{After the flux: mass parameter, horizons, outgoing radiation}\label{sec:final}
+
+We return to one-sided flux and assume that it ends: $Q(x)=\Etot$ for $x\ge s$. Define the first moment
 \[
-x_m=\begin{cases}
-\mu/x_p-px_p/2,&0<x_p<s,\\
-(\mu+Es/2)/x_p-E,&x_p>s.
-\end{cases}
+m_1=\int_0^{s}\bigl(\Etot-Q(x)\bigr)\,dx=\int x\,dQ(x)=\frac{M_\infty}{\lambda^3},\qquad M_\infty=\lambda\int x_p\,dT_{++}.
 \]
-The during domain is $0<x_p<\min(s,\sqrt{2\mu/p})$. Writing $x_0=s/2+\mu/E$, the after formula satisfies $x_m=E(x_0/x_p-1)$, so the after domain is
+
+\begin{proposition}[Late exterior and final mass parameter]\label{prop:late}
+For $x_p\ge s$ and $x_m=-y\le0$,
+\begin{equation}\label{eq:late}
+\Fh=\mu_f+\tfrac12\tilde y^{\,2}+\tilde y\,\tilde x_p,\qquad \tilde y=y-\Etot,\quad \tilde x_p=x_p+\Etot,\quad \mu_f=\mu+m_1+\tfrac12\Etot^2 .
+\end{equation}
+Hence in the exterior $x_p\ge s$, $x_m\le-\Etot$ the solution is the zero-flux solution \eqref{eq:mixed} with $\mu$ replaced by $\mu_f$, in the shifted Kruskal coordinates $(x_p+\Etot,\,x_m+\Etot)$. One has $m_1\ge0$. In the normalization of Theorem~\ref{thm:zero}(1) the mass parameter of the black hole increases by
+\begin{equation}\label{eq:mass}
+\Delta M_{\rm BH}=M_\infty+\frac{P_+(\infty)^2}{2\lambda}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+For $x\ge s$, $\int_0^xQ=\int_0^sQ+\Etot(x-s)$, so $F(x)=\mu+\tfrac12y^2+yx-\Etot x+m_1$. Substituting $y=\tilde y+\Etot$ and $x=\tilde x_p-\Etot$ gives \eqref{eq:late}. The comparison with \eqref{eq:mixed} requires $\tilde x_p\ge0$ and $\tilde y\ge0$. Finally $L\,(\mu_f-\mu)=\Delta M_{\rm BH}/(\lambda\sqrt\kappa)$ with $\Etot=P_+(\infty)/\lambda^2$.
+\end{proof}
+
+The first term of \eqref{eq:mass} is the classical result: the mass of a black hole formed by infall is the moment $M_\infty$ \cite{RST,Thorlacius}. The second term has no classical counterpart. It arises because the matter moves the horizon from $x_m=0$ to $x_m=-\Etot$, into the region where the outgoing boundary function is still switched on, and that region contributes $\tfrac12y^2$ to $\Fh$. For the impulsive shell of \cite{KimSon}, $m_1=0$ and $\mu_f=\mu+\alpha^2/2$. The identification is restricted to the exterior: for $-\Etot<x_m\le0$ formula \eqref{eq:late} still holds, but the zero-flux solution has no term $\tfrac12\tilde y^{\,2}$ there, so the interiors differ. We use the words mass parameter for the constant in $\Omega$, as in Theorem~\ref{thm:zero}; we do not claim that it is the ADM or Bondi energy at the future end, where the state carries a nonvanishing flux. Lean: \lean{Fray\_late}, \lean{late\_exterior\_eq\_zero\_flux}, \lean{first\_moment\_nonneg}.
+
+\begin{proposition}[Monotonicity along the horizons]\label{prop:mono}
+For monotone $Q$ with $0\le Q\le\Etot<\infty$, the function $\Fh$ is nondecreasing in $x_p\ge0$ along the event horizon $x_m=-\Etot$, where
 \[
-\boxed{s<x_p<x_0,\qquad \mu>Es/2.}
+\Fh=\mu+\tfrac12\Etot^2+\int_0^{x_p}\bigl(\Etot-Q\bigr)\ \longrightarrow\ \mu_f ,
 \]
-If $x_0\le s$, no after-shutoff both-positive segment exists. The exact invariant is $x_0-s=(2\mu-Es)/(2E)$. Consequently:
-\begin{center}
-\begin{tabular}{lll}
-Mass & Mixed-ray termination & After both-positive branch\\
-$\mu<Es/2$ & $0<y<y_{\max}$ during; $y_{\max}<y<E$ after & Absent\\
-$\mu=Es/2$ & All mixed hits after shutoff & Degenerate at $x_p=s$\\
-$\mu>Es/2$ & $y_{\max}\le0$ or nonreal; all mixed hits after & Present on $s<x_p<x_0$
+and along the apparent horizon $x_m=-Q(x_p)$. Consequently $\Omega$ and $e^{-2\phi}$ are nondecreasing to the future along both horizons.
+\end{proposition}
+\begin{proof}
+The first statement is immediate. On the apparent horizon $G(x)=\mu+\tfrac12Q(x)^2+Q(x)\,x-A(x)$, and for $0\le a\le b$,
+\[
+G(b)-G(a)=\tfrac12\bigl(Q(b)-Q(a)\bigr)\bigl(Q(b)+Q(a)\bigr)+a\bigl(Q(b)-Q(a)\bigr)+\int_a^b\bigl(Q(b)-Q\bigr)\ \ge0 .
+\]
+The last claim holds because $\Omega$ is a decreasing function of $\phi$ on the weak branch.
+\end{proof}
+
+In dilaton gravity $e^{-2\phi}$ plays the role of the area of the transverse sphere, so Proposition~\ref{prop:mono} has the form of an area theorem for both horizons, valid for the full semiclassical solution on this state. We do not attach an entropy to it; the entropy of RST black holes has further terms \cite{FPST}. Lean: \lean{event\_horizon\_mono}, \lean{apparent\_horizon\_mono}.
+
+\begin{proposition}[Outgoing flux at the right future infinity]\label{prop:radiation}
+Let $\Etot<\infty$ and $y>\Etot$. Along the outgoing ray $x_m=-y$, as $x_p\to\infty$,
+\[
+\langle T_{--}\rangle\ \longrightarrow\ -\lambda^2+\frac{\kappa}{4\,(y-\Etot)^2},
+\qquad\text{equivalently}\qquad
+\langle T_{\sigma^-\sigma^-}\rangle\ \longrightarrow\ \frac{\kappa\lambda^2}{4}-\lambda^4e^{-2\lambda\sigma^-},
+\]
+where $y-\Etot=e^{-\lambda\sigma^-}$ is the asymptotically Minkowskian retarded coordinate of Section~\ref{sec:ends}.
+\end{proposition}
+\begin{proof}
+In Kruskal gauge the stress tensor of \cite{KimSon} is $\langle T_{--}\rangle=2\sqrt\kappa\,\partial_-^2\Omega/(1+W)-4(\partial_-\Omega)^2(1-W)/(1+W)^3-\kappa t_-$ with $W=-(4/\kappa)e^{-2\phi}$. On the ray, $\partial_-\Omega=-L(x_p+y)$, $\partial_-^2\Omega=L$, $t_-=\lambda^2/\kappa$, and $e^{-2\phi}=\lambda^2(y-\Etot)x_p\,(1+o(1))$ by Proposition~\ref{prop:affine}(2). The first term vanishes in the limit, the second tends to $L^2\kappa^2x_p^2/(4e^{-4\phi})\to\kappa/(4(y-\Etot)^2)$, and the third is $-\lambda^2$. The second form follows from $dx^-/d\sigma^-=\lambda(y-\Etot)$.
+\end{proof}
+
+For the impulsive shell the Kruskal form is the expression given in \cite{KimSon} with $A/\lambda^2$ in place of $\Etot$. The general statement shows that the outgoing radiation depends on the infalling matter only through $\Etot$, which fixes the origin of $\sigma^-$. In the asymptotic frame the flux is universal: the constant $\kappa\lambda^2/4$ is the Hawking flux of the model \cite{CGHS,RST}, here the outgoing half of the equilibrium state, and the transient $-\lambda^4e^{-2\lambda\sigma^-}$ is the negative energy of the wormhole state leaving the system. The flux does not decay, so the black hole does not evaporate; it is fed by the incoming thermal flux of the $t_+=0$ state. This proposition is argued on paper and checked numerically; it is not formalized.
+
+\section{Dependence on the state}\label{sec:state}
+
+\begin{proposition}[Retained incoming state]\label{prop:state}
+Suppose $t_+=\lambda^2/\kappa$ is kept for all $x_p$ while $t_-$ is switched off as before, and $T_{++}=P\,\theta(x_p)$. Then in the mixed sector
+\[
+\Fh=\mu+\tfrac12y^2+y\,x_p+\tfrac12(1-p)x_p^2 ,
+\]
+and an outgoing ray $y>0$ is captured iff $p>1$, that is iff $P>\lambda^2$. In general, a state with $(\kappa/\lambda^2)t_+=q(x_p)$ for $x_p>0$ replaces $Q$ by $Q-\int_0^{x}q$ in Theorem~\ref{thm:flux}, which applies whenever this difference is monotone.
+\end{proposition}
+\begin{proof}
+Now $a_+''/L=1-p$ for $x_p>0$. For $p\le1$ every term is nonnegative and $C>0$. For $p>1$ this is Corollary~\ref{cor:sustained} with $p$ replaced by $p-1$.
+\end{proof}
+
+The critical value $P=\lambda^2$ is the magnitude of the negative Kruskal-frame flux carried by the state. Capture of outgoing rays is decided by the net null flux, matter plus state. With the Kim--Son switch-off the state contributes nothing for $x_p>0$ and the threshold is zero. The statement that an arbitrarily weak sustained flux closes the wormhole is therefore a property of the switch-off convention, and by Theorem~\ref{thm:zero} the same convention produces a black hole with no flux at all.
+
+\section{The ends of the spacetime and the two clocks}\label{sec:ends}
+
+\begin{proposition}[Affine length of the ends]\label{prop:affine}
+\begin{enumerate}
+\item In the pre-onset region, along a null ray $x_m=\text{const}$, the affine parameter $\int e^{2\rho}dx_p$ converges as $x_p\to-\infty$. The same holds for $x_m\to-\infty$ along $x_p=\text{const}$, in the pre-onset and mixed sectors. Quantitatively, on a pre-onset ray the affine parameter accumulated beyond coordinate separation $|x_p-x_m|=1$ is at most $2/\lambda^2$, for every $\kappa$ and $\mu\ge0$. At these ends $R\to-4\lambda^2$, $e^{-2\phi}\to\infty$, and the proper distance along the static slices diverges logarithmically.
+\item Let $\Etot<\infty$ and $y>\Etot$. Along the outgoing ray $x_m=-y$ one has $C+(y-\Etot)x_p\le\Fh\le C+y\,x_p$ for $x_p\ge0$, the affine parameter diverges as $x_p\to\infty$, and $e^{2\rho}\,\lambda^2(y-\Etot)\,x_p\to1$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(1) By \eqref{eq:pre} or \eqref{eq:mixed}, $\sqrt\kappa\,\Omega\ge\tfrac12\lambda^2(x_p-x_m)^2-\lambda^2A(x_p)$ plus a constant, so $\Omega\to\infty$ and $\phi\to-\infty$ along the ray. On a pre-onset ray, with $t=|x_p-x_m|$, \eqref{eq:branch} gives $e^{2\rho}\le1/(\lambda^2\Fh)\le2/(\lambda^2t^2)$, and $\int_1^\infty2\,dt/(\lambda^2t^2)=2/\lambda^2$. In the mixed sector the same bound holds once $y\,x_p+\mu\ge A(x_p)$. The curvature limit is computed in \cite{KimSon}. On a slice $x_p+x_m=\text{const}$ the proper length element is $e^{\rho}\,d(x_p-x_m)/2\sim d(x_p-x_m)/(\sqrt2\lambda|x_p-x_m|)$. (2) The two bounds on $\Fh$ follow from $0\le Q\le\Etot$ in \eqref{eq:mixed}. From $e^{-2\phi}=\sqrt\kappa\,\Omega-(\kappa/2)\phi$ and $-2\phi=\ln e^{-2\phi}$ one gets $e^{-2\phi}=\sqrt\kappa\,\Omega\,(1+o(1))$ as $\Omega\to\infty$, so $e^{2\rho}=(1+o(1))/(\lambda^2\Fh)$. The upper bounds on $\Fh$ and in \eqref{eq:branch} give $e^{-2\phi}\le K+2\lambda^2(C+y\,x_p)$ with a constant $K$ depending on $\kappa$ only, so $e^{2\rho}$ is bounded below by a positive multiple of $1/x_p$ for $x_p\ge1$, whose integral diverges logarithmically. Finally $\int_0^{x}(\Etot-Q)=o(x)$ because $Q\to\Etot$, so $\Fh=(y-\Etot)x_p\,(1+o(1))$, which gives the stated limit.
+\end{proof}
+
+The leading form of the metric at the ends in item~1 is
+\[
+ds^2\simeq-\frac{2\,dx^+dx^-}{\lambda^2(x^+-x^-)^2},
+\]
+which is AdS$_2$ of radius $1/(\sqrt2\lambda)$ in Poincar\'e coordinates with $z=(x^+-x^-)/2$. The conformal boundary of AdS$_2$ is $z\to0$. The ends of the wormhole are at $|z|\to\infty$, which is the Poincar\'e horizon, and the locus $z\to0$ is the throat, where the geometry is not AdS$_2$. The Kim--Son solution therefore has no timelike conformal boundary. What Kim and Son label $\mathcal I^-$ is a null boundary at finite affine distance on which the curvature stays bounded and the field $e^{-2\phi}$ diverges. We do not construct an extension; since $\phi\to-\infty$ there, the dilaton cannot be continued across it as a finite field. Incoming data in the mixed sector are posed on this boundary. Notions that presuppose a timelike AdS boundary, such as reflecting boundary conditions, coupling to a bath at the boundary, or boundary observers, have no referent in this solution without further construction.
+
+The future end in item~2 is of the opposite kind. For $y>\Etot$ and large $x_p$ the mixed sector is $\Fh\simeq(y-\Etot)x_p$, the linear-dilaton form $-\lambda^2x^+(x^-+\Etot)$ of an asymptotically flat region, complete, with asymptotically Minkowskian null coordinates defined by $x^+=e^{\lambda\sigma^+}$ and $-(x^-+\Etot)=e^{-\lambda\sigma^-}$, in which $-e^{2\rho}dx^+dx^-\to-d\sigma^+d\sigma^-$.
+
+\begin{proposition}[Symmetries]\label{prop:sym}
+A vector field that preserves both the metric and the dilaton has the form $\xi=(a+c\,x_p)\partial_p+(b-c\,x_m)\partial_m$ and satisfies $\xi(\Fh)=0$. For zero classical flux:
+\begin{enumerate}
+\item in the pre-onset sector, $\xi(\Fh)\equiv0$ iff $a=b$ and $c=0$: the translation $\partial_p+\partial_m$ only;
+\item in the both-positive sector, iff $a=b=0$: the boost $x_p\partial_p-x_m\partial_m$ only;
+\item in the mixed sector, iff $a=b=c=0$: no symmetry.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+A conformal Killing field of $-e^{2\rho}dx^+dx^-$ is $\xi^+(x^+)\partial_++\xi^-(x^-)\partial_-$, and it is Killing iff $2\xi(\rho)+\partial_+\xi^++\partial_-\xi^-=0$. Preserving $\phi$ means $\xi(\Omega)=0$, hence $\xi(\rho)=0$ in Kruskal gauge, hence $\partial_+\xi^+=-\partial_-\xi^-=c$. The three cases are polynomial identities in $x_p,x_m$: $\xi(\Fh)$ equals $(x_p-x_m)\,(a-b+c(x_p+x_m))$, $-a\,x_m-b\,x_p$, and $(b-a)x_m-b\,x_p-c\,x_m^2$ respectively.
+\end{proof}
+
+\paragraph{Two clocks and two moments.} The static time of the wormhole is $t=(x_p+x_m)/2$: it is linear in the Kruskal coordinates, and there is no boost symmetry before onset. The logarithmic coordinate $\sigma^+$, which is the natural time for linear-dilaton black holes, is natural here only at the future end and in the both-positive quadrant. The infalling matter has two corresponding moments \cite{RST,Thorlacius},
+\[
+P_+(\infty)=\int dT_{++}=\lambda^2\Etot,\qquad M_\infty=\lambda\int x_p\,dT_{++}=\int T_{\sigma\sigma}\,d\sigma^+ ,
+\]
+the null momentum in the static frame of the wormhole and the energy in the asymptotically flat frame of the future end. Theorem~\ref{thm:flux} shows that capture is decided by $P_+(\infty)$ alone. A pulse of fixed profile in $\sigma^+$ that is sent later has the same $M_\infty$ and a smaller $P_+(\infty)$, so it captures fewer rays: for $T_{\sigma\sigma}=\mathcal P$ on $[\sigma_a,\sigma_a+\Delta\sigma]$,
+\[
+\Etot=\frac{\mathcal P}{\lambda^4}\,e^{-\lambda\sigma_a}\bigl(1-e^{-\lambda\Delta\sigma}\bigr).
+\]
+This is the exact content of the statement that no threshold in the $\sigma$-frame energy alone exists. It is the familiar fact that in this class of models the horizon is set by $P_+$ and not by the mass. In the frame natural to the wormhole a threshold in a single integrated quantity does exist: it is $y<\Etot$. We do not claim that $P_+(\infty)$ is a conserved charge of the full solution, since the state switch-off breaks the translation symmetry in the region where the matter travels.
+
+\section{Formal verification and reproducibility}\label{sec:verify}
+
+The Lean~4 development (toolchain 4.36.0, Mathlib) accompanying this paper contains no \texttt{sorry} and uses only the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. Table~\ref{tab:lean} lists the correspondence. Four limits apply. First, the starting point of the formalization is the constraint equation in the normalized form $a''=\theta(-x)$ and the general solution \eqref{eq:Fhat}; the reduction of the RST action to \eqref{eq:eom} is not formalized. Second, the matter profile enters as $A=\int_0^xQ$ for monotone $Q$; the statement that $A''$ is the flux measure is used on paper only. Third, the affine-length statements of Proposition~\ref{prop:affine} and Corollary~\ref{cor:horizon}(4) are formalized conditionally: the weak-branch function $u=e^{-2\phi}$ along the ray enters as a hypothesis (a continuous function with $u\ge\kappa/4$ satisfying $u-(\kappa/4)\ln u=\sqrt\kappa\,\Omega$), and its existence, which is the Lambert-function inversion, is not constructed in Lean. Given such a $u$, the bound $2/\lambda^2$ and the divergence at the future end are theorems (\lean{ads\_end\_affine\_finite}, \lean{future\_end\_affine\_infinite}). The curvature limit, the precise asymptote $e^{2\rho}\lambda^2(y-\Etot)x_p\to1$ and Proposition~\ref{prop:radiation} are argued on paper and checked numerically. Fourth, Theorem~\ref{thm:global} is formalized as an order statement on the Kruskal plane; that the causal order of the spacetime is the coordinate order is the standard property of conformal gauge and is not formalized. Corollary~\ref{cor:global}(3), Corollary~\ref{cor:horizon}(3) and the general-state sentence of Proposition~\ref{prop:state} are not formalized.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}p{0.63\textwidth}@{}}
+\toprule
+Statement & Lean name (namespace \lean{AdS2RST})\\
+\midrule
+Lemma~\ref{lem:omega} & \lean{OmegaOf\_phiCrit}, \lean{OmegaCrit\_le}, \lean{conformal\_factor\_bound}, \lean{weak\_branch\_lower'}, \lean{weak\_branch\_upper}\\
+Prop.~\ref{prop:chiral}: state profile is $C^1$, $a''=\theta(-x)$ & \lean{aState\_hasDerivAt}, \lean{aState\_second\_deriv\_neg/pos}\\
+Prop.~\ref{prop:chiral}: sector formulas & \lean{Fhat\_pre}, \lean{Fhat\_mixed}, \lean{Fhat\_post}, \lean{Fhat\_mirror}\\
+Field equation $\partial_+\partial_-\Fh=-1$ & \lean{Fhat\_hasDerivAt\_xm}, \lean{mixed\_derivative\_field\_equation}\\
+Thm.~\ref{thm:zero}(2) & \lean{zero\_flux\_wall\_iff}, \lean{zero\_flux\_wall\_slope}, \lean{zero\_flux\_trapped\_plus/minus}\\
+Thm.~\ref{thm:zero}(3),(4) & \lean{wormhole\_regular}, \lean{zero\_flux\_mixed\_regular}, \lean{mirror\_regular}, \lean{eternal\_wormhole\_regular}\\
+Thm.~\ref{thm:flux} & \lean{hit\_iff}, \lean{existsUnique\_hit}, \lean{Fray\_neg\_after}, \lean{Fray\_pos\_before}, \lean{no\_hit\_of\_le}\\
+Cor.~\ref{cor:horizon}(1),(2) & \lean{Q\_gt\_of\_Fray\_nonpos}, \lean{general\_wall\_slope\_neg}\\
+Cor.~\ref{cor:horizon}(4): capture iff $y<\Etot$; linear bounds on escaping rays & \lean{finite\_total\_flux\_hit\_iff}, \lean{Fray\_ge\_linear}, \lean{Fray\_le\_linear}\\
+Cor.~\ref{cor:sustained} & \lean{sustained\_every\_ray\_hit}, \lean{sustained\_hit\_is\_xHit}, \lean{F\_eq\_zero\_iff}, \lean{horizon\_before\_wall}, \lean{slope\_neg}\\
+Cor.~\ref{cor:pulse} & \lean{Fray\_congr}, \lean{pulse\_during\_iff}, \lean{Fray\_after\_const}, \lean{after\_pulse\_root}, \lean{pulse\_after\_formula}\\
+Cor.~\ref{cor:impulse} & \lean{impulse\_hit\_iff}\\
+Prop.~\ref{prop:state} (constant sustained case) & \lean{retained\_state\_hit\_iff}, \lean{retained\_state\_regular}, \lean{retained\_state\_equiv}\\
+Eq.~\eqref{eq:two}: reduction to the one-sided solution & \lean{Fhat2\_eq\_Fhat}, \lean{Fhat2\_mixed}, \lean{Fhat2\_symm}\\
+Thm.~\ref{thm:global}, Cor.~\ref{cor:global}(1),(2),(4) & \lean{singular\_future}, \lean{regular\_past}, \lean{critical\_curve\_achronal}, \lean{mirror\_hit\_iff}\\
+Prop.~\ref{prop:late} & \lean{Fray\_late}, \lean{late\_exterior\_eq\_zero\_flux}, \lean{first\_moment\_nonneg}\\
+Prop.~\ref{prop:mono} & \lean{event\_horizon\_mono}, \lean{apparent\_horizon\_mono}\\
+Prop.~\ref{prop:affine}, given the branch $u=e^{-2\phi}$ as a hypothesis & \lean{affine\_finite\_of\_quadratic}, \lean{ads\_end\_affine\_finite}, \lean{affine\_infinite\_of\_linear}, \lean{future\_end\_affine\_infinite}, \lean{affine\_tail\_bounded}, \lean{affine\_future\_unbounded}\\
+Prop.~\ref{prop:sym} & \lean{symmetry\_pre}, \lean{symmetry\_post}, \lean{symmetry\_mixed}\\
+\bottomrule
 \end{tabular}
-\end{center}
-For $p=1,\mu=10,s=3$, $x_0=29/6$ and $x_m(4)=5/8>0$, $x_m(5)=-1/10<0$. For $\mu=2$, $x_0=13/6<3$, so no after segment exists.
+\caption{Correspondence between the statements of this paper and the Lean development.}
+\label{tab:lean}
+\end{table}
 
-\section{General cumulative-flux theorem}
-Let $dT$ be a nonnegative Radon measure on $x\ge0$, with the same state and matching conventions. A locally integrable density is the special case $dT=T^f_{++}(x)dx$; a Dirac impulse is included as a measure, not as a locally integrable function. Define
-\[
-Q(x)=\frac1{\lambda^2}\int_{[0,x]}dT(u).
-\]
-The matching conditions are $a_+(0)=B$ and $a_+'(0^-)=0$. An onset atom $dT=A\delta_0$ gives $a_+'(0^+)=-A/\sqrt\kappa$, not zero; this is precisely the impulsive derivative jump.
-Then
-\[
-F(x,y)=\mu+\frac{y^2}{2}+xy-\frac1{\lambda^2}\int_{[0,x]}(x-u)dT(u)
-\]
-is continuous and concave, with one-sided derivatives $D_+F=y-Q(x)$ and $D_-F=y-Q(x^-)$. For a density, $F_{xx}=-T^f_{++}/\lambda^2\le0$ almost everywhere; absolute continuity and monotonicity, not pointwise second differentiability, supply the proof.
+Independently of Lean, a SymPy and mpmath script (\texttt{structure\_checks.py}) integrates the constraints sector by sector, compares the result with the printed Kim--Son solution, and checks the identification with the Hartle--Hawking solution, the symmetry classification, the curvature limit, both affine-length statements through the exact Lambert-function inversion of $\Omega(\phi)$, the position of the event horizon, the future-set property on random two-sided fluxes with atoms, the mass formula, the horizon monotonicity, and the limit of Proposition~\ref{prop:radiation}. Earlier scripts in the same package test the closed formulas of Corollaries~\ref{cor:sustained} and~\ref{cor:pulse} symbolically and on numerical grids. These scripts are consistency controls; they are not independent proofs, and their number carries no evidential weight.
 
-If $E_{\mathrm{tot}}=\lim Q(x)$ is finite, a unique finite post-onset mixed-ray hit exists exactly for $0<y<E_{\mathrm{tot}}$. If $E_{\mathrm{tot}}=\infty$, every finite $y>0$ has such a hit. For $y<E_{\mathrm{tot}}$, the derivative is eventually negative and concavity forces a unique zero. For $y\ge E_{\mathrm{tot}}$, both one-sided derivatives are nonnegative and $F$ cannot descend from its positive initial value to zero.
+\section{Discussion and scope}\label{sec:discussion}
 
-At the first root, $Q(x_{\mathrm{hit}})>y$, and the correct right-derivative wall slope is
-\[
-\boxed{\left.\frac{dx_m}{dx_p}\right|_+=-\frac{Q(x_{\mathrm{hit}})-y}{x_{\mathrm{hit}}+y}<0.}
-\]
-Moreover, $\partial_+\Omega/L=y-Q(x)$. For a continuous profile, the apparent horizon is $Q(x_{\mathrm{AH}})=y$, and $Q(x_{\mathrm{hit}})>y$ implies $x_{\mathrm{AH}}<x_{\mathrm{hit}}$. For a measure, define the first level crossing $\inf\{x:Q(x)\ge y\}$ and call it a generalized trapping-boundary level crossing, not automatically a smooth apparent horizon. The first root must also have $Q(x_{\mathrm{hit}}^-)>y$: otherwise the nonnegative left derivative would make $F$ nondecreasing up to its first zero, contradicting descent from $F(0,y)>0$. Thus the generalized horizon precursor persists for measure-valued sources.
+\paragraph{What is established.} Given the RST equations \eqref{eq:eom} and the Kim--Son boundary functions, the statements of Sections~\ref{sec:model} to~\ref{sec:ends} are theorems. They are elementary: one concave function of one variable carries Theorem~\ref{thm:flux}, Theorem~\ref{thm:zero} is an inspection of \eqref{eq:Fhat}, and Theorem~\ref{thm:global} is two applications of Theorem~\ref{thm:flux}. Their interest lies in what they say about the model, not in their difficulty.
 
-Sustained $P$ gives $Q=px$ and every ray; a rectangular pulse gives $E_{\mathrm{tot}}=ps=E$ and the band $0<y<E$; an impulse gives $E_{\mathrm{tot}}=\alpha$ and the band $0<y<\alpha$.
+\paragraph{What changes in the reading of the model.} First, the Kim--Son wormhole does not collapse because matter falls in. It collapses because its supporting state is switched off, and the infalling matter only decides how much of the exterior is captured. Second, with the supporting state retained there is a genuine threshold, $P=\lambda^2$. Third, the solution has no AdS boundary in the sense used in holography; its AdS$_2$ ends are null and at finite affine distance. Fourth, the collapse is globally well posed: unlike the evaporating RST black hole, it needs no boundary condition at the singularity, and its final exterior is known in closed form, with the mass formula \eqref{eq:mass} and a monotone horizon value of $e^{-2\phi}$.
 
-\begin{corollary}[Finite logarithmic-null-support pulse]
-Let $x_p=e^{\lambda\sigma}$ and prescribe $T_{\sigma\sigma}=\mathcal P\mathbf 1_{[\sigma_a,\sigma_b]}$. With $x_a=e^{\lambda\sigma_a}$ and $x_b=e^{\lambda\sigma_b}$,
-\[
-T_{++}(x)=\frac{\mathcal P}{\lambda^2x^2}\mathbf 1_{[x_a,x_b]},\qquad
-E_{\mathrm{tot}}=\frac{\mathcal P}{\lambda^4}\left(\frac1{x_a}-\frac1{x_b}\right).
-\]
-Hence the exact mixed-ray termination band is $0<y<E_{\mathrm{tot}}$. More generally, $E_{\mathrm{tot}}=\lambda^{-3}\int T_{\sigma\sigma}e^{-\lambda\sigma}d\sigma$. This is finite null-coordinate support, not automatically finite proper time for a timelike observer.
-\end{corollary}
+\paragraph{What is not established.}
+\begin{itemize}
+\item Physical admissibility of the step-function state, for instance the Hadamard property across $x^\pm=0$.
+\item Any continuation beyond the null ends, and therefore any statement that requires a timelike boundary.
+\item Evaporation. With $t_\pm=0$ to the future the black hole is in equilibrium with incoming thermal radiation and does not evaporate. Switching the state instead to the future vacuum $t_\pm=1/(4(x^\pm)^2)$ would give an evaporating version; the effective flux is then not monotone, Theorem~\ref{thm:global} does not apply, and a timelike critical curve with its boundary condition is expected as in \cite{RST}. This is the natural next problem.
+\item Entropy or information-theoretic observables. Proposition~\ref{prop:mono} is a statement about $e^{-2\phi}$ only. A generalized-entropy or island computation on this background has not been attempted.\item The identification of the mass parameter in \eqref{eq:mass} with an energy measured at the future end.
+\item Signed or state-dependent effective fluxes beyond Proposition~\ref{prop:state}; for non-monotone $Q$ the function $F$ can have several zeros, only the first of which is physical.
+\item Priority. The literature search behind the remarks in the introduction is bounded.
+\end{itemize}
 
-\section{Assumptions and scope}
-Throughout, $\mu>0$ is the regular-wormhole case; $\mu=0$ is a separate already-singular limit. The pre-onset branch and retained Kim--Son $t_\pm$ functions are fixed, with $a_+(0)=B$ and $a_+'(0^-)=0$. The source is one-sided in Kruskal $x_p$ unless a finite $\sigma$-coordinate pulse is specified. Apparent horizons are local trapping boundaries, not global event horizons. Finite-affine and finite-proper-time results concern the stated null rays and explicit interior timelike curves, not arbitrary observers. Boundary-normalized physical energy, arbitrary Hadamard states, and bath histories are outside the theorem.
+\paragraph{Authorship and review status.} The analysis, the formalization and the text were produced by an AI agent (Razul) working with Victor Bessa, and checked by machine as described in Section~\ref{sec:verify}. No independent human specialist has reviewed the work. The derivation in Section~\ref{sec:model} from the equations of \cite{RST,KimSon} is the step most in need of independent human confirmation.
 
-\section{State and boundary-time phase structure}
-For constant post-onset data $t_+(x)=q\lambda^2/\kappa$, $Q_{\mathrm{eff}}=(p-q)x$ and
-\[
-F=\mu+\frac{y^2}{2}+xy-\frac{p-q}{2}x^2.
-\]
-Thus $r=p-q>0$ gives a unique hit with $D_r=\sqrt{(1+r)y^2+2r\mu}$, $x_{\mathrm{hit}}=(y+D_r)/r$, and $x_{\mathrm{hit}}-x_{\mathrm{AH}}=D_r/r>0$. For $r\le0$ there is no mixed-ray hit. Identical classical flux gives every-ray termination for $q=0$ but only $p>1$ for $q=1$. The phase boundary is $p=q$, a net-focusing threshold rather than a universal classical-energy threshold.
-
-For the finite logarithmic-null pulse, set $k=\mathcal P/\lambda^4$ and $E=k(1/a-1/b)$. During the pulse,
-\[
-F=C(y)+yx-k\left[\frac{x-a}{a}-\ln\frac xa\right].
-\]
-If $F_b<0$, the hit is during the pulse; if $F_b=0$, it is exactly at shutoff; if $F_b>0$ and $y<E$, the post-pulse root is $x_{\mathrm{hit}}=b+F_b/(E-y)$. If $y\ge E$, no hit exists. Writing $y=e^{-\lambda u}$ gives the closing-window law
-\[
-u>u_*,\qquad u_*=\sigma_a-\frac1\lambda\ln\!\left[\frac{\mathcal P}{\lambda^4}(1-e^{-\lambda\Delta\sigma})\right].
-\]
-Moving the pulse translates $u_*$ by the same amount. The same outgoing null ray in the fixed Kruskal chart, $u=0$, is inside the early-pulse window and outside the late-pulse window. The integrated incoming $\sigma$-coordinate flux is $E_{\mathrm{in}}=\mathcal P\Delta\sigma$, whereas
-\[
-E_{\mathrm{tot}}=\frac{E_{\mathrm{in}}}{\lambda^4\Delta\sigma}(e^{-\lambda\sigma_a}-e^{-\lambda\sigma_b}).
-\]
-Holding $E_{\mathrm{in}}$ and $\Delta\sigma$ fixed, $\sigma_a\to-\infty$ gives $E_{\mathrm{tot}}\to\infty$ and $\sigma_a\to+\infty$ gives $E_{\mathrm{tot}}\to0$. Hence no threshold depending only on $E_{\mathrm{in}}$ determines the closing window. The covariant statement is $u>u_*$, not a scalar energy-only criterion.
-
-An explicit conserved scalar realizes this source: $f'(x)=\sqrt{2\mathcal P}/(\lambda x)$ on $[a,b]$ and zero elsewhere. Then $T^f_{++}=f'^2/2=\mathcal P/(\lambda^2x^2)$ on the pulse, $\partial_-T^f_{++}=0$, and $E_{\mathrm{in}}=(\mathcal P/\lambda)\ln(b/a)$. The fixed chiral solution includes the resulting backreaction.
-
-\section{Scope and literature position}
-The Kruskal-constant source is not constant in every observer's time coordinate. If $x_p=e^{\lambda\sigma}$, then $T_{\sigma\sigma}=\lambda^2x_p^2P$ and $\int T_{\sigma\sigma}d\sigma=\lambda P x_p^2/2$. At the small-$p$ hit $x_{\mathrm{hit}}\sim2y/p$, this coordinate stress integral scales as $2\lambda^3y^2/p$. Finite support in $x_p$ is not finite duration in $\sigma$. Changing the retained $t_\pm$ functions changes the result: alternate data remove mixed-ray hits for $p\le1$, with a unique positive mixed hit for $p>1$, but do not eliminate every both-positive wall. No arbitrary-state or future-boundary absorber theorem follows.
-
-Kim--Son's impulse already produces a spacelike wall on $0<y<\alpha$, so broad wall existence is not new~\cite{KimSon}. Sustained one-sided input also appears in the original RST context~\cite{RST}, and finite pulses occur in earlier dilatonic-wormhole models~\cite{HKL}. The distinct contribution here is the sustained every-ray law, its apparent-horizon corollary, the finite-support completion, and the cumulative-flux formulation. A bounded search of thirteen primary documents did not find the exact constant-Kruskal-$P$ every-ray formula in that corpus; this is absence of evidence, not priority. Potaux, Sarkar, and Solodukhin's state-dependence papers are relevant literature, not the same calculation~\cite{Potaux,PotauxIslands}. Earlier finite-pulse and impulsive collapse models supply additional precedents~\cite{HKL,Koyama}. Saito's multiple-injection RST Page curves, Esp\'indola--Jahnke--Kim bath-induced traversable wormholes, and Castro et al.'s near-AdS2 backreaction are adjacent comparisons, not proofs of the present wall criterion~\cite{Saito,Espindola,Castro}.
-
-\section{Verification}
-The package contains 138 main checks, 39 separate symbolic checks, and 32 advanced research checks. Lean 4 formalizes the algebraic core and the abstract continuous first-hit criterion: the sustained root, root factor/sign ordering, actual $y$-derivative, negative general slope, retained-state equivalence, stress scaling, and after-domain sign. It does not formalize the full measure-theoretic cumulative theorem. The source contains no \texttt{sorry}. These checks support, but do not replace, source derivation or external scientific review.
-
-\begin{thebibliography}{9}
-\bibitem{KimSon} W. T. Kim and E. J. Son, \emph{Wormhole phase in the RST model}, JHEP 0408:006 (2004), arXiv:gr-qc/0404098v2.
-\bibitem{RST} J. G. Russo, L. Susskind, and L. Thorlacius, \emph{The Endpoint of Hawking Radiation}, arXiv:hep-th/9206070.
-\bibitem{HKL} S. A. Hayward, S.-W. Kim, and H. Lee, \emph{Dilatonic wormholes: construction, operation, maintenance and collapse to black holes}, arXiv:gr-qc/0110080.
-\bibitem{Potaux} Y. Potaux, D. Sarkar, and S. N. Solodukhin, \emph{Hybrid quantum states in 2D dilaton gravity}, Phys. Rev. D 108, 125012 (2023), arXiv:2310.18745.
-\bibitem{PotauxIslands} Y. Potaux, D. Sarkar, and S. N. Solodukhin, \emph{Islands for black holes in a hybrid quantum state}, Phys. Rev. D 111, 026019 (2025), arXiv:2411.09574.
-\bibitem{Koyama} H. Koyama, S. A. Hayward and S. W. Kim, \emph{Construction and enlargement of dilatonic wormholes by impulsive radiation}, Phys. Rev. D 67, 084008 (2003), arXiv:gr-qc/0212106.
-\bibitem{Saito} Y. Saito, \emph{Page curves and island's delays in asymptotically flat 2d spacetimes with injections}, PTEP 2025, ptaf174, arXiv:2509.03997.
-\bibitem{Espindola} R. Esp\'indola, V. Jahnke and K.-Y. Kim, \emph{Islands and traversable wormholes}, JHEP 08 (2026) 035, arXiv:2510.21985.
-\bibitem{Castro} A. Castro, J. Hollander, P. J. Martinez and E. Verheijden, \emph{The Effects of Near-AdS$_2$ Backreaction on Matter Fields}, JHEP 05 (2026) 282, arXiv:2509.08046.
+\begin{thebibliography}{99}
+\bibitem{KimSon} W. T. Kim and E. J. Son, \emph{Wormhole phase in the RST model}, JHEP 08 (2004) 006, arXiv:gr-qc/0404098.
+\bibitem{RST} J. G. Russo, L. Susskind and L. Thorlacius, \emph{The endpoint of Hawking radiation}, Phys. Rev. D 46, 3444 (1992), arXiv:hep-th/9206070.
+\bibitem{CGHS} C. G. Callan, S. B. Giddings, J. A. Harvey and A. Strominger, \emph{Evanescent black holes}, Phys. Rev. D 45, R1005 (1992), arXiv:hep-th/9111056.
+\bibitem{Thorlacius} L. Thorlacius, \emph{Black hole evolution}, Nucl. Phys. B Proc. Suppl. 41, 245 (1995), arXiv:hep-th/9411020.
+\bibitem{Strominger} A. Strominger, \emph{Les Houches lectures on black holes}, arXiv:hep-th/9501071.
+\bibitem{FPST} T. M. Fiola, J. Preskill, A. Strominger and S. P. Trivedi, \emph{Black hole thermodynamics and information loss in two dimensions}, Phys. Rev. D 50, 3987 (1994), arXiv:hep-th/9403137.
+\bibitem{Solodukhin} S. N. Solodukhin, \emph{Two-dimensional quantum-corrected eternal black hole}, Phys. Rev. D 53, 824 (1996), arXiv:hep-th/9506206.
+\bibitem{HKL} S. A. Hayward, S.-W. Kim and H. Lee, \emph{Dilatonic wormholes: construction, operation, maintenance and collapse to black holes}, Phys. Rev. D 65, 064003 (2002), arXiv:gr-qc/0110080.
+\bibitem{Koyama} H. Koyama, S. A. Hayward and S.-W. Kim, \emph{Construction and enlargement of dilatonic wormholes by impulsive radiation}, Phys. Rev. D 67, 084008 (2003), arXiv:gr-qc/0212106.
+\bibitem{KimSonYoon} W. T. Kim, E. J. Son and M. S. Yoon, \emph{Exactly soluble quantum wormhole in two dimensions}, Phys. Rev. D 70, 104020 (2004), arXiv:gr-qc/0407106.
+\bibitem{KimAdS} W. T. Kim, \emph{AdS$_2$ and quantum stability in the CGHS model}, Phys. Rev. D 60, 024011 (1999), arXiv:hep-th/9810055.
+\bibitem{Potaux} Y. Potaux, D. Sarkar and S. N. Solodukhin, \emph{Hybrid quantum states in 2D dilaton gravity}, Phys. Rev. D 108, 125012 (2023), arXiv:2310.18745.
 \end{thebibliography}
 \end{document}

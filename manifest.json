@@ -1,7 +1,7 @@
 {
   "schema": "ads2-rst.review-package.manifest.v1",
-  "created_at_utc": "2026-11-24T18:40:39.849980+00:00",
-  "file_count": 85,
+  "created_at_utc": "2026-11-24T19:52:46.937308+00:00",
+  "file_count": 97,
   "artifacts": [
     {
       "path": ".gitignore",
@@ -11,14 +11,14 @@
     },
     {
       "path": "00-index.md",
-      "bytes": 8572,
-      "sha256": "42247a900c335db1f4941dd18a2f38a314f8329a15ff510281eb74269af09f95",
+      "bytes": 10332,
+      "sha256": "cc62deac984d612d346cb240f007a63731dbc470afbc7f1a5fdebda8d8c49bcd",
       "role": "review-document"
     },
     {
       "path": "01-executive-claim.md",
-      "bytes": 6679,
-      "sha256": "ded8c93f42ce29869d7fc602799f5776dddf5f930c29075cc668ed6ccbcd32a2",
+      "bytes": 7556,
+      "sha256": "17dc66ba78502729852663f8a2171137088ce58d7a2c8113b72d4c1f8f1cee8a",
       "role": "review-document"
     },
     {
@@ -29,8 +29,8 @@
     },
     {
       "path": "03-sustained-flux-theorem.md",
-      "bytes": 5793,
-      "sha256": "ba995cbf7c4acd928a851b8a1f8e89dda83dfe0c5b05b3624c8a77ba01b40dfe",
+      "bytes": 6132,
+      "sha256": "3a9b055c8c1e5a6b738899a630e5298325599633dd4dc4ff4fa86fec36845c55",
       "role": "review-document"
     },
     {
@@ -41,20 +41,20 @@
     },
     {
       "path": "05-state-frame-and-novelty.md",
-      "bytes": 6070,
-      "sha256": "442c14deb4fab8d990f782fb49b34c1a1d948384cc4365050ccf76ae58c95fd9",
+      "bytes": 6283,
+      "sha256": "9bee68487d08d2002e73b029174d51a8a81f81cf0f7b0dbc3540f90c7414d72e",
       "role": "review-document"
     },
     {
       "path": "06-finite-pulse.md",
-      "bytes": 6838,
-      "sha256": "13cb5f34ce4bcffeaba2c91d316c84aa0674eb03263e96bfff6348a5c4f9bd23",
+      "bytes": 6834,
+      "sha256": "28664d3ff208327439ed4c742d6e9bc7d1de79b2ad25c88cfe7f87e7e240f412",
       "role": "review-document"
     },
     {
       "path": "07-evidence-and-reproduction.md",
-      "bytes": 9341,
-      "sha256": "f1ec449bad30e67c31c07f1b37d85de7cd0c7ef7523bba8d04b4b32e8d6d8847",
+      "bytes": 10433,
+      "sha256": "fa0de31c818f60dd00a5c51cf892145ccdf793e346fa8b45899310c15ad46930",
       "role": "review-document"
     },
     {
@@ -65,74 +65,92 @@
     },
     {
       "path": "09-independent-reviews.md",
-      "bytes": 14877,
-      "sha256": "4853ecf978617ff6dfbd332358b2d2b6f0c7b7320222c180a8f92a1b9e3e3a89",
+      "bytes": 15035,
+      "sha256": "26903c3e316cfeab8608953deeb11afcbe8e491a9699e29fb797e3cabbda3e0a",
       "role": "review-document"
     },
     {
       "path": "10-formal-signoff.md",
-      "bytes": 5113,
-      "sha256": "1e6f8d07409028f1da79ed0a338f25ab3259d1e0031ae8b36e35910175ccb374",
+      "bytes": 5291,
+      "sha256": "35e8844c2e255a157d4e13fbf1e1d65ef9a94a1a1b50c393fc787d46062d2c0e",
       "role": "review-document"
     },
     {
       "path": "11-cumulative-flux-generalization.md",
-      "bytes": 5892,
-      "sha256": "47043a82f38fca3c70a237ee930af3b0cf37efdae213dbc2b97f406b601a4043",
+      "bytes": 6218,
+      "sha256": "bf56bf11eb98c28b4b08568210885a3057d1ef2c7580bf30501317eb8d7e0235",
       "role": "review-document"
     },
     {
       "path": "12-signed-net-focusing.md",
-      "bytes": 10484,
-      "sha256": "21d297d39cd0beaf83aeaff29ffe77571ccc95019dce208e68dd4da69e1a67e5",
+      "bytes": 10728,
+      "sha256": "9eedb4a11a5dd38383ea94f0d7627333c862e7840c5d366da8d4e57e6161f667",
       "role": "review-document"
     },
     {
       "path": "13-breakthrough-program.md",
-      "bytes": 9161,
-      "sha256": "08fbcdbe9c54f3eb5a2c5849ee5d7366f5cb0ad8d1c7e7b95160b1b5a7e01900",
+      "bytes": 9587,
+      "sha256": "6ac1233cde2bcb8ca86844371408e4f24370c18355238607b607ea5104553b26",
       "role": "review-document"
     },
     {
       "path": "14-state-pulse-phase-diagram.md",
-      "bytes": 3881,
-      "sha256": "581b3a55bdcb44d7b3a18658f92a43ff53b368ce5af9d8aa8348c9755bdf4e6b",
+      "bytes": 4182,
+      "sha256": "6745d7bef88544918e39502ac8f90522188807e429551d04fb88709e042f3955",
       "role": "review-document"
     },
     {
       "path": "15-physical-boundary-injection.md",
-      "bytes": 6028,
-      "sha256": "841bb9a2f375b283554f94b2c15fb35c5ef2cf0c7727d9d1c491aece76f0c45f",
+      "bytes": 6413,
+      "sha256": "6a1ee18b226075d6231f0c28116a39a23b0f43f330505f19594c4d0077c34ae1",
       "role": "review-document"
     },
     {
       "path": "16-conformal-matter-realization.md",
-      "bytes": 5207,
-      "sha256": "34103994d11b6502d7b0c8576900d276ef446dc2e44963ae432f8a054bf5c05b",
+      "bytes": 5378,
+      "sha256": "37954e4add9f133db8a800bd59f1993a61994e46f1e5825b8a39ad23f8d9011d",
       "role": "review-document"
     },
     {
       "path": "17-observables-and-universality.md",
-      "bytes": 4967,
-      "sha256": "a9831f139bfd4ad564a1e00274a987588791a6f6ededbfc86398383283239367",
+      "bytes": 5386,
+      "sha256": "0aa31f72c3ed93f8e426d1648ccfae729851aec980ecfbb4840bc07e579e2d49",
       "role": "review-document"
     },
     {
       "path": "18-close-out.md",
-      "bytes": 4485,
-      "sha256": "3d18218a57c851adb75d3e5aeae64beeab2a691b78335ec17fb750d3d42dd539",
+      "bytes": 5102,
+      "sha256": "3ee958dfc2fdcb3182bdaafb1a4b2372f19518c1ba3ecec3a268c1bb70caacf1",
+      "role": "review-document"
+    },
+    {
+      "path": "19-global-structure.md",
+      "bytes": 9397,
+      "sha256": "afebb3fe756e41d3cb33b67ec33da8c0dc8889c7cb1e3d41651f94940664d54a",
+      "role": "review-document"
+    },
+    {
+      "path": "20-causal-structure-and-final-state.md",
+      "bytes": 8163,
+      "sha256": "c4377bac59ee8cf908517dfd6273e91f97ea0f095294374ba543082e946a0384",
       "role": "review-document"
     },
     {
       "path": "README.md",
-      "bytes": 6383,
-      "sha256": "e311047180ac967a847e1e113481acbe3dd03df0a7ec6d3063aeafbe0f28a858",
+      "bytes": 10927,
+      "sha256": "2c2f044d6bad27835b3be566cdc4ca55a8cbe5277adc7fc5ea06f034a3a30a21",
       "role": "review-document"
     },
     {
       "path": "advanced_checks.py",
-      "bytes": 6585,
-      "sha256": "62d63d4c174efaa6c1e2c220c1fedb5aa297eedfd3dfd9714074098b687c72ab",
+      "bytes": 5239,
+      "sha256": "be07e3e4bf677e8ef588843a69fd8a4886addb07b011230b44cf32f930b9df6d",
+      "role": "verification-producer"
+    },
+    {
+      "path": "build_archive.py",
+      "bytes": 965,
+      "sha256": "d7303d051f44abfe1aee10749c85981dad962a9ad08aa5d21ac2e12f465d6a5f",
       "role": "verification-producer"
     },
     {
@@ -142,15 +160,51 @@
       "role": "verification-producer"
     },
     {
+      "path": "lean/AdS2RST/Affine.lean",
+      "bytes": 8513,
+      "sha256": "1c4bfd7224018db59b1649522963e5c72b1ead480d6fd373695d07664f2f4e29",
+      "role": "package-artifact"
+    },
+    {
+      "path": "lean/AdS2RST/Core.lean",
+      "bytes": 9385,
+      "sha256": "ed991585af0dcdcb407d44d95867771e0d41c782f782a106f0ec2004b5a4bb62",
+      "role": "package-artifact"
+    },
+    {
+      "path": "lean/AdS2RST/Cumulative.lean",
+      "bytes": 15066,
+      "sha256": "436581a8cd3796c337446e8c80e0fececc7c5cb519645b789c91c6688b8219ef",
+      "role": "package-artifact"
+    },
+    {
+      "path": "lean/AdS2RST/Global.lean",
+      "bytes": 10431,
+      "sha256": "3d4d6f0695eddd6422368d6891d80bb5d087e06a537baf6fde015d105976cc08",
+      "role": "package-artifact"
+    },
+    {
+      "path": "lean/AdS2RST/Profile.lean",
+      "bytes": 5554,
+      "sha256": "7720d72de28167544bb2e43c00bceda82f88764c09174cf0f03fd48647c73818",
+      "role": "package-artifact"
+    },
+    {
+      "path": "lean/AdS2RST/Structure.lean",
+      "bytes": 13497,
+      "sha256": "6350de064207927fed46e0566f0c1bc2454811dcf7459910402b411fbafc7d36",
+      "role": "package-artifact"
+    },
+    {
       "path": "lean/AdS2RST.lean",
-      "bytes": 9838,
-      "sha256": "b832a2d08e5d5389210f0e228a4b87522c11b5c5d48c8e2d23f775ff88c2cdcf",
+      "bytes": 3952,
+      "sha256": "4f72417bc9e6ecbd1f6041bff11f1c442fa8d42985211bb8de81f1912f67c549",
       "role": "package-artifact"
     },
     {
       "path": "lean/README.md",
-      "bytes": 1465,
-      "sha256": "bc232bb037b05a391b58706d770a54deeb74d49ca5720d9b3ee44271469fad3a",
+      "bytes": 4926,
+      "sha256": "c043968ddda5be56223363f5ff2ab99a4981ae65e4a46754faf53acc1f9a9e4f",
       "role": "review-document"
     },
     {
@@ -227,26 +281,26 @@
     },
     {
       "path": "manuscript/ads2-rst-one-sided-flux.pdf",
-      "bytes": 89151,
-      "sha256": "9b97bcf2ceefc17d78b7c12bff003d858f96d870682a681d60a6e4d665b52fe6",
+      "bytes": 169952,
+      "sha256": "51385cbfe391565e7140c642fd055aed4949dc072025ce5f81f0e90e18d1b5bf",
       "role": "package-artifact"
     },
     {
       "path": "manuscript/ads2-rst-one-sided-flux.tex",
-      "bytes": 16326,
-      "sha256": "3f0e2adafb650d5ae1b67c853a430df1992b5b86c4da46a70579abe9f498a266",
+      "bytes": 52865,
+      "sha256": "6123e3467065604cd8c19d42ff39eb7c33a916901aa6753ff52728b1b3808c80",
       "role": "package-artifact"
     },
     {
       "path": "outputs/advanced-checks-summary.json",
-      "bytes": 3757,
-      "sha256": "83d957e4ee8560a1180308f5c5a69f49762e65db60a2b6e0bd2e15ffe93f9f5d",
+      "bytes": 2563,
+      "sha256": "ddb2d5e2a13fb631414edafb764089afc8de0824d36c5994a422ed7333688495",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/advanced-checks.out",
-      "bytes": 1578,
-      "sha256": "8fcdab5fa91e534098b79f4e1d0c41e235773d58c1c9785b510d39646bb35f6a",
+      "bytes": 1044,
+      "sha256": "cc691bc45b2b6deb25e8bd9c7714da77e8980814c022d98e11ab9050ad3e2403",
       "role": "execution-receipt"
     },
     {
@@ -263,20 +317,20 @@
     },
     {
       "path": "outputs/lean-build.json",
-      "bytes": 323,
-      "sha256": "df0f97e645a8b8c88a60db4ae12e1814ab8da102baa2dd955d127c925e20b68c",
+      "bytes": 565,
+      "sha256": "65fcccdbfba8471cd9ad21bb031357ff4cd4667e66147249593778157eb88273",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/lean-build.out",
-      "bytes": 2740,
-      "sha256": "20fdf636ecb7f3f3e4eee41fa8cd27605e43e01d9a10557a5327ba32ba40708a",
+      "bytes": 12311,
+      "sha256": "a0498aca0e5c7543cc02513eaca5af820ddadecd80c9d4f255a4278072c3e0fd",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/portability-receipt.json",
-      "bytes": 311,
-      "sha256": "6866e6aa6c11678cf3b588f1c5c8802c9738c6750506f227c4dcaa5621454ad3",
+      "bytes": 342,
+      "sha256": "8609f79a54cb146155f74b442d8ee440c5dd276aeeb8ce06116da121ee74b72a",
       "role": "execution-receipt"
     },
     {
@@ -310,21 +364,33 @@
       "role": "execution-receipt"
     },
     {
+      "path": "outputs/structure-checks-summary.json",
+      "bytes": 8746,
+      "sha256": "9e7fe6e8f6b98e7b37a13d8b94addcf8f44b90d03d958654791502be6632c76c",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/structure-checks.out",
+      "bytes": 4584,
+      "sha256": "d4660177245573d9ea5cf0d473a7508fbbfac3b2f5050381bd5f760c78c574a8",
+      "role": "execution-receipt"
+    },
+    {
       "path": "outputs/tectonic-build.json",
-      "bytes": 478,
-      "sha256": "65500b8f21bd987f96752f1611ceae9e2a374a56d5236c0f3691416241b291a4",
+      "bytes": 479,
+      "sha256": "98c6c86535ef9e3aa526c35921cc06e2d78ce38ba83c3667f5effae1c11c4d2d",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/tectonic-build.out",
-      "bytes": 10481,
-      "sha256": "07a1412055fa15b17aa18f0c2299a132a0372abb25c20cc922949f57b55f0a19",
+      "bytes": 10019,
+      "sha256": "a2111ac4b6c25720d1bd7901cad86d700ad16af263ae84b1f3231b685c827af7",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/verification-summary.json",
-      "bytes": 43242,
-      "sha256": "abf4e61a69b7663632349ccef03e05eedf3ce573e060d560715d61f02b11cab6",
+      "bytes": 43252,
+      "sha256": "7ba416bd62c57cffdb992c8fba3f756dcab1701d01802c999dfdc98fae3ec9a7",
       "role": "execution-receipt"
     },
     {
@@ -485,8 +551,8 @@
     },
     {
       "path": "run_verification.sh",
-      "bytes": 2217,
-      "sha256": "0842cb29a96c2539daf0d2b6b8bbb354c25f53d3355683bcf73629967f61c945",
+      "bytes": 3000,
+      "sha256": "2d42488a2c2c5b4722131a651adce06fb79def5aab89e48f5cad208811a136fd",
       "role": "package-artifact"
     },
     {
@@ -502,9 +568,15 @@
       "role": "primary-source"
     },
     {
+      "path": "structure_checks.py",
+      "bytes": 23438,
+      "sha256": "b43c8e00b5f9786d9c48de9c0f7b3e1c426c870576bfb1de7938d05f37fb125a",
+      "role": "verification-producer"
+    },
+    {
       "path": "validate_package.py",
-      "bytes": 18072,
-      "sha256": "820a9e6465f71f75921ec1b61f4576622537ebf1add79af1012faece3cf57fef",
+      "bytes": 20171,
+      "sha256": "3f139fe42d5cebdefdf440ed16a936775a55aa13dfebde2d0cee6950c36bf1ba",
       "role": "verification-producer"
     },
     {
@@ -525,29 +597,31 @@
   "source_reference_sha256": "8906ec46e685404da151c8b7d52a325c4053ee8c8f17964df7264c69baf58872",
   "source_mode": "external-links",
   "linked_markdown": {
-    "links": 193,
+    "links": 242,
     "unresolved": [],
     "per_note": {
-      "00-index.md": 35,
-      "01-executive-claim.md": 5,
+      "00-index.md": 40,
+      "01-executive-claim.md": 7,
       "02-source-and-derivation.md": 3,
-      "03-sustained-flux-theorem.md": 2,
+      "03-sustained-flux-theorem.md": 3,
       "04-horizon-and-causal-structure.md": 2,
-      "05-state-frame-and-novelty.md": 5,
+      "05-state-frame-and-novelty.md": 6,
       "06-finite-pulse.md": 1,
-      "07-evidence-and-reproduction.md": 16,
+      "07-evidence-and-reproduction.md": 19,
       "08-review-adjudication.md": 10,
-      "09-independent-reviews.md": 32,
+      "09-independent-reviews.md": 33,
       "10-formal-signoff.md": 15,
-      "11-cumulative-flux-generalization.md": 4,
-      "12-signed-net-focusing.md": 3,
-      "13-breakthrough-program.md": 8,
-      "14-state-pulse-phase-diagram.md": 3,
-      "15-physical-boundary-injection.md": 3,
-      "16-conformal-matter-realization.md": 5,
-      "17-observables-and-universality.md": 3,
-      "18-close-out.md": 12,
-      "README.md": 19,
+      "11-cumulative-flux-generalization.md": 5,
+      "12-signed-net-focusing.md": 4,
+      "13-breakthrough-program.md": 9,
+      "14-state-pulse-phase-diagram.md": 4,
+      "15-physical-boundary-injection.md": 4,
+      "16-conformal-matter-realization.md": 6,
+      "17-observables-and-universality.md": 4,
+      "18-close-out.md": 15,
+      "19-global-structure.md": 18,
+      "20-causal-structure-and-final-state.md": 3,
+      "README.md": 24,
       "lean/README.md": 0,
       "legacy/canonical-result-note.md": 0,
       "legacy/independent-math-review.md": 0,

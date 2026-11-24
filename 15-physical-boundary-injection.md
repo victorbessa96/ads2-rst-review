@@ -5,6 +5,9 @@ type: finite-null-injection
 
 # Finite logarithmic-null injection and weighted focusing
 
+> [!note] Reading note, 2026-11-24
+> The closing-window law is exact. Its reading is frame dependent: it says that the `sigma`-frame energy `M_infinity` does not fix the Kruskal total flux `E_tot`, which alone decides capture ([19](19-global-structure.md), section 4). The Kim-Son solution has no timelike boundary, so "boundary injection" means data on a null line and nothing more.
+
 The filename is retained for link stability. The completed result is a finite logarithmic-null-coordinate calculation, not yet a boundary-normalized AdS energy theorem.
 
 ## 1. Classical transformation and weighted focusing

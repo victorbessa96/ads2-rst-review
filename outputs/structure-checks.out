@@ -1,0 +1,46 @@
+PASS | A1 constraint reduces to sqrt(kappa) d^2 Omega in Kruskal gauge | kappa t = sqrt(kappa) Omega'' + T
+PASS | A2 general solution solves d_+ d_- Omega = -lambda^2/sqrt(kappa)
+PASS | A3 state profile from t = (lambda^2/kappa) theta(-x) | x<0: z**2/2; x>0: 0
+PASS | A4 sustained matter profile from T_++ = p lambda^2 theta(x) | x>0: -p*z**2/2
+PASS | A5 profiles are C^1 at the onset point | value and first derivative vanish on both sides
+PASS | A6 pre-onset sector is the static wormhole | mu + x_m**2/2 - x_m*x_p + x_p**2/2
+PASS | A7 mixed sector formula | mu - p*x_p**2/2 + x_m**2/2 - x_m*x_p
+PASS | A8 both-positive sector formula | mu - p*x_p**2/2 - x_m*x_p
+PASS | A9 Kim-Son printed impulsive solution follows from the constraints in all four sectors | C_pm = lambda^2 x0/sqrt(kappa), D fixed by M
+PASS | B1 zero-flux both-positive sector is mu - x_p x_m | mu - x_m*x_p
+PASS | B2 zero-flux wall is the hyperbola x_p x_m = mu | x_m = mu/x_p
+PASS | B3 both-positive quadrant is trapped at zero flux | d_+ = -x_m < 0, d_- = -x_p < 0
+PASS | B4 zero-flux mixed sector is regular | mu + x*y + y**2/2
+PASS | B5 without the state switch-off the wormhole is eternal and regular | Fhat >= mu > 0 on the whole plane
+PASS | B6 zero-flux wall is spacelike | dx_m/dx_p = -mu/x_p^2 < 0
+PASS | B7 both-positive sector equals the t=0 static RST black hole | M_bh/(lambda sqrt(kappa)) = Omega_s + M/lambda
+PASS | B8 linear dilaton vacuum has t_+ = 1/(4 x_p^2), so t = 0 is not the vacuum | kappa t_+ = sqrt(kappa) d_+^2 Omega
+PASS | C1 pre-onset wormhole: translation only | [{a: b, c: 0}]
+PASS | C2 zero-flux mixed sector: no symmetry | [{a: 0, b: 0, c: 0}]
+PASS | C3 zero-flux both-positive sector: boost only | [{a: 0, b: 0}]
+PASS | D1 after any pulse the mixed excess is linear with slope y - E_tot | slope independent of the delay d
+PASS | D2 double-integral identity behind the CGHS mass and momentum functions | d^2/dx^2 int_0^x (x-s) tau(s) ds = tau(x)
+PASS | D3 sigma-frame energy of a fixed Kruskal pulse depends on its position | E_sigma = lambda**3*p*s*(2*d + s)/2; E_tot = p s
+PASS | E1 Lambert-W inversion reproduces Omega(phi)
+PASS | E2 conformal factor bound e^{2 rho} <= 1/(sqrt(kappa) Omega) at weak coupling | holds wherever phi <= 0
+PASS | E3 pre-onset conformal factor tends to 2/(lambda^2 (x_p - x_m)^2) | ['0.999415138634', '0.999999895431', '0.999999999985']
+PASS | E4 curvature tends to -4 lambda^2 at the AdS2 ends and stays finite | ['-3.9698752', '-3.9963199', '-3.9994933']
+PASS | E5 null rays reach the AdS2 end at finite affine parameter | ['2.44229716594', '2.44427716028', '2.44429696028']
+PASS | E6 the same end is at infinite proper distance along static slices (logarithmic growth) | ['4.0322254', '7.2885413', '10.544888']
+PASS | E7 the dilaton field diverges at the AdS2 end (weak coupling) | -13.468937
+PASS | E8 escaping rays end in a linear-dilaton region: e^{2 rho} lambda^2 x_p (y - E) -> 1 | ['0.996115661536', '0.999994374579', '0.999999999991']
+PASS | E9 the future end is at infinite affine parameter (logarithmic divergence) | ['5.592067955', '12.49568818', '19.40343759']
+PASS | E10 event horizon of the pulse spacetime is x_m = -E_tot | hits at ['1.1375', '2.475', '57.005']; y >= E escape
+PASS | F1 two-sided solution satisfies field equation and both constraints in all four sectors
+PASS | F2 the non-positive set is a future set (causal future of F<=0 has F<0), two-sided random fluxes with atoms | 12016 point pairs, 0 violations
+PASS | F3 both null gradients of F are negative on the critical curve (spacelike, future-trapped) | 3315 zeros, 0 exceptions
+PASS | F4 mirror sector: the ray x_p=-y' is captured iff y' < E_tot of the outgoing flux
+PASS | G1 after a uniform pulse the mixed sector is the zero-flux form with mu_f = mu + m1 + E^2/2 in shifted coordinates
+PASS | G2 first moment of the uniform pulse: int_0^s x p dx = E s/2
+PASS | G3 impulsive shell: mu_f = mu + alpha^2/2 (m1 = 0)
+PASS | G4 F is nondecreasing along the event horizon and along the apparent horizon
+PASS | G5 outgoing flux at right future infinity: -lambda^2 + kappa/(4 (y - E_tot)^2), Kim-Son's formula with A/lambda^2 -> E_tot | residuals at x_p=1e16: ['7.49e-16', '3.51e-13', '4.86e-17'], decreasing in x_p
+PASS | G6 asymptotic frame: outgoing flux is kappa lambda^2/4 - lambda^4 exp(-2 lambda sigma^-), Hawking value plus decaying transient
+PASS | H1 weak branch: kappa/4 + lambda^2 Fhat <= e^{-2 phi} <= 2 sqrt(kappa) Omega + (kappa/2)(ln(kappa/2) - 1)
+PASS | H2 affine length of the AdS2 end beyond unit distance is at most 2/lambda^2
+STRUCTURE: 45/45 PASS

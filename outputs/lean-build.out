@@ -1,35 +1,121 @@
-⚠ [18250/18252] Replayed AdS2RST
-warning: AdS2RST.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: AdS2RST.lean:39:42: Variable name `hmu` is not explicitly referenced.
+⚠ [18250/18264] Replayed AdS2RST.Core
+warning: AdS2RST/Core.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: AdS2RST/Core.lean:39:42: Variable name `hmu` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _hmu
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-warning: AdS2RST.lean:94:32: Variable name `hy` is not explicitly referenced.
+warning: AdS2RST/Core.lean:94:32: Variable name `hy` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _hy
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-warning: AdS2RST.lean:94:45: Variable name `hmu` is not explicitly referenced.
+warning: AdS2RST/Core.lean:94:45: Variable name `hmu` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _hmu
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-info: AdS2RST.lean:252:0: 'AdS2RST.first_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:253:0: 'AdS2RST.F_hasDerivAt_y' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:254:0: 'AdS2RST.F_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:255:0: 'AdS2RST.F_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:256:0: 'AdS2RST.F_pos_before' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:257:0: 'AdS2RST.F_neg_after' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:258:0: 'AdS2RST.slope_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:259:0: 'AdS2RST.general_wall_slope_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:260:0: 'AdS2RST.retained_state_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:261:0: 'AdS2RST.stress_scaling' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:262:0: 'AdS2RST.zAfter_pos_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: AdS2RST.lean:263:0: 'AdS2RST.after_interval_nonempty_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [18251/18252] Ran AdS2RST:irArts
-warning: AdS2RST.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-Build completed successfully (18252 jobs).
+⚠ [18251/18264] Ran AdS2RST.Core:irArts
+warning: AdS2RST/Core.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18252/18264] Replayed AdS2RST.Profile
+warning: AdS2RST/Profile.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18253/18264] Ran AdS2RST.Profile:irArts
+warning: AdS2RST/Profile.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18254/18264] Replayed AdS2RST.Cumulative
+warning: AdS2RST/Cumulative.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18255/18264] Ran AdS2RST.Cumulative:irArts
+warning: AdS2RST/Cumulative.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18256/18264] Replayed AdS2RST.Structure
+warning: AdS2RST/Structure.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18257/18264] Ran AdS2RST.Structure:irArts
+warning: AdS2RST/Structure.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18258/18264] Replayed AdS2RST.Affine
+warning: AdS2RST/Affine.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18259/18264] Ran AdS2RST.Affine:irArts
+warning: AdS2RST/Affine.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18260/18264] Built AdS2RST.Global (52s)
+warning: AdS2RST/Global.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18261/18264] Ran AdS2RST.Global:irArts
+warning: AdS2RST/Global.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+ℹ [18262/18264] Replayed AdS2RST
+info: AdS2RST.lean:22:0: 'AdS2RST.first_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:23:0: 'AdS2RST.F_hasDerivAt_y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:24:0: 'AdS2RST.F_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:25:0: 'AdS2RST.F_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:26:0: 'AdS2RST.F_pos_before' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:27:0: 'AdS2RST.F_neg_after' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:28:0: 'AdS2RST.slope_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:29:0: 'AdS2RST.general_wall_slope_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:30:0: 'AdS2RST.retained_state_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:31:0: 'AdS2RST.stress_scaling' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:32:0: 'AdS2RST.zAfter_pos_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:33:0: 'AdS2RST.after_interval_nonempty_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:34:0: 'AdS2RST.aState_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:35:0: 'AdS2RST.aState_second_deriv_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:36:0: 'AdS2RST.aState_second_deriv_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:37:0: 'AdS2RST.Fhat_pre' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:38:0: 'AdS2RST.Fhat_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:39:0: 'AdS2RST.Fhat_post' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:40:0: 'AdS2RST.Fhat_hasDerivAt_xm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:41:0: 'AdS2RST.Q_gt_of_Fray_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:42:0: 'AdS2RST.Fray_neg_after' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:43:0: 'AdS2RST.Fray_pos_before' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:44:0: 'AdS2RST.hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:45:0: 'AdS2RST.existsUnique_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:46:0: 'AdS2RST.no_hit_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:47:0: 'AdS2RST.sustained_every_ray_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:48:0: 'AdS2RST.sustained_hit_is_xHit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:49:0: 'AdS2RST.impulse_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:50:0: 'AdS2RST.finite_total_flux_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:51:0: 'AdS2RST.zero_flux_wall_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:52:0: 'AdS2RST.zero_flux_wall_slope' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:53:0: 'AdS2RST.zero_flux_trapped_minus' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:54:0: 'AdS2RST.zero_flux_trapped_plus' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:55:0: 'AdS2RST.wormhole_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:56:0: 'AdS2RST.zero_flux_mixed_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:57:0: 'AdS2RST.mirror_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:58:0: 'AdS2RST.symmetry_pre' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:59:0: 'AdS2RST.symmetry_post' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:60:0: 'AdS2RST.symmetry_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:61:0: 'AdS2RST.OmegaOf_phiCrit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:62:0: 'AdS2RST.OmegaCrit_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:63:0: 'AdS2RST.conformal_factor_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:64:0: 'AdS2RST.affine_tail_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:65:0: 'AdS2RST.affine_future_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:66:0: 'AdS2RST.horizon_before_wall' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:67:0: 'AdS2RST.excess_pos_at_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:68:0: 'AdS2RST.Fhat_mirror' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:69:0: 'AdS2RST.eternal_wormhole_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:70:0: 'AdS2RST.mixed_derivative_field_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:71:0: 'AdS2RST.Fray_root_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:72:0: 'AdS2RST.Fray_ge_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:73:0: 'AdS2RST.Fray_le_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:74:0: 'AdS2RST.Fray_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:75:0: 'AdS2RST.Fray_after_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:76:0: 'AdS2RST.after_pulse_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:77:0: 'AdS2RST.pulse_after_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:78:0: 'AdS2RST.pulse_during_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:79:0: 'AdS2RST.retained_state_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:80:0: 'AdS2RST.retained_state_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:81:0: 'AdS2RST.Fhat2_eq_Fhat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:82:0: 'AdS2RST.Fhat2_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:83:0: 'AdS2RST.Fhat2_neg_after_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:84:0: 'AdS2RST.singular_future' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:85:0: 'AdS2RST.regular_past' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:86:0: 'AdS2RST.critical_curve_achronal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:87:0: 'AdS2RST.mirror_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:88:0: 'AdS2RST.Fray_late' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:89:0: 'AdS2RST.late_exterior_eq_zero_flux' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:90:0: 'AdS2RST.first_moment_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:91:0: 'AdS2RST.event_horizon_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:92:0: 'AdS2RST.apparent_horizon_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:93:0: 'AdS2RST.weak_branch_lower'' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:94:0: 'AdS2RST.weak_branch_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:95:0: 'AdS2RST.affine_finite_of_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:96:0: 'AdS2RST.affine_infinite_of_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:97:0: 'AdS2RST.ads_end_affine_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:98:0: 'AdS2RST.future_end_affine_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (18264 jobs).

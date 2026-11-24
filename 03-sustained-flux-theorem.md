@@ -5,6 +5,9 @@ type: sustained-flux-theorem-and-observer-clocks
 
 # Sustained-flux theorem and explicit clocks
 
+> [!note] Reading note, 2026-11-24
+> Every ray with `x_m > 0` reaches the critical curve `x_p x_m = mu` even at `p = 0` ([19](19-global-structure.md), section 2). The theorem below is about mixed rays `x_m = -y < 0`. The `sigma` coordinates used in the later sections are natural only in the both-positive quadrant and at the future end.
+
 ## 1. Unique positive post-onset hit
 
 Set

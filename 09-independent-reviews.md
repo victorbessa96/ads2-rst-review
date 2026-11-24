@@ -57,7 +57,7 @@ The fresh adversarial passes found real defects in the first closed draft. They 
 4. **Finite-pulse no-wall controls:** the census now checks selected-hit residuals and explicit no-root sign conditions rather than only comparing a branch label to `y<E`.
 5. **Post-shutoff identity:** `x_after-s=F_during(s)/(E-y)` is tested with the whole quotient substituted, making the strict inequality and equality case explicit.
 
-The current results are **138/138 main checks**, **39/39 independent symbolic checks**, and **32/32 advanced research checks**. Older green and red outputs remain as history, never as substitutes for the final run.
+The current results are **138/138 main checks**, **39/39 independent symbolic checks**, and **22/22 advanced consistency checks** (32 before ten rows that could not fail were removed on 2026-11-24), and **45/45 structure checks**. Older green and red outputs remain as history, never as substitutes for the final run.
 
 ## 5. OpenCode code-and-test review
 
@@ -76,7 +76,7 @@ A separate OpenCode/deepseek code review returned `FIX-FIRST` on an intermediate
 
 The final literature reviewer confirmed the impulsive wall band and bounded novelty position, but caught a transcription error in Hayward–Kim–Lee Eq. (44): the pulse term is `-Delta^2/2`, not `-Delta^2`. The source-citation file is corrected accordingly. This does not alter the qualitative precursor conclusion or the Kim-Son calculation.
 
-The mathematical reviewer independently reproduced the corrected `Q(p)` and shutoff/equality formulas, confirmed the exact finite-pulse cutoff, and independently recomputed all three corrected proper-time values. The adversarial reviewer independently reproduced the quadrature values and isolated a stale portability receipt. **Historical count:** the receipt was first regenerated at 131/131 and 32/32; the current package is 133/133 and 34/34, with `validate_package.py` now performing a fresh relocation and checking the current output hash.
+The mathematical reviewer independently reproduced the corrected `Q(p)` and shutoff/equality formulas, confirmed the exact finite-pulse cutoff, and independently recomputed all three corrected proper-time values. The adversarial reviewer independently reproduced the quadrature values and isolated a stale portability receipt. **Historical count:** the receipt was first regenerated at 131/131 and 32/32; the package at that time was 133/133 and 34/34 (later counts are in [00-index.md](00-index.md)), with `validate_package.py` now performing a fresh relocation and checking the current output hash.
 
 The adversarial reviewer also caught the both-positive branch domain: the during formula is restricted to `0<x_p<min(s,sqrt(2mu/p))` and the after formula to `s<x_p<s/2+mu/E`, with the interval existing only when `mu>E s/2`. The sign identity `x_m=E(x_0/x_p-1)` and explicit tests on both sides of `x_0` now pin the domain in both producers. Producer verdict text is conditional on zero failures, and the independent-source-to-code disposition names the source derivation and fresh-agent re-derivation rather than calling the producers themselves independent derivations.
 

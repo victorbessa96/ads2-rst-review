@@ -138,7 +138,7 @@ Every wall ray has `y<E`, hence `x_{p,AH}=y/p<s=E/p`, so it crosses the during-p
 | 2 | 1 | 1.5 | 1.00 | None | No wall |
 | 2 | 1 | 1.5 | 1.25 | None | No wall |
 
-Two explicit review-regression rows also pass:
+Explicit review-regression rows also pass:
 
 | Case | Result |
 |---|---|

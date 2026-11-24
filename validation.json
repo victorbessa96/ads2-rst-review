@@ -1,7 +1,7 @@
 {
   "schema": "ads2-rst.review-package.final-validation.v1",
-  "captured_at_utc": "2026-11-24T18:40:48.281754+00:00",
-  "manifest_sha256": "7576a4ccfb450ab5c6630a2601f302802d53a18cd73c887c61cdc820c1ee62bf",
+  "captured_at_utc": "2026-11-24T19:52:49.921365+00:00",
+  "manifest_sha256": "a1a50694a36aa3775b10636ab544dae74c6010b94e9c0e1b995a41fe23bdebe6",
   "checks": [
     {
       "check": "required_artifacts",
@@ -11,7 +11,7 @@
     {
       "check": "relative_markdown_links",
       "pass": true,
-      "evidence": "links=193; unresolved=[]"
+      "evidence": "links=242; unresolved=[]"
     },
     {
       "check": "main_science_counts",
@@ -26,7 +26,12 @@
     {
       "check": "advanced_science_counts",
       "pass": true,
-      "evidence": "32/32 PASS; failed=0"
+      "evidence": "22/22 PASS; failed=0"
+    },
+    {
+      "check": "structure_science_counts",
+      "pass": true,
+      "evidence": "45/45 PASS; failed=0"
     },
     {
       "check": "source_tar_identity",
@@ -51,22 +56,22 @@
     {
       "check": "lean_build_receipt",
       "pass": true,
-      "evidence": "Lean algebraic-core build; no placeholders=True; receipt_fresh=True"
+      "evidence": "Lean build of 7 sources; no placeholders=True; axiom audits=77 standard-only=True; receipt_fresh=True"
     },
     {
       "check": "manuscript_pdf_receipt",
       "pass": true,
-      "evidence": "pdf_bytes=89151; receipt_fresh=True"
+      "evidence": "pdf_bytes=169952; receipt_fresh=True"
     },
     {
       "check": "manifest_readback",
       "pass": true,
-      "evidence": "mode=regenerated; disk_files=85; manifest_files=85; mismatches=[]"
+      "evidence": "mode=regenerated; disk_files=97; manifest_files=97; mismatches=[]"
     }
   ],
   "totals": {
-    "checks": 12,
-    "passed": 12,
+    "checks": 13,
+    "passed": 13,
     "failed": 0
   },
   "failures": [],

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Advanced research checks: state phases, physical injection, matter, and universality."""
+"""Advanced consistency checks: state phases, sigma-frame pulses, matter realization.
+
+Ten rows that could not fail (tautologies and symbol-independence tests) were
+removed on 2026-11-24; the count is 22.
+"""
 from pathlib import Path
 import json
 import sympy as sp
@@ -25,13 +29,11 @@ check("state phase horizon gap", sp.simplify(x_state-y/r-D_state/r) == 0 and (D_
 F_state_pq = mu + y**2/2 + x*y - (p-q)*x**2/2
 check("state phase r=0 has no mixed hit", (mu+y**2/2+x*y).is_positive is True)
 check("state phase r<0 has no mixed hit", F_state_pq.subs(p-q,-sp.symbols("rpos", positive=True)).is_positive is True)
-check("same classical P has different state outcomes", (p.subs(p,sp.Rational(1,2)) > 0) and (p.subs(p,sp.Rational(1,2))-1 < 0))
 R_inf = sp.symbols("R_inf", positive=True)
 check("finite state pulse cannot prevent sustained classical focusing", sp.limit(p*x-R_inf,x,sp.oo) == sp.oo)
 check("alternate q=1 is retained state with shifted p", sp.simplify(F_state_pq.subs({q:1,p:1+p}) - F_state_pq.subs(q,0)) == 0)
 alpha_atom = sp.symbols("alpha_atom", positive=True)
 Q_onset = alpha_atom
-check("onset atom has post-onset Q jump but F(0) is unchanged", Q_onset == alpha_atom and sp.simplify((mu+y**2/2+sp.Integer(0)*(y-Q_onset))-(mu+y**2/2)) == 0)
 check("onset atom generalized trapping crossing when alpha>=y", (Q_onset-y).subs(alpha_atom,y+sp.symbols("h_atom", positive=True)).is_positive is True)
 
 # Physical boundary-time pulse.
@@ -40,9 +42,6 @@ Pcal = sp.symbols("mathcalP", positive=True)
 a, b, k = sp.symbols("a b k", positive=True)
 C = mu + y**2/2
 E = k*(1/a-1/b)
-Qa = sp.Integer(0)
-Qb = k*(1/a-1/b)
-check("boundary Q starts at zero and ends at E", Qa == 0 and sp.simplify(Qb-E) == 0)
 F_during = C + y*x - k*((x-a)/a-sp.log(x/a))
 check("boundary during-pulse concavity", sp.simplify(sp.diff(F_during,x,2)+k/x**2) == 0)
 Fb = sp.symbols("F_b", positive=True)
@@ -56,7 +55,6 @@ check("boundary y>=E gives no post-pulse root", (y-E).subs(E,y-hE).is_positive i
 E_early = sp.exp(2)-sp.exp(1)
 E_late = sp.exp(-2)-sp.exp(-3)
 check("same unit energy has early and late focusing examples", E_early > E_late and E_late > 0)
-check("early-late pulses have same injected energy", sp.simplify((E_early/ (sp.exp(2)-sp.exp(1))) - (E_late/(sp.exp(-2)-sp.exp(-3)))) == 0)
 sig, delta = sp.symbols("sigma_a Delta_sigma", positive=True)
 E_timing = sp.exp(-lam*sig)*(1-sp.exp(-lam*delta))
 check("early boundary timing diverges", sp.limit(E_timing.subs({lam:1,delta:1}),sig,-sp.oo) == sp.oo)
@@ -72,33 +70,19 @@ check("closing-window translation covariance", sp.simplify(u_star.subs(sa,sa+shi
 early_u = u_star.subs({lam:1,Pcal:1,dsig:1,sa:-2})
 late_u = u_star.subs({lam:1,Pcal:1,dsig:1,sa:2})
 check("same physical ray is hit early and missed late", early_u.evalf() < 0 and late_u.evalf() > 0)
-fu, fu0, fu1, fprime, Tpp_u = sp.symbols("u u0 u1 fprime Tpp", positive=True)
-Tuu = fprime**2*Tpp_u
-check("general boundary focusing identity", sp.simplify(sp.integrate(Tuu/fprime,(fu,fu0,fu1))-sp.integrate(Tpp_u*fprime,(fu,fu0,fu1))) == 0)
 
 # Explicit conformal-scalar realization.
 fprime = sp.sqrt(2*Pcal)/(lam*x)
 Tpp = sp.simplify(fprime**2/2)
 check("matter wavepacket reproduces prescribed stress", sp.simplify(Tpp-Pcal/(lam**2*x**2)) == 0)
 xm = sp.symbols("x_m", real=True)
-check("matter stress is conserved", sp.diff(Tpp,xm) == 0)
-f_a = sp.Integer(0)
-f_b = sp.sqrt(2*Pcal)/lam*sp.log(b/a)
-check("wavepacket is continuous at pulse endpoints", f_a == 0 and sp.simplify(f_b.subs(b,a)) == 0)
 E_in = Pcal/lam*sp.log(b/a)
 check("wavepacket physical energy is finite", sp.simplify(E_in.subs(b,a*sp.exp(lam*delta))-Pcal*delta) == 0)
 
 # Observable and universality controls.
-xp2, xm2, Omega_s = sp.symbols("xp2 xm2 Omega_s", real=True)
-G = -sp.log((x-xp2)*(xm-xm2))/(4*sp.pi)
-check("free conformal two-point function has no explicit Omega_s term", sp.diff(G,Omega_s) == 0)
 Q = sp.Function("Q")
 F_chiral = C + sp.Integral(y-Q(x),(x,0,x))
 check("chiral-system accumulated-excess derivative", sp.simplify(sp.diff(F_chiral,x)-(y-Q(x))) == 0)
-fminus = sp.Function("f_minus")
-Tmm = fminus(xm).diff(xm)**2/2
-check("outgoing flux is independent of incoming f_plus", sp.diff(Tmm,sp.Function("f_plus")(x)) == 0)
-check("incoming-sector energy recovery is not an outgoing observable", Tmm.free_symbols == {xm})
 
 passed = sum(row["status"] == "PASS" for row in checks)
 failed = len(checks)-passed

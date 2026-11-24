@@ -5,6 +5,9 @@ type: research-disposition
 
 # Research disposition and open gates
 
+> [!note] Reading note, 2026-11-24
+> Superseded in emphasis by [19 Global structure](19-global-structure.md). "Proved" below means derived on paper; Lean coverage is listed in [lean/README.md](lean/README.md). The "no energy-only threshold" wording is frame dependent, and gate 2 (boundary and bath histories) is not well posed for this solution without an extension.
+
 ## 1. Completed research and packaging hunts
 
 | Thread | Disposition | Artifact |
@@ -32,9 +35,10 @@ type: research-disposition
 
 - Main producer: **138/138**.
 - Separate symbolic producer: **39/39**.
-- Advanced research producer: **32/32**.
-- Package validation: **12/12**.
-- Lean: algebraic core and abstract continuous first-hit criterion, no placeholders.
+- Advanced consistency producer: **22/22** (ten rows that could not fail removed).
+- Structure producer: **45/45**.
+- Package validation: **13/13**.
+- Lean: six modules, cumulative theorem for monotone `Q`, zero-flux structure, symmetries, global causal theorem, final mass parameter, horizon monotonicity, affine-length theorems; no placeholders; 77 axiom audits.
 - PDF: compiled manuscript with state and boundary-time results.
 - Archive: verified, checksum sidecar external, no self-nested ZIP.
 - Fresh relocated reproduction and read-only validation: pass.
@@ -51,4 +55,4 @@ These are not hidden unfinished calculations in the current package:
 
 The appropriate next publication-stage hunt is a specified bath/reflecting-boundary history with an information observable, not another verification cycle.
 
-[Back to index](00-index.md) · [Breakthrough program](13-breakthrough-program.md).
+[Back to index](00-index.md) · [Research program](13-breakthrough-program.md) · [Global structure](19-global-structure.md).

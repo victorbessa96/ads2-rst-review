@@ -1,8 +1,17 @@
 {
-  "schema": "ads2-rst.lean-build-receipt.v1",
-  "created_at_utc": "2026-11-24T18:35:34.963521+00:00",
-  "source_sha256": "b832a2d08e5d5389210f0e228a4b87522c11b5c5d48c8e2d23f775ff88c2cdcf",
-  "log_sha256": "20fdf636ecb7f3f3e4eee41fa8cd27605e43e01d9a10557a5327ba32ba40708a",
+  "schema": "ads2-rst.lean-build-receipt.v2",
+  "sources": [
+    "lean/AdS2RST.lean",
+    "lean/AdS2RST/Core.lean",
+    "lean/AdS2RST/Profile.lean",
+    "lean/AdS2RST/Cumulative.lean",
+    "lean/AdS2RST/Structure.lean",
+    "lean/AdS2RST/Global.lean",
+    "lean/AdS2RST/Affine.lean"
+  ],
+  "created_at_utc": "2026-11-24T19:50:22.365843+00:00",
+  "source_sha256": "6974d334ea190abfd5d1257007e0469ddb37d7bc58e8ebb8958b44d4ee6ff6bb",
+  "log_sha256": "a0498aca0e5c7543cc02513eaca5af820ddadecd80c9d4f255a4278072c3e0fd",
   "command": "lake build",
   "status": "PASS"
 }
