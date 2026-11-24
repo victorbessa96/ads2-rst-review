@@ -1,0 +1,1315 @@
+{
+  "spark": "spark_20261110_154351_a10e80",
+  "interpreter": "/home/bessa/.venvs/physics/bin/python",
+  "mpmath_dps": 90,
+  "source_tex_sha256": "8906ec46e685404da151c8b7d52a325c4053ee8c8f17964df7264c69baf58872",
+  "checks_total": 129,
+  "checks_passed": 128,
+  "checks_failed": 1,
+  "groups": {
+    "canonical-88": {
+      "total": 88,
+      "passed": 88,
+      "failed": 0
+    },
+    "provenance": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "sustained-proof": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "horizon": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "conformal-factor": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "impulsive-comparison": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "state-sensitivity": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "finite-pulse": {
+      "total": 18,
+      "passed": 17,
+      "failed": 1
+    },
+    "null-affine": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "interior-observer": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "Primary source gives chiral Omega solution",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Primary source gives chiral constraint with matter",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Primary source identifies the RST minimum/singularity",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Primary source fixes the AdS2 wormhole boundary functions",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Primary source has the pre-shock static wormhole",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Primary source asymptotic is R -> -4 lambda^2",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Primary source infalling shock is one-sided and positive",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Primary source post-shock singularity is cloaked by horizon",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "pre region obeys the mixed RST equation",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "pre region obeys both chiral constraints",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "mixed region obeys the mixed RST equation",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "mixed region obeys both chiral constraints",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "post region obeys the mixed RST equation",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "post region obeys both chiral constraints",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "other region obeys the mixed RST equation",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "other region obeys both chiral constraints",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "C0/C1 matching at xp=0, xm<0: pre/mixed",
+      "status": "PASS",
+      "detail": "residuals=[0, 0, 0]",
+      "group": "canonical-88"
+    },
+    {
+      "name": "C0/C1 matching at xm=0, xp<0: pre/other",
+      "status": "PASS",
+      "detail": "residuals=[0, 0, 0]",
+      "group": "canonical-88"
+    },
+    {
+      "name": "C0/C1 matching at xp=0, xm>0: other/post",
+      "status": "PASS",
+      "detail": "residuals=[0, 0, 0]",
+      "group": "canonical-88"
+    },
+    {
+      "name": "C0/C1 matching at xm=0, xp>0: mixed/post",
+      "status": "PASS",
+      "detail": "residuals=[0, 0, 0]",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Exact first-hit root satisfies the normalized wall equation",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "General implicit wall tangent dxm/dxp is negative for every p,mu,y>0",
+      "status": "PASS",
+      "detail": "implicit_residual=0",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Zero-flux control has no positive mixed-region wall",
+      "status": "PASS",
+      "detail": "F(p=0)=mu + x*y + y**2/2>0",
+      "group": "canonical-88"
+    },
+    {
+      "name": "M=0 mixed-region post-onset wall is the exact line xm=-(sqrt(1+p)-1)xp",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "M=0 wall energy simplifies to lambda^2 y(1+sqrt(1+p))",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Both-positive wall reaches xm=0 at x=sqrt(2mu/p)",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Both-positive wall derivative identity holds (negative sign proved separately)",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Mixed and both-positive wall positions match at xm=0",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Mixed and both-positive wall slopes match at xm=0",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Leading large-S curvature is R -> -4 lambda^2",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "General mixed-region wall tangent and metric norm are spacelike",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Pre-onset M=0 singular line is timelike by its metric norm",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "General-p M=0 post-onset singular branch is spacelike by its metric norm",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Fourth sector xp<0,xm>0 has strictly positive normalized Omega excess",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=0, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=20.04987562112089027, slope=-0.00498756211209, before=2.01e-6, after=-2.01e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=0, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=200.4987562112089027, slope=-0.00498756211209, before=0.000201, after=-0.000201",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=0, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=2004.987562112089027, slope=-0.00498756211209, before=0.0201, after=-0.0201",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=0.2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=21.874342087037917235, slope=-0.00540373042342, before=2.6e-6, after=-2.6e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=0.2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=200.69756700139283901, slope=-0.00499250280995, before=0.000202, after=-0.000202",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=0.2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=2005.0074626588600611, slope=-0.00498761161575, before=0.0202, after=-0.0202",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=32.383029285599391361, slope=-0.00689068408269, before=7.25e-6, after=-7.25e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=202.46950765959598383, slope=-0.00503611125019, before=0.000207, after=-0.000207",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.01, mu=2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=2005.1865498503250466, slope=-0.00498805706065, before=0.0202, after=-0.0202",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=0, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=2.048808848170151547, slope=-0.0488088481702, before=2.15e-7, after=-2.15e-7",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=0, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=20.48808848170151547, slope=-0.0488088481702, before=2.15e-5, after=-2.15e-5",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=0, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=204.8808848170151547, slope=-0.0488088481702, before=0.00215, after=-0.00215",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=0.2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=3.258317958127242985, slope=-0.0672455076108, before=7.36e-7, after=-7.36e-7",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=0.2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=20.677078252031311211, slope=-0.0492551538906, before=2.21e-5, after=-2.21e-5",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=0.2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=204.89995233554684509, slope=-0.048813390229, before=0.00215, after=-0.00215",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=7.4109281699298425379, slope=-0.0853546728831, before=4.75e-6, after=-4.75e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=22.247448713915890491, slope=-0.052682979817, before=2.72e-5, after=-2.72e-5",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=0.1, mu=2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=205.07140429250957717, slope=-0.0488541954883, before=0.00215, after=-0.00215",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=0, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.24142135623730950488, slope=-0.414213562373, before=3.41e-8, after=-3.41e-8",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=0, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=2.4142135623730950488, slope=-0.414213562373, before=3.41e-6, after=-3.41e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=0, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=24.142135623730950488, slope=-0.414213562373, before=0.000341, after=-0.000341",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=0.2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.7480740698407860231, slope=-0.764171542189, before=4.85e-7, after=-4.85e-7",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=0.2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=2.5491933384829667541, slope=-0.436491673104, before=3.95e-6, after=-3.95e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=0.2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=24.156270695349110906, slope=-0.414455981498, before=0.000342, after=-0.000342",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=2.1049937655763421351, slope=-0.9092967957, before=4.22e-6, after=-4.22e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=3.4494897427831780982, slope=-0.550510257217, before=8.45e-6, after=-8.45e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=1, mu=2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=24.282856857085699996, slope=-0.416618046641, before=0.000347, after=-0.000347",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=0, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.043166247903553998491, slope=-2.31662479036, before=1.43e-8, after=-1.43e-8",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=0, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.43166247903553998491, slope=-2.31662479036, before=1.43e-6, after=-1.43e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=0, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=4.3166247903553998491, slope=-2.31662479036, before=0.000143, after=-0.000143",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=0.2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.21273134932713292628, slope=-6.48260399104, before=4.31e-7, after=-4.31e-7",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=0.2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.48729833462074168852, slope=-2.60403932154, before=1.89e-6, after=-1.89e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=0.2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=4.322649545167229941, slope=-2.31985676581, before=0.000144, after=-0.000144",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.64332456134276049408, slope=-8.5201619088, before=4.07e-6, after=-4.07e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.8141428428542849998, slope=-3.93653038771, before=5.81e-6, after=-5.81e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=10, mu=2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=4.3763886032268264366, slope=-2.34856520397, before=0.000148, after=-0.000148",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=0, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.01104987562112089027, slope=-9.04987562112, before=1.11e-8, after=-1.11e-8",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=0, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.1104987562112089027, slope=-9.04987562112, before=1.11e-6, after=-1.11e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=0, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=1.104987562112089027, slope=-9.04987562112, before=0.000111, after=-0.000111",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=0.2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.06503905058634145616, slope=-38.8023624462, before=4.17e-7, after=-4.17e-7",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=0.2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.12874342087037917235, slope=-10.5199657136, before=1.53e-6, after=-1.53e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=0.2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=1.1069756700139283901, slope=-9.06615535976, before=0.000111, after=-0.000111",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=2, y=0.1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.20125234081028865716, slope=-66.4732895591, before=4.03e-6, after=-4.03e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=2, y=1: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=0.23383029285599391361, slope=-18.1410923489, before=5.23e-6, after=-5.23e-6",
+      "group": "canonical-88"
+    },
+    {
+      "name": "first hit p=100, mu=2, y=10: physical before, excluded after, spacelike",
+      "status": "PASS",
+      "detail": "xp=1.1246950765959598383, slope=-9.21099472427, before=0.000115, after=-0.000115",
+      "group": "canonical-88"
+    },
+    {
+      "name": "M=0 exact mixed-region branch reproduces root and negative slope p=0.001",
+      "status": "PASS",
+      "detail": "xp=4000.999750124921929646517, xm=-2.0",
+      "group": "canonical-88"
+    },
+    {
+      "name": "M=0 exact mixed-region branch reproduces root and negative slope p=0.1",
+      "status": "PASS",
+      "detail": "xp=40.97617696340303093982907, xm=-2.0",
+      "group": "canonical-88"
+    },
+    {
+      "name": "M=0 exact mixed-region branch reproduces root and negative slope p=1",
+      "status": "PASS",
+      "detail": "xp=4.828427124746190097603377, xm=-2.0",
+      "group": "canonical-88"
+    },
+    {
+      "name": "M=0 exact mixed-region branch reproduces root and negative slope p=100",
+      "status": "PASS",
+      "detail": "xp=0.2209975124224178054043853, xm=-2.0",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Small-flux numerical control places the fixed-ray wall beyond 1e12",
+      "status": "PASS",
+      "detail": "",
+      "group": "canonical-88"
+    },
+    {
+      "name": "xm=0 branch match p=0.1, mu=0.2",
+      "status": "PASS",
+      "detail": "xp=2.0, common slope=-0.1",
+      "group": "canonical-88"
+    },
+    {
+      "name": "xm=0 branch match p=1, mu=2",
+      "status": "PASS",
+      "detail": "xp=2.0, common slope=-1.0",
+      "group": "canonical-88"
+    },
+    {
+      "name": "xm=0 branch match p=100, mu=0.2",
+      "status": "PASS",
+      "detail": "xp=0.06324555320336758663997787, common slope=-100.0",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Weak-branch curvature sequence approaches AdS2 monotonically",
+      "status": "PASS",
+      "detail": "gaps=1.60061,0.663636,0.151041,0.0243565,0.00336032,0.000428224",
+      "group": "canonical-88"
+    },
+    {
+      "name": "Staged TeX is byte-identical to its tar member and pinned SHA-256",
+      "status": "PASS",
+      "detail": "8906ec46e685404da151c8b7d52a325c4053ee8c8f17964df7264c69baf58872",
+      "group": "provenance"
+    },
+    {
+      "name": "Negative root is rationalized and strictly negative",
+      "status": "PASS",
+      "detail": "",
+      "group": "sustained-proof"
+    },
+    {
+      "name": "Apparent horizon precedes the singular hit on every mixed ray",
+      "status": "PASS",
+      "detail": "x_hit-y/p=D/p>0",
+      "group": "horizon"
+    },
+    {
+      "name": "Mixed apparent-horizon curve is xm=-p xp and is distinct from the wall",
+      "status": "PASS",
+      "detail": "at fixed y, x_AH=y/p",
+      "group": "horizon"
+    },
+    {
+      "name": "RST minimum has finite nonzero conformal factor exp(2rho)=4/kappa",
+      "status": "PASS",
+      "detail": "",
+      "group": "conformal-factor"
+    },
+    {
+      "name": "Global mixed-wall representation solves the normalized wall equation",
+      "status": "PASS",
+      "detail": "valid for x>=sqrt(2mu/p) in the mixed region",
+      "group": "sustained-proof"
+    },
+    {
+      "name": "Impulsive mixed wall exists exactly for 0<y<a",
+      "status": "PASS",
+      "detail": "x_imp=(mu+y^2/2)/(a-y); positivity requires a>y",
+      "group": "impulsive-comparison"
+    },
+    {
+      "name": "Impulsive example alpha=mu=1,y=1/2 has x=9/4 and spacelike slope -2/11",
+      "status": "PASS",
+      "detail": "",
+      "group": "impulsive-comparison"
+    },
+    {
+      "name": "Impulsive mixed and both-positive branches match position and slope",
+      "status": "PASS",
+      "detail": "",
+      "group": "impulsive-comparison"
+    },
+    {
+      "name": "Impulsive both-positive branch is spacelike",
+      "status": "PASS",
+      "detail": "",
+      "group": "impulsive-comparison"
+    },
+    {
+      "name": "Alternate retained-t+ state has no mixed-ray wall for p=1",
+      "status": "PASS",
+      "detail": "",
+      "group": "state-sensitivity"
+    },
+    {
+      "name": "Alternate retained-t+ state has positive coefficients for 0<p<1",
+      "status": "PASS",
+      "detail": "parameterize p=1/(1+r_small)",
+      "group": "state-sensitivity"
+    },
+    {
+      "name": "Alternate retained-t+ state has a unique positive mixed hit for p>1",
+      "status": "PASS",
+      "detail": "parameterize p=1+q>1",
+      "group": "state-sensitivity"
+    },
+    {
+      "name": "Alternate p=1 both-positive wall is xm=mu/xp",
+      "status": "PASS",
+      "detail": "the p<=1 statement is mixed-ray-specific, not an all-wall theorem",
+      "group": "state-sensitivity"
+    },
+    {
+      "name": "Finite-pulse shutoff value and first derivative match at x=s",
+      "status": "PASS",
+      "detail": "E=p*s",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse post-shutoff root has the exact linear form and x_after>s for F_during(s)>0,y<E",
+      "status": "FAIL",
+      "detail": "x_after-s=F_during(s)/(E-y)",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse post-shutoff wall is spacelike for y<E",
+      "status": "PASS",
+      "detail": "numerator y-E<0; denominator x_after+y>0",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse shutoff ray bound has the correct M=0 limit",
+      "status": "PASS",
+      "detail": "0<y<y_max gives x_hit<x_s; y_max<E",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse both-positive wall position and slope match at shutoff",
+      "status": "PASS",
+      "detail": "",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse apparent horizon continues after shutoff as y=E",
+      "status": "PASS",
+      "detail": "during: y=p*x; after: y=E",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Fixed-xm null geodesic has dxp/dlambda=C exp(-2rho)",
+      "status": "PASS",
+      "detail": "therefore dlambda/dxp=exp(2rho)/C",
+      "group": "null-affine"
+    },
+    {
+      "name": "Weak-branch conformal factor has finite positive upper bound",
+      "status": "PASS",
+      "detail": "W<=-1 gives 0<exp(2rho)<=4/kappa",
+      "group": "null-affine"
+    },
+    {
+      "name": "Interior observer chart has the expected Lorentzian conformal metric",
+      "status": "PASS",
+      "detail": "ds^2=-lambda^2 K exp(2rho)(dsigma0^2-dsigma1^2)",
+      "group": "interior-observer"
+    },
+    {
+      "name": "Interior constant-sigma1 wall root has the exact R_w form",
+      "status": "PASS",
+      "detail": "sigma0_wall=-ln(R_w)/(2 lambda)",
+      "group": "interior-observer"
+    },
+    {
+      "name": "Interior observer chart gives R=-xm/xp=exp(-2 lambda sigma0)",
+      "status": "PASS",
+      "detail": "",
+      "group": "interior-observer"
+    },
+    {
+      "name": "Null affine quadrature is finite and below the exact weak-branch bound",
+      "status": "PASS",
+      "detail": "ell=1.7363464803171617722, bound=9.7967733539318670163",
+      "group": "null-affine"
+    },
+    {
+      "name": "Interior timelike observer hits at finite sigma0 and proper time sigma1=-1",
+      "status": "PASS",
+      "detail": "sigma0_hit=1.4118043725926659663, tau=0.68870725783988057111, residual=-9.327e-90",
+      "group": "interior-observer"
+    },
+    {
+      "name": "Interior timelike observer hits at finite sigma0 and proper time sigma1=0",
+      "status": "PASS",
+      "detail": "sigma0_hit=0.72181773758940517125, tau=0.8043804359527121034, residual=-1.227e-90",
+      "group": "interior-observer"
+    },
+    {
+      "name": "Interior timelike observer hits at finite sigma0 and proper time sigma1=1",
+      "status": "PASS",
+      "detail": "sigma0_hit=0.48695421853797283617, tau=0.57230444660825756226, residual=1.473e-90",
+      "group": "interior-observer"
+    },
+    {
+      "name": "Finite-pulse wall existence p=1,mu=0,s=2,y/E=0.25",
+      "status": "PASS",
+      "detail": "first=1.207106781186548, branch=during, E=2.0",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=1,mu=0,s=2,y/E=0.75",
+      "status": "PASS",
+      "detail": "first=6.25, branch=after, E=2.0",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=1,mu=0,s=2,y/E=1",
+      "status": "PASS",
+      "detail": "first=NONE, branch=none, E=2.0",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=1,mu=0,s=2,y/E=1.25",
+      "status": "PASS",
+      "detail": "first=NONE, branch=none, E=2.0",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=0.2,mu=0.5,s=3,y/E=0.25",
+      "status": "PASS",
+      "detail": "first=3.136111111111111, branch=after, E=0.6",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=0.2,mu=0.5,s=3,y/E=0.75",
+      "status": "PASS",
+      "detail": "first=10.00833333333333, branch=after, E=0.6",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=0.2,mu=0.5,s=3,y/E=1",
+      "status": "PASS",
+      "detail": "first=NONE, branch=none, E=0.6",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=0.2,mu=0.5,s=3,y/E=1.25",
+      "status": "PASS",
+      "detail": "first=NONE, branch=none, E=0.6",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=2,mu=1,s=1.5,y/E=0.25",
+      "status": "PASS",
+      "detail": "first=1.569444444444444, branch=after, E=3.0",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=2,mu=1,s=1.5,y/E=0.75",
+      "status": "PASS",
+      "detail": "first=7.708333333333333, branch=after, E=3.0",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=2,mu=1,s=1.5,y/E=1",
+      "status": "PASS",
+      "detail": "first=NONE, branch=none, E=3.0",
+      "group": "finite-pulse"
+    },
+    {
+      "name": "Finite-pulse wall existence p=2,mu=1,s=1.5,y/E=1.25",
+      "status": "PASS",
+      "detail": "first=NONE, branch=none, E=3.0",
+      "group": "finite-pulse"
+    }
+  ],
+  "wall_rows": [
+    {
+      "p": "0.01",
+      "mu": "0",
+      "y": "0.1",
+      "xp": "20.04987562112089027021926491275957618695",
+      "slope_xm_xp": "-0.004987562112089027021926491275957618694502",
+      "residual": "0.0"
+    },
+    {
+      "p": "0.01",
+      "mu": "0",
+      "y": "1",
+      "xp": "200.4987562112089027021926491275957618695",
+      "slope_xm_xp": "-0.004987562112089027021926491275957618694502",
+      "residual": "0.0"
+    },
+    {
+      "p": "0.01",
+      "mu": "0",
+      "y": "10",
+      "xp": "2004.987562112089027021926491275957618695",
+      "slope_xm_xp": "-0.004987562112089027021926491275957618694502",
+      "residual": "0.0"
+    },
+    {
+      "p": "0.01",
+      "mu": "0.2",
+      "y": "0.1",
+      "xp": "21.87434208703791723467291760041217847791",
+      "slope_xm_xp": "-0.005403730423420629887100162153330853391399",
+      "residual": "0.0"
+    },
+    {
+      "p": "0.01",
+      "mu": "0.2",
+      "y": "1",
+      "xp": "200.6975670013928390146609003943423898817",
+      "slope_xm_xp": "-0.004992502809947006636188678660423176729058",
+      "residual": "3.142e-89"
+    },
+    {
+      "p": "0.01",
+      "mu": "0.2",
+      "y": "10",
+      "xp": "2005.007462658860061063856767630114835587",
+      "slope_xm_xp": "-0.004987611615754136853375084797630202726594",
+      "residual": "4.022e-87"
+    },
+    {
+      "p": "0.01",
+      "mu": "2",
+      "y": "0.1",
+      "xp": "32.38302928559939136103937617656365775065",
+      "slope_xm_xp": "-0.0068906840826949584514274117300360173618",
+      "residual": "9.818e-91"
+    },
+    {
+      "p": "0.01",
+      "mu": "2",
+      "y": "1",
+      "xp": "202.4695076595959838322103868052105199074",
+      "slope_xm_xp": "-0.005036111250194168325978292062666805664134",
+      "residual": "0.0"
+    },
+    {
+      "p": "0.01",
+      "mu": "2",
+      "y": "10",
+      "xp": "2005.186549850325046618260763800597106269",
+      "slope_xm_xp": "-0.004988057060647728953034403544951626115369",
+      "residual": "-4.022e-87"
+    },
+    {
+      "p": "0.1",
+      "mu": "0",
+      "y": "0.1",
+      "xp": "2.048808848170151546991453513679937598475",
+      "slope_xm_xp": "-0.04880884817015154699145351367993759847527",
+      "residual": "0.0"
+    },
+    {
+      "p": "0.1",
+      "mu": "0",
+      "y": "1",
+      "xp": "20.48808848170151546991453513679937598475",
+      "slope_xm_xp": "-0.04880884817015154699145351367993759847527",
+      "residual": "3.927e-90"
+    },
+    {
+      "p": "0.1",
+      "mu": "0",
+      "y": "10",
+      "xp": "204.8808848170151546991453513679937598475",
+      "slope_xm_xp": "-0.04880884817015154699145351367993759847527",
+      "residual": "0.0"
+    },
+    {
+      "p": "0.1",
+      "mu": "0.2",
+      "y": "0.1",
+      "xp": "3.25831795812724298497204998596911539536",
+      "slope_xm_xp": "-0.06724550761079775620901658137362398624946",
+      "residual": "1.227e-91"
+    },
+    {
+      "p": "0.1",
+      "mu": "0.2",
+      "y": "1",
+      "xp": "20.67707825203131121081152396559571062628",
+      "slope_xm_xp": "-0.04925515389063461884181090887932595555865",
+      "residual": "0.0"
+    },
+    {
+      "p": "0.1",
+      "mu": "0.2",
+      "y": "10",
+      "xp": "204.8999523355468450901117416625345727863",
+      "slope_xm_xp": "-0.04881339022902855473652295464222655168713",
+      "residual": "5.027e-88"
+    },
+    {
+      "p": "0.1",
+      "mu": "2",
+      "y": "0.1",
+      "xp": "7.410928169929842537917179465958210665699",
+      "slope_xm_xp": "-0.08535467288312151719300852992591117640444",
+      "residual": "-4.909e-91"
+    },
+    {
+      "p": "0.1",
+      "mu": "2",
+      "y": "1",
+      "xp": "22.24744871391589049098642037352945695983",
+      "slope_xm_xp": "-0.05268297981698346413499784790060680497198",
+      "residual": "3.927e-90"
+    },
+    {
+      "p": "0.1",
+      "mu": "2",
+      "y": "10",
+      "xp": "205.0714042925095771749568857999077544079",
+      "slope_xm_xp": "-0.04885419548830693294766579603677858347835",
+      "residual": "5.027e-88"
+    },
+    {
+      "p": "1",
+      "mu": "0",
+      "y": "0.1",
+      "xp": "0.241421356237309504880168872420969807857",
+      "slope_xm_xp": "-0.4142135623730950488016887242096980785697",
+      "residual": "3.835e-93"
+    },
+    {
+      "p": "1",
+      "mu": "0",
+      "y": "1",
+      "xp": "2.41421356237309504880168872420969807857",
+      "slope_xm_xp": "-0.4142135623730950488016887242096980785697",
+      "residual": "0.0"
+    },
+    {
+      "p": "1",
+      "mu": "0",
+      "y": "10",
+      "xp": "24.1421356237309504880168872420969807857",
+      "slope_xm_xp": "-0.4142135623730950488016887242096980785697",
+      "residual": "0.0"
+    },
+    {
+      "p": "1",
+      "mu": "0.2",
+      "y": "0.1",
+      "xp": "0.7480740698407860230965967436087996657705",
+      "slope_xm_xp": "-0.764171542189059987843896450732210702226",
+      "residual": "0.0"
+    },
+    {
+      "p": "1",
+      "mu": "0.2",
+      "y": "1",
+      "xp": "2.549193338482966754071706159912959844333",
+      "slope_xm_xp": "-0.4364916731037084425896326998911998054165",
+      "residual": "0.0"
+    },
+    {
+      "p": "1",
+      "mu": "0.2",
+      "y": "10",
+      "xp": "24.15627069534911090596654211461923518231",
+      "slope_xm_xp": "-0.4144559814979069044054651417454143469251",
+      "residual": "0.0"
+    },
+    {
+      "p": "1",
+      "mu": "2",
+      "y": "0.1",
+      "xp": "2.104993765576342135075873850245161032038",
+      "slope_xm_xp": "-0.9092967956996812997449309622992381390936",
+      "residual": "-4.909e-91"
+    },
+    {
+      "p": "1",
+      "mu": "2",
+      "y": "1",
+      "xp": "3.449489742783178098197284074705891391966",
+      "slope_xm_xp": "-0.5505102572168219018027159252941086080341",
+      "residual": "0.0"
+    },
+    {
+      "p": "1",
+      "mu": "2",
+      "y": "10",
+      "xp": "24.28285685708569999599879962273453055753",
+      "slope_xm_xp": "-0.4166180466413979587753877166055643426053",
+      "residual": "-6.284e-89"
+    },
+    {
+      "p": "10",
+      "mu": "0",
+      "y": "0.1",
+      "xp": "0.04316624790355399849114932736670686683927",
+      "slope_xm_xp": "-2.316624790355399849114932736670686683927",
+      "residual": "-1.918e-93"
+    },
+    {
+      "p": "10",
+      "mu": "0",
+      "y": "1",
+      "xp": "0.4316624790355399849114932736670686683927",
+      "slope_xm_xp": "-2.316624790355399849114932736670686683927",
+      "residual": "1.227e-91"
+    },
+    {
+      "p": "10",
+      "mu": "0",
+      "y": "10",
+      "xp": "4.316624790355399849114932736670686683927",
+      "slope_xm_xp": "-2.316624790355399849114932736670686683927",
+      "residual": "0.0"
+    },
+    {
+      "p": "10",
+      "mu": "0.2",
+      "y": "0.1",
+      "xp": "0.2127313493271329262771887552164499897514",
+      "slope_xm_xp": "-6.482603991039785555003185146962241768052",
+      "residual": "-3.068e-92"
+    },
+    {
+      "p": "10",
+      "mu": "0.2",
+      "y": "1",
+      "xp": "0.4872983346207416885179265399782399610833",
+      "slope_xm_xp": "-2.604039321535998654431313150717584501808",
+      "residual": "0.0"
+    },
+    {
+      "p": "10",
+      "mu": "0.2",
+      "y": "10",
+      "xp": "4.322649545167229941033705097962996804093",
+      "slope_xm_xp": "-2.31985676580934242918977410672908010595",
+      "residual": "0.0"
+    },
+    {
+      "p": "10",
+      "mu": "2",
+      "y": "0.1",
+      "xp": "0.6433245613427604940798397708897193120003",
+      "slope_xm_xp": "-8.520161908799391919054437665864546932647",
+      "residual": "-4.909e-91"
+    },
+    {
+      "p": "10",
+      "mu": "2",
+      "y": "1",
+      "xp": "0.8141428428542849997999399811367265278766",
+      "slope_xm_xp": "-3.93653038771019285399905684643427400949",
+      "residual": "-4.909e-91"
+    },
+    {
+      "p": "10",
+      "mu": "2",
+      "y": "10",
+      "xp": "4.37638860322682643662337788190442199777",
+      "slope_xm_xp": "-2.348565203968530182742441304831080472214",
+      "residual": "0.0"
+    },
+    {
+      "p": "100",
+      "mu": "0",
+      "y": "0.1",
+      "xp": "0.01104987562112089027021926491275957618695",
+      "slope_xm_xp": "-9.049875621120890270219264912759576186945",
+      "residual": "2.876e-93"
+    },
+    {
+      "p": "100",
+      "mu": "0",
+      "y": "1",
+      "xp": "0.1104987562112089027021926491275957618695",
+      "slope_xm_xp": "-9.049875621120890270219264912759576186945",
+      "residual": "-1.227e-91"
+    },
+    {
+      "p": "100",
+      "mu": "0",
+      "y": "10",
+      "xp": "1.104987562112089027021926491275957618695",
+      "slope_xm_xp": "-9.049875621120890270219264912759576186945",
+      "residual": "-7.855e-90"
+    },
+    {
+      "p": "100",
+      "mu": "0.2",
+      "y": "0.1",
+      "xp": "0.0650390505863414561599812675874545705667",
+      "slope_xm_xp": "-38.80236244623749298619849223496576438093",
+      "residual": "-3.068e-92"
+    },
+    {
+      "p": "100",
+      "mu": "0.2",
+      "y": "1",
+      "xp": "0.1287434208703791723467291760041217847791",
+      "slope_xm_xp": "-10.5199657136265371839161498771533799828",
+      "residual": "1.227e-91"
+    },
+    {
+      "p": "100",
+      "mu": "0.2",
+      "y": "10",
+      "xp": "1.106975670013928390146609003943423898817",
+      "slope_xm_xp": "-9.066155359757492118975752445471683411271",
+      "residual": "-7.855e-90"
+    },
+    {
+      "p": "100",
+      "mu": "2",
+      "y": "0.1",
+      "xp": "0.201252340810288657159842157345326843521",
+      "slope_xm_xp": "-66.47328955906637333396636156562538061665",
+      "residual": "4.909e-91"
+    },
+    {
+      "p": "100",
+      "mu": "2",
+      "y": "1",
+      "xp": "0.2338302928559939136103937617656365775065",
+      "slope_xm_xp": "-18.1410923489230776027317215859064889981",
+      "residual": "0.0"
+    },
+    {
+      "p": "100",
+      "mu": "2",
+      "y": "10",
+      "xp": "1.124695076595959838322103868052105199074",
+      "slope_xm_xp": "-9.210994724266238477667639725957074594535",
+      "residual": "7.855e-90"
+    }
+  ],
+  "observer_rows": [
+    {
+      "sigma1": "-1",
+      "sigma0_hit": "1.41180437259266596630848633586",
+      "proper_time_from_minus_2": "0.688707257839880571113393227235"
+    },
+    {
+      "sigma1": "0",
+      "sigma0_hit": "0.721817737589405171246638370137",
+      "proper_time_from_minus_2": "0.804380435952712103399384475708"
+    },
+    {
+      "sigma1": "1",
+      "sigma0_hit": "0.486954218537972836166123639525",
+      "proper_time_from_minus_2": "0.572304446608257562263323783499"
+    }
+  ],
+  "pulse_rows": [
+    {
+      "p": "1",
+      "mu": "0",
+      "x_s": "2",
+      "y_over_E": "0.25",
+      "first_hit": "1.2071067811865475244008443621",
+      "branch": "during"
+    },
+    {
+      "p": "1",
+      "mu": "0",
+      "x_s": "2",
+      "y_over_E": "0.75",
+      "first_hit": "6.25",
+      "branch": "after"
+    },
+    {
+      "p": "1",
+      "mu": "0",
+      "x_s": "2",
+      "y_over_E": "1",
+      "first_hit": null,
+      "branch": "none"
+    },
+    {
+      "p": "1",
+      "mu": "0",
+      "x_s": "2",
+      "y_over_E": "1.25",
+      "first_hit": null,
+      "branch": "none"
+    },
+    {
+      "p": "0.2",
+      "mu": "0.5",
+      "x_s": "3",
+      "y_over_E": "0.25",
+      "first_hit": "3.13611111111111111111111111111",
+      "branch": "after"
+    },
+    {
+      "p": "0.2",
+      "mu": "0.5",
+      "x_s": "3",
+      "y_over_E": "0.75",
+      "first_hit": "10.0083333333333333333333333333",
+      "branch": "after"
+    },
+    {
+      "p": "0.2",
+      "mu": "0.5",
+      "x_s": "3",
+      "y_over_E": "1",
+      "first_hit": null,
+      "branch": "none"
+    },
+    {
+      "p": "0.2",
+      "mu": "0.5",
+      "x_s": "3",
+      "y_over_E": "1.25",
+      "first_hit": null,
+      "branch": "none"
+    },
+    {
+      "p": "2",
+      "mu": "1",
+      "x_s": "1.5",
+      "y_over_E": "0.25",
+      "first_hit": "1.56944444444444444444444444444",
+      "branch": "after"
+    },
+    {
+      "p": "2",
+      "mu": "1",
+      "x_s": "1.5",
+      "y_over_E": "0.75",
+      "first_hit": "7.70833333333333333333333333333",
+      "branch": "after"
+    },
+    {
+      "p": "2",
+      "mu": "1",
+      "x_s": "1.5",
+      "y_over_E": "1",
+      "first_hit": null,
+      "branch": "none"
+    },
+    {
+      "p": "2",
+      "mu": "1",
+      "x_s": "1.5",
+      "y_over_E": "1.25",
+      "first_hit": null,
+      "branch": "none"
+    }
+  ],
+  "verdict": "Exact fixed-model sustained and finite-pulse wall theorems, apparent-horizon ordering, finite null affine parameter, and finite interior-observer proper time are verified. No future-asymptotic absorber or arbitrary-state claim is made."
+}

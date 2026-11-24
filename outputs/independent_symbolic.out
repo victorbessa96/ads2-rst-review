@@ -1,0 +1,40 @@
+PASS | sustained root residual
+PASS | negative other root
+PASS | positive selected root
+PASS | apparent-horizon ordering
+PASS | spacelike mixed tangent
+PASS | zero-flux regularity
+PASS | post interface position
+PASS | post interface slope
+PASS | global wall representation
+PASS | finite conformal factor at Omega_s
+PASS | impulsive root and positive ray band
+PASS | impulsive causal sign
+PASS | impulsive branch join
+PASS | alternate state p=1 has no mixed wall
+PASS | alternate state p<1 coefficient is positive
+PASS | alternate state p>1 has a positive mixed hit and negative other root
+PASS | alternate p=1 retains a both-positive wall
+PASS | pulse C0 at shutoff
+PASS | pulse C1 at shutoff
+PASS | pulse after-shutoff root and post-shutoff inequality
+PASS | pulse after-shutoff exact negative tangent
+PASS | pulse y_max M=0 limit and x_hit monotonicity
+PASS | pulse both-positive position match
+PASS | pulse both-positive slope match and sign-domain
+PASS | pulse apparent-horizon continuation and during crossing
+PASS | cumulative derivative, concavity, corrected slope, and horizon ordering
+PASS | exponential total-flux cutoff
+PASS | signed positive linear unique hit
+PASS | signed unattained threshold no finite hit
+PASS | signed quadratic tangential contact
+PASS | signed cusp one-sided causal signs
+PASS | finite sigma pulse cumulative flux
+PASS | large-mu nonreal-y_max post-shutoff hit
+PASS | shutoff equality x_after=x_during=x_s
+PASS | null affine relation and geodesic ODE
+PASS | observer metric coefficients
+PASS | observer wall root
+PASS | observer R coordinate
+PASS | observer M=0 root matches global wall
+INDEPENDENT_SYMBOLIC: 39/39 PASS

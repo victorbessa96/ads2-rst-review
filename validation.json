@@ -1,0 +1,82 @@
+{
+  "schema": "ads2-rst.review-package.final-validation.v1",
+  "captured_at_utc": "2026-11-24T18:40:48.281754+00:00",
+  "manifest_sha256": "7576a4ccfb450ab5c6630a2601f302802d53a18cd73c887c61cdc820c1ee62bf",
+  "checks": [
+    {
+      "check": "required_artifacts",
+      "pass": true,
+      "evidence": "missing=[]; archive_status=verified; archive_missing=[]; archive_current=True; archive_sha_ok=True"
+    },
+    {
+      "check": "relative_markdown_links",
+      "pass": true,
+      "evidence": "links=193; unresolved=[]"
+    },
+    {
+      "check": "main_science_counts",
+      "pass": true,
+      "evidence": "138/138 PASS; failed=0"
+    },
+    {
+      "check": "independent_science_counts",
+      "pass": true,
+      "evidence": "39/39 PASS; failed=0"
+    },
+    {
+      "check": "advanced_science_counts",
+      "pass": true,
+      "evidence": "32/32 PASS; failed=0"
+    },
+    {
+      "check": "source_tar_identity",
+      "pass": true,
+      "evidence": "external-source-links; original tar not redistributed"
+    },
+    {
+      "check": "red_first_preserved",
+      "pass": true,
+      "evidence": "125/129 red-first artifacts present; failed=4"
+    },
+    {
+      "check": "red_second_preserved",
+      "pass": true,
+      "evidence": "128/129 red-second artifacts present; failed=1"
+    },
+    {
+      "check": "relocated_reproduction",
+      "pass": true,
+      "evidence": "fresh=True; status=PASS; byte_identical=True; receipt_hash_matches=True"
+    },
+    {
+      "check": "lean_build_receipt",
+      "pass": true,
+      "evidence": "Lean algebraic-core build; no placeholders=True; receipt_fresh=True"
+    },
+    {
+      "check": "manuscript_pdf_receipt",
+      "pass": true,
+      "evidence": "pdf_bytes=89151; receipt_fresh=True"
+    },
+    {
+      "check": "manifest_readback",
+      "pass": true,
+      "evidence": "mode=regenerated; disk_files=85; manifest_files=85; mismatches=[]"
+    }
+  ],
+  "totals": {
+    "checks": 12,
+    "passed": 12,
+    "failed": 0
+  },
+  "failures": [],
+  "warnings": [
+    "External human scientific review is not performed.",
+    "Literature finding is bounded absence of evidence, not exhaustive priority.",
+    "Interior observer proper time is not a future-asymptotic boundary-observer theorem."
+  ],
+  "status": "PASS",
+  "archive_status": "verified",
+  "archive_verified": true,
+  "external_formal_review_performed": false
+}

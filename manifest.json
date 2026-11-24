@@ -1,0 +1,581 @@
+{
+  "schema": "ads2-rst.review-package.manifest.v1",
+  "created_at_utc": "2026-11-24T18:40:39.849980+00:00",
+  "file_count": 85,
+  "artifacts": [
+    {
+      "path": ".gitignore",
+      "bytes": 45,
+      "sha256": "f7a695371b157909aa9bb9923698a5a553fc72d6253af726c0262c6a705f816f",
+      "role": "package-artifact"
+    },
+    {
+      "path": "00-index.md",
+      "bytes": 8572,
+      "sha256": "42247a900c335db1f4941dd18a2f38a314f8329a15ff510281eb74269af09f95",
+      "role": "review-document"
+    },
+    {
+      "path": "01-executive-claim.md",
+      "bytes": 6679,
+      "sha256": "ded8c93f42ce29869d7fc602799f5776dddf5f930c29075cc668ed6ccbcd32a2",
+      "role": "review-document"
+    },
+    {
+      "path": "02-source-and-derivation.md",
+      "bytes": 5221,
+      "sha256": "ded0b2d96d6664af73f71b5dd3958fe09fd5a422cc6d173db8dbbbc9985cc67c",
+      "role": "review-document"
+    },
+    {
+      "path": "03-sustained-flux-theorem.md",
+      "bytes": 5793,
+      "sha256": "ba995cbf7c4acd928a851b8a1f8e89dda83dfe0c5b05b3624c8a77ba01b40dfe",
+      "role": "review-document"
+    },
+    {
+      "path": "04-horizon-and-causal-structure.md",
+      "bytes": 3939,
+      "sha256": "fd85d633188897f2b49a7ed0d6665d8ddeed40f42aa77b641d722dcc958b1008",
+      "role": "review-document"
+    },
+    {
+      "path": "05-state-frame-and-novelty.md",
+      "bytes": 6070,
+      "sha256": "442c14deb4fab8d990f782fb49b34c1a1d948384cc4365050ccf76ae58c95fd9",
+      "role": "review-document"
+    },
+    {
+      "path": "06-finite-pulse.md",
+      "bytes": 6838,
+      "sha256": "13cb5f34ce4bcffeaba2c91d316c84aa0674eb03263e96bfff6348a5c4f9bd23",
+      "role": "review-document"
+    },
+    {
+      "path": "07-evidence-and-reproduction.md",
+      "bytes": 9341,
+      "sha256": "f1ec449bad30e67c31c07f1b37d85de7cd0c7ef7523bba8d04b4b32e8d6d8847",
+      "role": "review-document"
+    },
+    {
+      "path": "08-review-adjudication.md",
+      "bytes": 6633,
+      "sha256": "a069010b8733526163700fb97edca756d6cfc7773f426c32d5eda878239ff184",
+      "role": "review-document"
+    },
+    {
+      "path": "09-independent-reviews.md",
+      "bytes": 14877,
+      "sha256": "4853ecf978617ff6dfbd332358b2d2b6f0c7b7320222c180a8f92a1b9e3e3a89",
+      "role": "review-document"
+    },
+    {
+      "path": "10-formal-signoff.md",
+      "bytes": 5113,
+      "sha256": "1e6f8d07409028f1da79ed0a338f25ab3259d1e0031ae8b36e35910175ccb374",
+      "role": "review-document"
+    },
+    {
+      "path": "11-cumulative-flux-generalization.md",
+      "bytes": 5892,
+      "sha256": "47043a82f38fca3c70a237ee930af3b0cf37efdae213dbc2b97f406b601a4043",
+      "role": "review-document"
+    },
+    {
+      "path": "12-signed-net-focusing.md",
+      "bytes": 10484,
+      "sha256": "21d297d39cd0beaf83aeaff29ffe77571ccc95019dce208e68dd4da69e1a67e5",
+      "role": "review-document"
+    },
+    {
+      "path": "13-breakthrough-program.md",
+      "bytes": 9161,
+      "sha256": "08fbcdbe9c54f3eb5a2c5849ee5d7366f5cb0ad8d1c7e7b95160b1b5a7e01900",
+      "role": "review-document"
+    },
+    {
+      "path": "14-state-pulse-phase-diagram.md",
+      "bytes": 3881,
+      "sha256": "581b3a55bdcb44d7b3a18658f92a43ff53b368ce5af9d8aa8348c9755bdf4e6b",
+      "role": "review-document"
+    },
+    {
+      "path": "15-physical-boundary-injection.md",
+      "bytes": 6028,
+      "sha256": "841bb9a2f375b283554f94b2c15fb35c5ef2cf0c7727d9d1c491aece76f0c45f",
+      "role": "review-document"
+    },
+    {
+      "path": "16-conformal-matter-realization.md",
+      "bytes": 5207,
+      "sha256": "34103994d11b6502d7b0c8576900d276ef446dc2e44963ae432f8a054bf5c05b",
+      "role": "review-document"
+    },
+    {
+      "path": "17-observables-and-universality.md",
+      "bytes": 4967,
+      "sha256": "a9831f139bfd4ad564a1e00274a987588791a6f6ededbfc86398383283239367",
+      "role": "review-document"
+    },
+    {
+      "path": "18-close-out.md",
+      "bytes": 4485,
+      "sha256": "3d18218a57c851adb75d3e5aeae64beeab2a691b78335ec17fb750d3d42dd539",
+      "role": "review-document"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6383,
+      "sha256": "e311047180ac967a847e1e113481acbe3dd03df0a7ec6d3063aeafbe0f28a858",
+      "role": "review-document"
+    },
+    {
+      "path": "advanced_checks.py",
+      "bytes": 6585,
+      "sha256": "62d63d4c174efaa6c1e2c220c1fedb5aa297eedfd3dfd9714074098b687c72ab",
+      "role": "verification-producer"
+    },
+    {
+      "path": "independent_symbolic.py",
+      "bytes": 11018,
+      "sha256": "ba5968b40a8b62650c6553fe4c68bb6b66c945b864cf57580e0ed134289a75c2",
+      "role": "verification-producer"
+    },
+    {
+      "path": "lean/AdS2RST.lean",
+      "bytes": 9838,
+      "sha256": "b832a2d08e5d5389210f0e228a4b87522c11b5c5d48c8e2d23f775ff88c2cdcf",
+      "role": "package-artifact"
+    },
+    {
+      "path": "lean/README.md",
+      "bytes": 1465,
+      "sha256": "bc232bb037b05a391b58706d770a54deeb74d49ca5720d9b3ee44271469fad3a",
+      "role": "review-document"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "bytes": 3126,
+      "sha256": "cf75bcaafae85c14ad01d16948f6c34059b27dee92c777c1c7904ea74cb8c130",
+      "role": "package-artifact"
+    },
+    {
+      "path": "lean/lakefile.toml",
+      "bytes": 185,
+      "sha256": "b671cfec21bde406522fdddb540526970b24992be98790a924892e6a47a74725",
+      "role": "package-artifact"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "bytes": 24,
+      "sha256": "9387b82b68652509fde6b2b4c61210a71fcc4b68b65d02f025414e000d47b567",
+      "role": "package-artifact"
+    },
+    {
+      "path": "legacy/ads2_rst_flux_out.txt",
+      "bytes": 11082,
+      "sha256": "6b179d2d40eb689303df182c5f2db810b6994ec72d5d92bb624a11a635f9acf7",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "legacy/ads2_rst_flux_verify.py",
+      "bytes": 10934,
+      "sha256": "7589ad51afba3e8088f95cabf1b0197288aff0283880d78b2231197a088fce4a",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "legacy/canonical-result-note.md",
+      "bytes": 8887,
+      "sha256": "2ff82e7daef5b8e81d0929a7e362d020a33e8087faa15307972e09ebfbc20b4c",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "legacy/independent-math-review.md",
+      "bytes": 2630,
+      "sha256": "deccb158171849a561f79f1b8bd5fef577588b100fb58c1dc3799ec4a55284eb",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "legacy/independent-scope-review.md",
+      "bytes": 2123,
+      "sha256": "065dceb456f6ecc7fc10de0bb4b5176d29236c2f2a0d60eaa4c5e74d410790df",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "legacy/red-first-summary.json",
+      "bytes": 25427,
+      "sha256": "7d7951ceb270ed069403ad7d41e7d6ad56424ed23ccd8c4e430725ff83da1a0c",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "legacy/red-first.out",
+      "bytes": 10183,
+      "sha256": "5006fd0f46c3f38dae40d7cf6dccebafd7e25473033cda0f8cf76fb15750ed8c",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "legacy/review-strengthened-console.out",
+      "bytes": 10953,
+      "sha256": "5c9cc41d20d66fd9c93063223265a5da00332bae071e74765fd4c5854447109b",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "legacy/verification-summary.json",
+      "bytes": 26211,
+      "sha256": "17d74103771f8390f503b373fdf22822777e17e916bdc2106ee69c5ca795fcfd",
+      "role": "legacy-evidence"
+    },
+    {
+      "path": "manuscript/ads2-rst-one-sided-flux.pdf",
+      "bytes": 89151,
+      "sha256": "9b97bcf2ceefc17d78b7c12bff003d858f96d870682a681d60a6e4d665b52fe6",
+      "role": "package-artifact"
+    },
+    {
+      "path": "manuscript/ads2-rst-one-sided-flux.tex",
+      "bytes": 16326,
+      "sha256": "3f0e2adafb650d5ae1b67c853a430df1992b5b86c4da46a70579abe9f498a266",
+      "role": "package-artifact"
+    },
+    {
+      "path": "outputs/advanced-checks-summary.json",
+      "bytes": 3757,
+      "sha256": "83d957e4ee8560a1180308f5c5a69f49762e65db60a2b6e0bd2e15ffe93f9f5d",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/advanced-checks.out",
+      "bytes": 1578,
+      "sha256": "8fcdab5fa91e534098b79f4e1d0c41e235773d58c1c9785b510d39646bb35f6a",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/independent-symbolic-summary.json",
+      "bytes": 4283,
+      "sha256": "c4e5554c0037144792eab1e4f10111ece6097879113d711cb17fd16b876e4474",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/independent_symbolic.out",
+      "bytes": 1654,
+      "sha256": "af84c0de5e9c0c697bac4e59d814f062e3bcb9375466f1b8ce5df15a8fc74532",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/lean-build.json",
+      "bytes": 323,
+      "sha256": "df0f97e645a8b8c88a60db4ae12e1814ab8da102baa2dd955d127c925e20b68c",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/lean-build.out",
+      "bytes": 2740,
+      "sha256": "20fdf636ecb7f3f3e4eee41fa8cd27605e43e01d9a10557a5327ba32ba40708a",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/portability-receipt.json",
+      "bytes": 311,
+      "sha256": "6866e6aa6c11678cf3b588f1c5c8802c9738c6750506f227c4dcaa5621454ad3",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/red-first-summary.json",
+      "bytes": 40409,
+      "sha256": "9d7b2085504f68e7e6d3e1c5299a654743bf5584e23b0c8bdced60b0309b4882",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/red-first.out",
+      "bytes": 15313,
+      "sha256": "840b6a6c932351c4a3a4273f9dad5f1dedead416e1023a747a3330cc1501602a",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/red-second-independent.out",
+      "bytes": 1118,
+      "sha256": "ee48a71bbf16d64c3d622d725b231d96907b74fd01f6f50e8d1586d1a189544e",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/red-second-summary.json",
+      "bytes": 40411,
+      "sha256": "da68a7c3d7f8e9765b91f0e1e86c4fe0548720b4d98806753b7c0003c76c85b3",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/red-second.out",
+      "bytes": 15315,
+      "sha256": "6d62ab51bdcd32a96bc42a84893f6b5c51cfb82237d56898e25d81512a7f123d",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/tectonic-build.json",
+      "bytes": 478,
+      "sha256": "65500b8f21bd987f96752f1611ceae9e2a374a56d5236c0f3691416241b291a4",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/tectonic-build.out",
+      "bytes": 10481,
+      "sha256": "07a1412055fa15b17aa18f0c2299a132a0372abb25c20cc922949f57b55f0a19",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/verification-summary.json",
+      "bytes": 43242,
+      "sha256": "abf4e61a69b7663632349ccef03e05eedf3ce573e060d560715d61f02b11cab6",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "outputs/verify.out",
+      "bytes": 16963,
+      "sha256": "0fbb64f50508782fe2e7b5390f1c905125ee7d6e2a7a400e64f6715929359537",
+      "role": "execution-receipt"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 28,
+      "sha256": "47fd19021144e071cc43b6e265aafada0056abe89724ad95bd6e3a8e37995b94",
+      "role": "package-artifact"
+    },
+    {
+      "path": "reviews/additional-state-dependence.md",
+      "bytes": 1834,
+      "sha256": "31b796c269cfd2408e275dc59513e4d6cc47c41de5f1635b3cb0bab0e0f9968d",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/claude-opus-5-5-review.md",
+      "bytes": 12652,
+      "sha256": "568a11d50aae1fff53b6b7966a88486c0df355dbbe337498c5ccf9eb4ba9baed",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/literature-check.md",
+      "bytes": 9952,
+      "sha256": "0a85ef1a727581a0feb06e59a8253916d165f58c45538d26fb8452d354ad1300",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/literature-citations.json",
+      "bytes": 2872,
+      "sha256": "60960e30e76df1f3ce06026adef8884c36b572083f5ce3badab6defe1a85ce3c",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/opencode-code-review.md",
+      "bytes": 7392,
+      "sha256": "f4414923864ac1f4462a4cb20b2cb2c794a4ae7355774e11f34945f671de545d",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/primary-source-spot-check.md",
+      "bytes": 2179,
+      "sha256": "ff62f24aab5d8a56a48994bba04f3c2b7d8940b90b074a250b24842a2b4fb09b",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/recent-literature-2025-2026.md",
+      "bytes": 2897,
+      "sha256": "6fcfef5029c8e62451dbec1abb5f6e447705fbc19098f3f6ae113b7d6a1f35d2",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-02-26-cumulative-tex-lean.md",
+      "bytes": 19985,
+      "sha256": "4e264e122235baa70122e80c5a5b18570d5dd51c7eaacb51762c5d443e8b5060",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-02-28-lean-tex-source.md",
+      "bytes": 8385,
+      "sha256": "15a38d05d175ae80cd3a906eadecd7f5940404ea4e0317b00e2709d03410b9f2",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-02-28-package-audit.md",
+      "bytes": 6877,
+      "sha256": "3f7e9e22c8d5dc1a623c724088b27ed740d8ba6ea0d354d8c57152e611df5adc",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-03-32-full-evaluation.md",
+      "bytes": 10925,
+      "sha256": "046a68f872a89e12643ac2900f358d4d86c9c00c3d742543f6b9f6e6d8a625b9",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-03-55-referee-update.md",
+      "bytes": 33853,
+      "sha256": "b5227caab5ed6ebb71d0021c0ffa39a2c12b85f24166cc2c02b47b337e3c8d35",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-03-57-breakthrough-program.md",
+      "bytes": 27538,
+      "sha256": "9ae435647ea6db55bad845f5b4c68fcc8d8ad2612f7cf47ae6e4194be4a163b6",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-12-28-signed-contact-review.md",
+      "bytes": 12757,
+      "sha256": "fe83e30fb97f6fa96ff9cf71e47082a8874f7e6ee03d4fe29417e348c1ea745d",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-15-14-boundary-matter-review.md",
+      "bytes": 22652,
+      "sha256": "93e6db154f082ecf9a0dcdef62006d5251985e57f0b24ee69ef3731849f38e19",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-15-16-closing-window-review.md",
+      "bytes": 7125,
+      "sha256": "7470b7c5aa6d493df92b96793fd8391f30ae2a287fa10421cc14fc9f0b8e280c",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-16-56-formal-evaluation.md",
+      "bytes": 23874,
+      "sha256": "06e1bd80f4718ee90f2abaa371303a3b155010fe7ca88a7182c09048a864919a",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-16-56-onset-atom-review.md",
+      "bytes": 20119,
+      "sha256": "475b28938fbc8b466b4b5ca4238bce07eea37b980d7119f8bd64a28a6936de85",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-16-57-package-evaluation.md",
+      "bytes": 16272,
+      "sha256": "e75ffd9683e0c17c3cea3ef8fe8c929d6f1149813c8dc15c152135bee985bb06",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-22-06-recheck.md",
+      "bytes": 7824,
+      "sha256": "3cdc9b3e7df891184761f9dd1f418de2ee52869c3e9f1bb78f6cdc5efe717e5b",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-22-18-formal-evaluation.md",
+      "bytes": 30440,
+      "sha256": "f43910db4f180b68fc401bae3b562253268b716854f6c18bbcf480fa3ec9d2d7",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/reviewer-22-21-evaluation.md",
+      "bytes": 8701,
+      "sha256": "c8d9425e3c7e641adcbbecb17418a928287ebf95a34f79c627f3266f4e2421cc",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/second-ai-review.md",
+      "bytes": 22188,
+      "sha256": "45222f6d7c67a92e6a80e3238ad8ec3629163c9cce86c50f198dbef14b99a6bc",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/updated-reviewer-20-05.md",
+      "bytes": 15503,
+      "sha256": "7e47e6863e4a866d977e85eec8a42cb97f03f6fd469bcbe01ac0c06680ccd43c",
+      "role": "review-evidence"
+    },
+    {
+      "path": "run_verification.sh",
+      "bytes": 2217,
+      "sha256": "0842cb29a96c2539daf0d2b6b8bbb354c25f53d3355683bcf73629967f61c945",
+      "role": "package-artifact"
+    },
+    {
+      "path": "sources/README.md",
+      "bytes": 2169,
+      "sha256": "645a88d1f1f0e034b609ebbd5933b9287e13e2e608bc073345acdf26ecf1dcf6",
+      "role": "primary-source"
+    },
+    {
+      "path": "sources/source-anchors.txt",
+      "bytes": 1808,
+      "sha256": "7580e533a2da7999e68a2284839d78fb6e7f008b2d6c19111d8f0313d7ac6bbb",
+      "role": "primary-source"
+    },
+    {
+      "path": "validate_package.py",
+      "bytes": 18072,
+      "sha256": "820a9e6465f71f75921ec1b61f4576622537ebf1add79af1012faece3cf57fef",
+      "role": "verification-producer"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 30462,
+      "sha256": "d66ab42ef4c64f055a3b80a30501587a1631679f275f12371806f0291c0b972b",
+      "role": "verification-producer"
+    }
+  ],
+  "exclusions": [
+    "manifest.json (self)",
+    "validation.json (final receipt)",
+    "Archive.zip and Archive.zip.sha256 (self-containing distribution)",
+    "__pycache__/",
+    "lean/.lake/ (downloaded dependencies)"
+  ],
+  "source_tex_sha256": null,
+  "source_reference_sha256": "8906ec46e685404da151c8b7d52a325c4053ee8c8f17964df7264c69baf58872",
+  "source_mode": "external-links",
+  "linked_markdown": {
+    "links": 193,
+    "unresolved": [],
+    "per_note": {
+      "00-index.md": 35,
+      "01-executive-claim.md": 5,
+      "02-source-and-derivation.md": 3,
+      "03-sustained-flux-theorem.md": 2,
+      "04-horizon-and-causal-structure.md": 2,
+      "05-state-frame-and-novelty.md": 5,
+      "06-finite-pulse.md": 1,
+      "07-evidence-and-reproduction.md": 16,
+      "08-review-adjudication.md": 10,
+      "09-independent-reviews.md": 32,
+      "10-formal-signoff.md": 15,
+      "11-cumulative-flux-generalization.md": 4,
+      "12-signed-net-focusing.md": 3,
+      "13-breakthrough-program.md": 8,
+      "14-state-pulse-phase-diagram.md": 3,
+      "15-physical-boundary-injection.md": 3,
+      "16-conformal-matter-realization.md": 5,
+      "17-observables-and-universality.md": 3,
+      "18-close-out.md": 12,
+      "README.md": 19,
+      "lean/README.md": 0,
+      "legacy/canonical-result-note.md": 0,
+      "legacy/independent-math-review.md": 0,
+      "legacy/independent-scope-review.md": 0,
+      "reviews/additional-state-dependence.md": 2,
+      "reviews/claude-opus-5-5-review.md": 0,
+      "reviews/literature-check.md": 0,
+      "reviews/opencode-code-review.md": 0,
+      "reviews/primary-source-spot-check.md": 2,
+      "reviews/recent-literature-2025-2026.md": 2,
+      "reviews/reviewer-02-26-cumulative-tex-lean.md": 0,
+      "reviews/reviewer-02-28-lean-tex-source.md": 0,
+      "reviews/reviewer-02-28-package-audit.md": 0,
+      "reviews/reviewer-03-32-full-evaluation.md": 0,
+      "reviews/reviewer-03-55-referee-update.md": 0,
+      "reviews/reviewer-03-57-breakthrough-program.md": 0,
+      "reviews/reviewer-12-28-signed-contact-review.md": 0,
+      "reviews/reviewer-15-14-boundary-matter-review.md": 0,
+      "reviews/reviewer-15-16-closing-window-review.md": 0,
+      "reviews/reviewer-16-56-formal-evaluation.md": 0,
+      "reviews/reviewer-16-56-onset-atom-review.md": 0,
+      "reviews/reviewer-16-57-package-evaluation.md": 0,
+      "reviews/reviewer-22-06-recheck.md": 0,
+      "reviews/reviewer-22-18-formal-evaluation.md": 0,
+      "reviews/reviewer-22-21-evaluation.md": 0,
+      "reviews/second-ai-review.md": 0,
+      "reviews/updated-reviewer-20-05.md": 0,
+      "sources/README.md": 1
+    }
+  }
+}

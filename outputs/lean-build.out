@@ -1,0 +1,35 @@
+⚠ [18250/18252] Replayed AdS2RST
+warning: AdS2RST.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: AdS2RST.lean:39:42: Variable name `hmu` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmu
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: AdS2RST.lean:94:32: Variable name `hy` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hy
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: AdS2RST.lean:94:45: Variable name `hmu` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmu
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: AdS2RST.lean:252:0: 'AdS2RST.first_hit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:253:0: 'AdS2RST.F_hasDerivAt_y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:254:0: 'AdS2RST.F_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:255:0: 'AdS2RST.F_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:256:0: 'AdS2RST.F_pos_before' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:257:0: 'AdS2RST.F_neg_after' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:258:0: 'AdS2RST.slope_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:259:0: 'AdS2RST.general_wall_slope_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:260:0: 'AdS2RST.retained_state_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:261:0: 'AdS2RST.stress_scaling' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:262:0: 'AdS2RST.zAfter_pos_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AdS2RST.lean:263:0: 'AdS2RST.after_interval_nonempty_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [18251/18252] Ran AdS2RST:irArts
+warning: AdS2RST.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (18252 jobs).

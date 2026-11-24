@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://arxiv.org/abs/gr-qc/0404098",
+      "title": "Wormhole phase in the RST model",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 2,
+      "url": "https://arxiv.org/pdf/gr-qc/0404098v2",
+      "title": "Wormhole phase in the RST model (v2 PDF)",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 3,
+      "url": "https://arxiv.org/abs/gr-qc/0407106",
+      "title": "Exactly Soluble Quantum Wormhole in Two Dimensions",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 4,
+      "url": "https://arxiv.org/pdf/gr-qc/0407106v2",
+      "title": "Exactly Soluble Quantum Wormhole in Two Dimensions (v2 PDF)",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 5,
+      "url": "https://ar5iv.labs.arxiv.org/html/gr-qc/0404098",
+      "title": "Wormhole phase in the RST model (ar5iv full text)",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 6,
+      "url": "https://arxiv.org/pdf/hep-th/9401109",
+      "title": "The Superscattering Matrix For Two Dimensional Black Holes",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 7,
+      "url": "https://arxiv.org/pdf/hep-th/9306069",
+      "title": "The Stretched Horizon and Black Hole Complementarity",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 8,
+      "url": "https://arxiv.org/pdf/gr-qc/0110080",
+      "title": "Dilatonic wormholes: construction, operation, maintenance and collapse to black holes",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 9,
+      "url": "https://arxiv.org/pdf/2108.07451",
+      "title": "Möbius Mirrors",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 10,
+      "url": "https://arxiv.org/pdf/1611.01758",
+      "title": "Black hole mining in the RST model",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 11,
+      "url": "https://arxiv.org/pdf/1301.5138",
+      "title": "Black hole complementarity and firewall in two dimensions",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 12,
+      "url": "https://arxiv.org/pdf/hep-th/9206070",
+      "title": "The Endpoint of Hawking Radiation",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 13,
+      "url": "https://jcsphysics.net/lit/carlitz1987a.pdf",
+      "title": "Reflections on moving mirrors",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 14,
+      "url": "https://arxiv.org/pdf/0708.3695",
+      "title": "Near-horizon geometries of supersymmetric AdS(5) black holes",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 15,
+      "url": "https://arxiv.org/pdf/hep-th/9510109",
+      "title": "Soluble models in 2d dilaton gravity",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": 16,
+      "url": "https://arxiv.org/pdf/hep-th/9209012",
+      "title": "Cosmic censorship in two-dimensional gravity",
+      "accessed": "2026-11-23"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+KIM-SON AdS2-RST + SUSTAINED ONE-SIDED POSITIVE FLUX
+Spark spark_20261110_154351_a10e80
+
+PASS | Primary source gives chiral Omega solution
+PASS | Primary source gives chiral constraint with matter
+PASS | Primary source identifies the RST minimum/singularity
+PASS | Primary source fixes the AdS2 wormhole boundary functions
+PASS | Primary source has the pre-shock static wormhole
+PASS | Primary source asymptotic is R -> -4 lambda^2
+PASS | Primary source infalling shock is one-sided and positive
+PASS | Primary source post-shock singularity is cloaked by horizon
+PASS | pre region obeys the mixed RST equation
+PASS | pre region obeys both chiral constraints
+PASS | mixed region obeys the mixed RST equation
+PASS | mixed region obeys both chiral constraints
+PASS | post region obeys the mixed RST equation
+PASS | post region obeys both chiral constraints
+PASS | other region obeys the mixed RST equation
+PASS | other region obeys both chiral constraints
+PASS | C0/C1 matching at xp=0, xm<0: pre/mixed | residuals=[0, 0, 0]
+PASS | C0/C1 matching at xm=0, xp<0: pre/other | residuals=[0, 0, 0]
+PASS | C0/C1 matching at xp=0, xm>0: other/post | residuals=[0, 0, 0]
+PASS | C0/C1 matching at xm=0, xp>0: mixed/post | residuals=[0, 0, 0]
+PASS | Exact first-hit root satisfies the normalized wall equation
+PASS | General implicit wall tangent dxm/dxp is negative for every p,mu,y>0 | implicit_residual=0
+PASS | Zero-flux control has no positive mixed-region wall | F(p=0)=mu + x*y + y**2/2>0
+PASS | M=0 mixed-region post-onset wall is the exact line xm=-(sqrt(1+p)-1)xp
+PASS | M=0 wall energy simplifies to lambda^2 y(1+sqrt(1+p))
+PASS | Both-positive wall reaches xm=0 at x=sqrt(2mu/p)
+PASS | Both-positive wall is spacelike
+PASS | Mixed and both-positive wall positions match at xm=0
+PASS | Mixed and both-positive wall slopes match at xm=0
+PASS | Leading large-S curvature is R -> -4 lambda^2
+PASS | General mixed-region wall tangent and metric norm are spacelike
+PASS | Pre-onset M=0 singular line is timelike by its metric norm
+PASS | General-p M=0 post-onset singular branch is spacelike by its metric norm
+PASS | Fourth sector xp<0,xm>0 has strictly positive normalized Omega excess
+PASS | first hit p=0.01, mu=0, y=0.1: physical before, excluded after, spacelike | xp=20.04987562112089027, slope=-0.00498756211209, before=2.01e-6, after=-2.01e-6
+PASS | first hit p=0.01, mu=0, y=1: physical before, excluded after, spacelike | xp=200.4987562112089027, slope=-0.00498756211209, before=0.000201, after=-0.000201
+PASS | first hit p=0.01, mu=0, y=10: physical before, excluded after, spacelike | xp=2004.987562112089027, slope=-0.00498756211209, before=0.0201, after=-0.0201
+PASS | first hit p=0.01, mu=0.2, y=0.1: physical before, excluded after, spacelike | xp=21.874342087037917235, slope=-0.00540373042342, before=2.6e-6, after=-2.6e-6
+PASS | first hit p=0.01, mu=0.2, y=1: physical before, excluded after, spacelike | xp=200.69756700139283901, slope=-0.00499250280995, before=0.000202, after=-0.000202
+PASS | first hit p=0.01, mu=0.2, y=10: physical before, excluded after, spacelike | xp=2005.0074626588600611, slope=-0.00498761161575, before=0.0202, after=-0.0202
+PASS | first hit p=0.01, mu=2, y=0.1: physical before, excluded after, spacelike | xp=32.383029285599391361, slope=-0.00689068408269, before=7.25e-6, after=-7.25e-6
+PASS | first hit p=0.01, mu=2, y=1: physical before, excluded after, spacelike | xp=202.46950765959598383, slope=-0.00503611125019, before=0.000207, after=-0.000207
+PASS | first hit p=0.01, mu=2, y=10: physical before, excluded after, spacelike | xp=2005.1865498503250466, slope=-0.00498805706065, before=0.0202, after=-0.0202
+PASS | first hit p=0.1, mu=0, y=0.1: physical before, excluded after, spacelike | xp=2.048808848170151547, slope=-0.0488088481702, before=2.15e-7, after=-2.15e-7
+PASS | first hit p=0.1, mu=0, y=1: physical before, excluded after, spacelike | xp=20.48808848170151547, slope=-0.0488088481702, before=2.15e-5, after=-2.15e-5
+PASS | first hit p=0.1, mu=0, y=10: physical before, excluded after, spacelike | xp=204.8808848170151547, slope=-0.0488088481702, before=0.00215, after=-0.00215
+PASS | first hit p=0.1, mu=0.2, y=0.1: physical before, excluded after, spacelike | xp=3.258317958127242985, slope=-0.0672455076108, before=7.36e-7, after=-7.36e-7
+PASS | first hit p=0.1, mu=0.2, y=1: physical before, excluded after, spacelike | xp=20.677078252031311211, slope=-0.0492551538906, before=2.21e-5, after=-2.21e-5
+PASS | first hit p=0.1, mu=0.2, y=10: physical before, excluded after, spacelike | xp=204.89995233554684509, slope=-0.048813390229, before=0.00215, after=-0.00215
+PASS | first hit p=0.1, mu=2, y=0.1: physical before, excluded after, spacelike | xp=7.4109281699298425379, slope=-0.0853546728831, before=4.75e-6, after=-4.75e-6
+PASS | first hit p=0.1, mu=2, y=1: physical before, excluded after, spacelike | xp=22.247448713915890491, slope=-0.052682979817, before=2.72e-5, after=-2.72e-5
+PASS | first hit p=0.1, mu=2, y=10: physical before, excluded after, spacelike | xp=205.07140429250957717, slope=-0.0488541954883, before=0.00215, after=-0.00215
+PASS | first hit p=1, mu=0, y=0.1: physical before, excluded after, spacelike | xp=0.24142135623730950488, slope=-0.414213562373, before=3.41e-8, after=-3.41e-8
+PASS | first hit p=1, mu=0, y=1: physical before, excluded after, spacelike | xp=2.4142135623730950488, slope=-0.414213562373, before=3.41e-6, after=-3.41e-6
+PASS | first hit p=1, mu=0, y=10: physical before, excluded after, spacelike | xp=24.142135623730950488, slope=-0.414213562373, before=0.000341, after=-0.000341
+PASS | first hit p=1, mu=0.2, y=0.1: physical before, excluded after, spacelike | xp=0.7480740698407860231, slope=-0.764171542189, before=4.85e-7, after=-4.85e-7
+PASS | first hit p=1, mu=0.2, y=1: physical before, excluded after, spacelike | xp=2.5491933384829667541, slope=-0.436491673104, before=3.95e-6, after=-3.95e-6
+PASS | first hit p=1, mu=0.2, y=10: physical before, excluded after, spacelike | xp=24.156270695349110906, slope=-0.414455981498, before=0.000342, after=-0.000342
+PASS | first hit p=1, mu=2, y=0.1: physical before, excluded after, spacelike | xp=2.1049937655763421351, slope=-0.9092967957, before=4.22e-6, after=-4.22e-6
+PASS | first hit p=1, mu=2, y=1: physical before, excluded after, spacelike | xp=3.4494897427831780982, slope=-0.550510257217, before=8.45e-6, after=-8.45e-6
+PASS | first hit p=1, mu=2, y=10: physical before, excluded after, spacelike | xp=24.282856857085699996, slope=-0.416618046641, before=0.000347, after=-0.000347
+PASS | first hit p=10, mu=0, y=0.1: physical before, excluded after, spacelike | xp=0.043166247903553998491, slope=-2.31662479036, before=1.43e-8, after=-1.43e-8
+PASS | first hit p=10, mu=0, y=1: physical before, excluded after, spacelike | xp=0.43166247903553998491, slope=-2.31662479036, before=1.43e-6, after=-1.43e-6
+PASS | first hit p=10, mu=0, y=10: physical before, excluded after, spacelike | xp=4.3166247903553998491, slope=-2.31662479036, before=0.000143, after=-0.000143
+PASS | first hit p=10, mu=0.2, y=0.1: physical before, excluded after, spacelike | xp=0.21273134932713292628, slope=-6.48260399104, before=4.31e-7, after=-4.31e-7
+PASS | first hit p=10, mu=0.2, y=1: physical before, excluded after, spacelike | xp=0.48729833462074168852, slope=-2.60403932154, before=1.89e-6, after=-1.89e-6
+PASS | first hit p=10, mu=0.2, y=10: physical before, excluded after, spacelike | xp=4.322649545167229941, slope=-2.31985676581, before=0.000144, after=-0.000144
+PASS | first hit p=10, mu=2, y=0.1: physical before, excluded after, spacelike | xp=0.64332456134276049408, slope=-8.5201619088, before=4.07e-6, after=-4.07e-6
+PASS | first hit p=10, mu=2, y=1: physical before, excluded after, spacelike | xp=0.8141428428542849998, slope=-3.93653038771, before=5.81e-6, after=-5.81e-6
+PASS | first hit p=10, mu=2, y=10: physical before, excluded after, spacelike | xp=4.3763886032268264366, slope=-2.34856520397, before=0.000148, after=-0.000148
+PASS | first hit p=100, mu=0, y=0.1: physical before, excluded after, spacelike | xp=0.01104987562112089027, slope=-9.04987562112, before=1.11e-8, after=-1.11e-8
+PASS | first hit p=100, mu=0, y=1: physical before, excluded after, spacelike | xp=0.1104987562112089027, slope=-9.04987562112, before=1.11e-6, after=-1.11e-6
+PASS | first hit p=100, mu=0, y=10: physical before, excluded after, spacelike | xp=1.104987562112089027, slope=-9.04987562112, before=0.000111, after=-0.000111
+PASS | first hit p=100, mu=0.2, y=0.1: physical before, excluded after, spacelike | xp=0.06503905058634145616, slope=-38.8023624462, before=4.17e-7, after=-4.17e-7
+PASS | first hit p=100, mu=0.2, y=1: physical before, excluded after, spacelike | xp=0.12874342087037917235, slope=-10.5199657136, before=1.53e-6, after=-1.53e-6
+PASS | first hit p=100, mu=0.2, y=10: physical before, excluded after, spacelike | xp=1.1069756700139283901, slope=-9.06615535976, before=0.000111, after=-0.000111
+PASS | first hit p=100, mu=2, y=0.1: physical before, excluded after, spacelike | xp=0.20125234081028865716, slope=-66.4732895591, before=4.03e-6, after=-4.03e-6
+PASS | first hit p=100, mu=2, y=1: physical before, excluded after, spacelike | xp=0.23383029285599391361, slope=-18.1410923489, before=5.23e-6, after=-5.23e-6
+PASS | first hit p=100, mu=2, y=10: physical before, excluded after, spacelike | xp=1.1246950765959598383, slope=-9.21099472427, before=0.000115, after=-0.000115
+PASS | M=0 exact mixed-region branch reproduces root and negative slope p=0.001 | xp=4000.999750124921929646517, xm=-2.0
+PASS | M=0 exact mixed-region branch reproduces root and negative slope p=0.1 | xp=40.97617696340303093982907, xm=-2.0
+PASS | M=0 exact mixed-region branch reproduces root and negative slope p=1 | xp=4.828427124746190097603377, xm=-2.0
+PASS | M=0 exact mixed-region branch reproduces root and negative slope p=100 | xp=0.2209975124224178054043853, xm=-2.0
+PASS | Vanishing flux retreats the fixed-ray wall to infinite advanced coordinate
+PASS | xm=0 branch match p=0.1, mu=0.2 | xp=2.0, common slope=-0.1
+PASS | xm=0 branch match p=1, mu=2 | xp=2.0, common slope=-1.0
+PASS | xm=0 branch match p=100, mu=0.2 | xp=0.06324555320336758663997787, common slope=-100.0
+CURVATURE | S=1 | R=-2.39938924960873541941194842564 | |R+4|=1.6006108
+CURVATURE | S=10 | R=-3.336363859638849212690417726 | |R+4|=0.66363614
+CURVATURE | S=100 | R=-3.8489591648730910754122739934 | |R+4|=0.15104084
+CURVATURE | S=1000 | R=-3.97564351394449230692457113445 | |R+4|=0.024356486
+CURVATURE | S=10000 | R=-3.99663967501115858386983614872 | |R+4|=0.003360325
+CURVATURE | S=100000 | R=-3.99957177590566973206065336441 | |R+4|=0.00042822409
+PASS | Weak-branch curvature sequence approaches AdS2 monotonically | gaps=1.60061,0.663636,0.151041,0.0243565,0.00336032,0.000428224
+
+VERDICT: sustained one-sided positive flux creates a finite, spacelike RST edge in the past-AdS2 Kim-Son branch
+No future AdS2 absorber is present in this exact solution; a different transparent-boundary problem is not covered
+SUMMARY: 88/88 checks PASS

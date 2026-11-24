@@ -1,0 +1,167 @@
+{
+  "checks_total": 32,
+  "checks_passed": 32,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "state phase root residual",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "state phase other root negative",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "state phase horizon gap",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "state phase r=0 has no mixed hit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "state phase r<0 has no mixed hit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "same classical P has different state outcomes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "finite state pulse cannot prevent sustained classical focusing",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "alternate q=1 is retained state with shifted p",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "onset atom has post-onset Q jump but F(0) is unchanged",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "onset atom generalized trapping crossing when alpha>=y",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "boundary Q starts at zero and ends at E",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "boundary during-pulse concavity",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "boundary after-pulse root residual",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "boundary after-pulse root is beyond b",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "boundary shutoff equality F_b=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "boundary y>=E gives no post-pulse root",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "same unit energy has early and late focusing examples",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "early-late pulses have same injected energy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "early boundary timing diverges",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "late boundary timing vanishes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "closing-window threshold matches retarded ray label",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "closing-window translation covariance",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "same physical ray is hit early and missed late",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "general boundary focusing identity",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "matter wavepacket reproduces prescribed stress",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "matter stress is conserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "wavepacket is continuous at pulse endpoints",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "wavepacket physical energy is finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "free conformal two-point function has no explicit Omega_s term",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "chiral-system accumulated-excess derivative",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "outgoing flux is independent of incoming f_plus",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "incoming-sector energy recovery is not an outgoing observable",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

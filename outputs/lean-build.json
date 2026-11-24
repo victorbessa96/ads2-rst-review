@@ -1,0 +1,8 @@
+{
+  "schema": "ads2-rst.lean-build-receipt.v1",
+  "created_at_utc": "2026-11-24T18:35:34.963521+00:00",
+  "source_sha256": "b832a2d08e5d5389210f0e228a4b87522c11b5c5d48c8e2d23f775ff88c2cdcf",
+  "log_sha256": "20fdf636ecb7f3f3e4eee41fa8cd27605e43e01d9a10557a5327ba32ba40708a",
+  "command": "lake build",
+  "status": "PASS"
+}

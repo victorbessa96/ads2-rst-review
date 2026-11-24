@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "verify_exit": 0,
+  "independent_exit": 0,
+  "advanced_exit": 0,
+  "main_checks": "138/138",
+  "independent_checks": "39/39",
+  "advanced_checks": "32/32",
+  "main_output_byte_identical": true,
+  "main_output_sha256": "0fbb64f50508782fe2e7b5390f1c905125ee7d6e2a7a400e64f6715929359537"
+}

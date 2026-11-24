@@ -1,0 +1,31 @@
+PASS | sustained root residual
+PASS | negative other root
+PASS | positive selected root
+PASS | apparent-horizon ordering
+PASS | spacelike mixed tangent
+PASS | zero-flux regularity
+PASS | post interface position
+PASS | post interface slope
+PASS | global wall representation
+PASS | finite conformal factor at Omega_s
+PASS | impulsive root and positive ray band
+PASS | impulsive causal sign
+PASS | impulsive branch join
+PASS | alternate state p=1 has no mixed wall
+PASS | alternate state p<1 coefficient is positive
+PASS | alternate state p>1 has a positive mixed hit
+PASS | alternate p=1 retains a both-positive wall
+PASS | pulse C0 at shutoff
+PASS | pulse C1 at shutoff
+FAIL | pulse after-shutoff root and post-shutoff inequality
+PASS | pulse after-shutoff causal sign
+PASS | pulse y_max M=0 limit
+PASS | pulse both-positive position match
+PASS | pulse both-positive slope match
+PASS | pulse apparent-horizon continuation
+PASS | null affine relation
+PASS | observer metric coefficients
+PASS | observer wall root
+PASS | observer R coordinate
+PASS | observer M=0 root matches global wall
+INDEPENDENT_SYMBOLIC: 29/30 PASS

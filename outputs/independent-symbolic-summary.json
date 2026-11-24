@@ -1,0 +1,202 @@
+{
+  "checks_total": 39,
+  "checks_passed": 39,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "sustained root residual",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "negative other root",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "positive selected root",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "apparent-horizon ordering",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "spacelike mixed tangent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "zero-flux regularity",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "post interface position",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "post interface slope",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "global wall representation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "finite conformal factor at Omega_s",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "impulsive root and positive ray band",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "impulsive causal sign",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "impulsive branch join",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "alternate state p=1 has no mixed wall",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "alternate state p<1 coefficient is positive",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "alternate state p>1 has a positive mixed hit and negative other root",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "alternate p=1 retains a both-positive wall",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "pulse C0 at shutoff",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "pulse C1 at shutoff",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "pulse after-shutoff root and post-shutoff inequality",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "pulse after-shutoff exact negative tangent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "pulse y_max M=0 limit and x_hit monotonicity",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "pulse both-positive position match",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "pulse both-positive slope match and sign-domain",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "pulse apparent-horizon continuation and during crossing",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "cumulative derivative, concavity, corrected slope, and horizon ordering",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "exponential total-flux cutoff",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "signed positive linear unique hit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "signed unattained threshold no finite hit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "signed quadratic tangential contact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "signed cusp one-sided causal signs",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "finite sigma pulse cumulative flux",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "large-mu nonreal-y_max post-shutoff hit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "shutoff equality x_after=x_during=x_s",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "null affine relation and geodesic ODE",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "observer metric coefficients",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "observer wall root",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "observer R coordinate",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "observer M=0 root matches global wall",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

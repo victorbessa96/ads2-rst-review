@@ -1,0 +1,10 @@
+name = "ads2_rst"
+defaultTargets = ["AdS2RST"]
+
+[[lean_lib]]
+name = "AdS2RST"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.36.0"

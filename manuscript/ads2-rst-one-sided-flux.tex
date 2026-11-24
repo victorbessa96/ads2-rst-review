@@ -1,0 +1,208 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=1in}
+\title{Sustained, Finite, and Cumulative One-Sided Flux on the Kim--Son AdS$_2$-RST Wormhole Branch}
+\author{ }
+\date{2026-11-24}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\begin{document}
+\maketitle
+\begin{center}\small Internal review manuscript; AI-reviewed, human scientific review pending.\end{center}
+\begin{abstract}
+This note derives exact mixed-ray singular-termination results on the fixed past-asymptotically-AdS$_2$ Kim--Son RST branch. The main results are an every-ray first-hit law for sustained Kruskal flux, an exact finite-support cutoff $0<y<E$, and a cumulative-flux classification for nonnegative Radon-measure incoming profiles. Apparent-horizon ordering follows from the same cumulative flux. These are fixed-state, fixed-matching theorems for mixed outgoing rays, not arbitrary-state absorber or future-asymptotic-observer theorems.
+\end{abstract}
+
+\section{Fixed model and chiral solution}
+Let $\lambda>0$, $\kappa>0$, $P>0$, $M\ge0$. Retain $t_\pm=(\lambda^2/\kappa)\Theta(-x^\pm)$ and set $L=\lambda^2/\sqrt\kappa$. With onset at $x_0=0$,
+\[
+T^f_{++}=P\Theta(x_p),\qquad T^f_{--}=0.
+\]
+The Kruskal-gauge solution is $\Omega=-Lx_px_m+a_+(x_p)+a_-(x_m)$, with
+\[
+a_+(x_p)=\frac L2x_p^2\Theta(-x_p)-\frac{P}{2\sqrt\kappa}x_p^2\Theta(x_p),
+\qquad a_-(x_m)=\frac L2x_m^2\Theta(-x_m).
+\]
+The chiral constraint is $a_\pm''=\sqrt\kappa t_\pm-T^f_{\pm\pm}/\sqrt\kappa$, directly from Kim--Son's \texttt{kruskal:cons} equation and its integrated \texttt{omegasol} form, including sign and normalization~\cite{KimSon}. Define
+\[
+\Omega_s=\frac{\sqrt\kappa}{4}\left(1-\ln\frac\kappa4\right),\qquad B=\frac M\lambda+\Omega_s.
+\]
+All four sectors obey $\partial_p\partial_m\Omega=-L$ and have continuous values and first derivatives at the onset axes. At the RST minimum, $e^{-2\phi}=\kappa/4$ and $e^{2\rho}=4/\kappa$ is finite and nonzero. On the weak Lambert branch $W=W_{-1}\le-1$, $e^{-2\phi}=-\kappa W/4$, hence $e^{2\rho}=-4/(\kappa W)$ and $0<e^{2\rho}\le4/\kappa$.
+
+\section{Sustained-flux theorem}
+Set $p=P/\lambda^2$, $\mu=\sqrt\kappa M/\lambda^3$, $y=-x_m>0$. The normalized excess is
+\[
+F(x_p,y)=\mu+\frac{y^2}{2}+x_py-\frac p2x_p^2.
+\]
+Define $D=\sqrt{(1+p)y^2+2p\mu}$. Since $D>y$, the other root $(y-D)/p$ is negative and
+\[
+\boxed{x_{p,\mathrm{hit}}=\frac{y+D}{p}}
+\]
+is the unique positive post-onset hit. The factorization
+\[
+F=-\frac p2(x-x_{\mathrm{hit}})(x-x_-),\qquad x_-=\frac{y-D}{p}<0,
+\]
+proves $F>0$ before the hit and $F<0$ after it. Implicit differentiation gives
+\[
+\frac{dx_m}{dx_p}=-\frac{D}{x_{p,\mathrm{hit}}+y}<0,
+\]
+so the edge is spacelike. For $\mu>0$, the both-positive branch is $x_m=\mu/x_p-px_p/2$ for $0<x_p<\sqrt{2\mu/p}$, with position and slope matching at $x_p=\sqrt{2\mu/p}$. For $\mu=0$, the pre-onset line $x_p=x_m$ is already singular, so first hit means first positive post-onset hit, not first singularity globally.
+
+The apparent horizon on each ray is $x_{p,\mathrm{AH}}=y/p$ and
+\[
+\boxed{x_{p,\mathrm{hit}}-x_{p,\mathrm{AH}}=D/p>0.}
+\]
+The appropriate description is spacelike RST singular termination behind an apparent horizon.
+
+\begin{corollary}[Retained-state mixed-sector equivalence]
+In the alternate $t_+$-on problem, set $p_{\mathrm{eff}}=1+p$. Then $(1-p_{\mathrm{eff}})/2=-p/2$, exactly the retained Kim--Son coefficient. The step-off supplies the critical $\lambda^2$ in this comparison, so every $p>0$ corresponds to $p_{\mathrm{eff}}>1$. This is a mixed-sector coefficient equivalence, not a proof that every sector of two spacetime solutions coincides.
+\end{corollary}
+
+\section{Finite forward null affine parameter and interior controls}
+For a fixed-$x_m$ null geodesic,
+\[
+\frac{dx_p}{d\ell}=Ce^{-2\rho},\qquad d\ell=\frac{e^{2\rho}}C dx_p.
+\]
+On $W_{-1}\le-1$, $0<e^{2\rho}\le4/\kappa$, hence
+\[
+\ell_{\mathrm{hit}}-\ell_i=\frac1C\int_{x_i}^{x_{\mathrm{hit}}}e^{2\rho}dx_p\le\frac{4(x_{\mathrm{hit}}-x_i)}{C\kappa}<\infty.
+\]
+Use
+\[
+x_p=e^{\lambda(\sigma_0+\sigma_1)},\qquad x_m=-e^{-\lambda(\sigma_0-\sigma_1)}.
+\]
+Then
+\[
+ds^2=-\lambda^2K e^{2\rho}(d\sigma_0^2-d\sigma_1^2),\qquad K=e^{2\lambda\sigma_1}.
+\]
+Constant-$\sigma_1$ curves are timelike with $d\tau=\lambda\sqrt K e^\rho d\sigma_0$. With $R=-x_m/x_p=e^{-2\lambda\sigma_0}$, the wall root is
+\[
+R_w=\sqrt{(1+\mu/K)^2+p}-(1+\mu/K),\qquad \sigma_{0,w}=-\frac{\ln R_w}{2\lambda}.
+\]
+Every such interior curve reaches the wall at finite $\sigma_0$ and finite proper time from any finite earlier coordinate. These are generally accelerated, already trapped interior curves. The result is a consistency control, not an all-geodesics or future-asymptotic-observer theorem.
+
+\section{Finite Kruskal-support pulse}
+For $s=x_s>0$, prescribe
+\[
+T^f_{++}=P[\Theta(x_p)-\Theta(x_p-s)],\qquad T^f_{--}=0.
+\]
+The $C^1$ chiral function is
+\[
+a_+(x)=\begin{cases}
+(L/2)x^2,&x<0,\\
+-(P/2\sqrt\kappa)x^2,&0<x<s,\\
+-(Ps/\sqrt\kappa)(x-s/2),&x>s.
+\end{cases}
+\]
+Set $E=ps$. On $x_m=-y$,
+\[
+F(x,y)=\begin{cases}
+\mu+y^2/2+xy-px^2/2,&0<x<s,\\
+\mu+y^2/2+Es/2+x(y-E),&x>s.
+\end{cases}
+\]
+A unique positive post-onset hit exists exactly for $0<y<E$. During the pulse, $x_{p,d}=(y+D)/p$. Define $y_{\max}=\sqrt{(1+p)s^2-2\mu}-s$. Then $0<y<y_{\max}$ hits before shutoff, $y=y_{\max}$ hits at shutoff, and $y>y_{\max}$ with $y<E$ hits afterward:
+\[
+x_{p,a}=\frac{\mu+y^2/2+Es/2}{E-y}>s,\qquad x_{p,a}-s=\frac{F_d(s)}{E-y}.
+\]
+Necessity is direct: a pre-shutoff hit requires $y<y_{\max}<E$; if no hit has occurred by $s$, the after branch is linear with positive value at $s$ and can cross zero only when its slope $y-E$ is negative. If the radicand is negative or $y_{\max}\le0$, all rays in $0<y<E$ hit afterward. After shutoff, $dx_m/dx_p=(y-E)/(x_{p,a}+y)<0$, so the wall remains spacelike.
+
+For $\mu>0$, the both-positive formulas are
+\[
+x_m=\begin{cases}
+\mu/x_p-px_p/2,&0<x_p<s,\\
+(\mu+Es/2)/x_p-E,&x_p>s.
+\end{cases}
+\]
+The during domain is $0<x_p<\min(s,\sqrt{2\mu/p})$. Writing $x_0=s/2+\mu/E$, the after formula satisfies $x_m=E(x_0/x_p-1)$, so the after domain is
+\[
+\boxed{s<x_p<x_0,\qquad \mu>Es/2.}
+\]
+If $x_0\le s$, no after-shutoff both-positive segment exists. The exact invariant is $x_0-s=(2\mu-Es)/(2E)$. Consequently:
+\begin{center}
+\begin{tabular}{lll}
+Mass & Mixed-ray termination & After both-positive branch\\
+$\mu<Es/2$ & $0<y<y_{\max}$ during; $y_{\max}<y<E$ after & Absent\\
+$\mu=Es/2$ & All mixed hits after shutoff & Degenerate at $x_p=s$\\
+$\mu>Es/2$ & $y_{\max}\le0$ or nonreal; all mixed hits after & Present on $s<x_p<x_0$
+\end{tabular}
+\end{center}
+For $p=1,\mu=10,s=3$, $x_0=29/6$ and $x_m(4)=5/8>0$, $x_m(5)=-1/10<0$. For $\mu=2$, $x_0=13/6<3$, so no after segment exists.
+
+\section{General cumulative-flux theorem}
+Let $dT$ be a nonnegative Radon measure on $x\ge0$, with the same state and matching conventions. A locally integrable density is the special case $dT=T^f_{++}(x)dx$; a Dirac impulse is included as a measure, not as a locally integrable function. Define
+\[
+Q(x)=\frac1{\lambda^2}\int_{[0,x]}dT(u).
+\]
+The matching conditions are $a_+(0)=B$ and $a_+'(0^-)=0$. An onset atom $dT=A\delta_0$ gives $a_+'(0^+)=-A/\sqrt\kappa$, not zero; this is precisely the impulsive derivative jump.
+Then
+\[
+F(x,y)=\mu+\frac{y^2}{2}+xy-\frac1{\lambda^2}\int_{[0,x]}(x-u)dT(u)
+\]
+is continuous and concave, with one-sided derivatives $D_+F=y-Q(x)$ and $D_-F=y-Q(x^-)$. For a density, $F_{xx}=-T^f_{++}/\lambda^2\le0$ almost everywhere; absolute continuity and monotonicity, not pointwise second differentiability, supply the proof.
+
+If $E_{\mathrm{tot}}=\lim Q(x)$ is finite, a unique finite post-onset mixed-ray hit exists exactly for $0<y<E_{\mathrm{tot}}$. If $E_{\mathrm{tot}}=\infty$, every finite $y>0$ has such a hit. For $y<E_{\mathrm{tot}}$, the derivative is eventually negative and concavity forces a unique zero. For $y\ge E_{\mathrm{tot}}$, both one-sided derivatives are nonnegative and $F$ cannot descend from its positive initial value to zero.
+
+At the first root, $Q(x_{\mathrm{hit}})>y$, and the correct right-derivative wall slope is
+\[
+\boxed{\left.\frac{dx_m}{dx_p}\right|_+=-\frac{Q(x_{\mathrm{hit}})-y}{x_{\mathrm{hit}}+y}<0.}
+\]
+Moreover, $\partial_+\Omega/L=y-Q(x)$. For a continuous profile, the apparent horizon is $Q(x_{\mathrm{AH}})=y$, and $Q(x_{\mathrm{hit}})>y$ implies $x_{\mathrm{AH}}<x_{\mathrm{hit}}$. For a measure, define the first level crossing $\inf\{x:Q(x)\ge y\}$ and call it a generalized trapping-boundary level crossing, not automatically a smooth apparent horizon. The first root must also have $Q(x_{\mathrm{hit}}^-)>y$: otherwise the nonnegative left derivative would make $F$ nondecreasing up to its first zero, contradicting descent from $F(0,y)>0$. Thus the generalized horizon precursor persists for measure-valued sources.
+
+Sustained $P$ gives $Q=px$ and every ray; a rectangular pulse gives $E_{\mathrm{tot}}=ps=E$ and the band $0<y<E$; an impulse gives $E_{\mathrm{tot}}=\alpha$ and the band $0<y<\alpha$.
+
+\begin{corollary}[Finite logarithmic-null-support pulse]
+Let $x_p=e^{\lambda\sigma}$ and prescribe $T_{\sigma\sigma}=\mathcal P\mathbf 1_{[\sigma_a,\sigma_b]}$. With $x_a=e^{\lambda\sigma_a}$ and $x_b=e^{\lambda\sigma_b}$,
+\[
+T_{++}(x)=\frac{\mathcal P}{\lambda^2x^2}\mathbf 1_{[x_a,x_b]},\qquad
+E_{\mathrm{tot}}=\frac{\mathcal P}{\lambda^4}\left(\frac1{x_a}-\frac1{x_b}\right).
+\]
+Hence the exact mixed-ray termination band is $0<y<E_{\mathrm{tot}}$. More generally, $E_{\mathrm{tot}}=\lambda^{-3}\int T_{\sigma\sigma}e^{-\lambda\sigma}d\sigma$. This is finite null-coordinate support, not automatically finite proper time for a timelike observer.
+\end{corollary}
+
+\section{Assumptions and scope}
+Throughout, $\mu>0$ is the regular-wormhole case; $\mu=0$ is a separate already-singular limit. The pre-onset branch and retained Kim--Son $t_\pm$ functions are fixed, with $a_+(0)=B$ and $a_+'(0^-)=0$. The source is one-sided in Kruskal $x_p$ unless a finite $\sigma$-coordinate pulse is specified. Apparent horizons are local trapping boundaries, not global event horizons. Finite-affine and finite-proper-time results concern the stated null rays and explicit interior timelike curves, not arbitrary observers. Boundary-normalized physical energy, arbitrary Hadamard states, and bath histories are outside the theorem.
+
+\section{State and boundary-time phase structure}
+For constant post-onset data $t_+(x)=q\lambda^2/\kappa$, $Q_{\mathrm{eff}}=(p-q)x$ and
+\[
+F=\mu+\frac{y^2}{2}+xy-\frac{p-q}{2}x^2.
+\]
+Thus $r=p-q>0$ gives a unique hit with $D_r=\sqrt{(1+r)y^2+2r\mu}$, $x_{\mathrm{hit}}=(y+D_r)/r$, and $x_{\mathrm{hit}}-x_{\mathrm{AH}}=D_r/r>0$. For $r\le0$ there is no mixed-ray hit. Identical classical flux gives every-ray termination for $q=0$ but only $p>1$ for $q=1$. The phase boundary is $p=q$, a net-focusing threshold rather than a universal classical-energy threshold.
+
+For the finite logarithmic-null pulse, set $k=\mathcal P/\lambda^4$ and $E=k(1/a-1/b)$. During the pulse,
+\[
+F=C(y)+yx-k\left[\frac{x-a}{a}-\ln\frac xa\right].
+\]
+If $F_b<0$, the hit is during the pulse; if $F_b=0$, it is exactly at shutoff; if $F_b>0$ and $y<E$, the post-pulse root is $x_{\mathrm{hit}}=b+F_b/(E-y)$. If $y\ge E$, no hit exists. Writing $y=e^{-\lambda u}$ gives the closing-window law
+\[
+u>u_*,\qquad u_*=\sigma_a-\frac1\lambda\ln\!\left[\frac{\mathcal P}{\lambda^4}(1-e^{-\lambda\Delta\sigma})\right].
+\]
+Moving the pulse translates $u_*$ by the same amount. The same outgoing null ray in the fixed Kruskal chart, $u=0$, is inside the early-pulse window and outside the late-pulse window. The integrated incoming $\sigma$-coordinate flux is $E_{\mathrm{in}}=\mathcal P\Delta\sigma$, whereas
+\[
+E_{\mathrm{tot}}=\frac{E_{\mathrm{in}}}{\lambda^4\Delta\sigma}(e^{-\lambda\sigma_a}-e^{-\lambda\sigma_b}).
+\]
+Holding $E_{\mathrm{in}}$ and $\Delta\sigma$ fixed, $\sigma_a\to-\infty$ gives $E_{\mathrm{tot}}\to\infty$ and $\sigma_a\to+\infty$ gives $E_{\mathrm{tot}}\to0$. Hence no threshold depending only on $E_{\mathrm{in}}$ determines the closing window. The covariant statement is $u>u_*$, not a scalar energy-only criterion.
+
+An explicit conserved scalar realizes this source: $f'(x)=\sqrt{2\mathcal P}/(\lambda x)$ on $[a,b]$ and zero elsewhere. Then $T^f_{++}=f'^2/2=\mathcal P/(\lambda^2x^2)$ on the pulse, $\partial_-T^f_{++}=0$, and $E_{\mathrm{in}}=(\mathcal P/\lambda)\ln(b/a)$. The fixed chiral solution includes the resulting backreaction.
+
+\section{Scope and literature position}
+The Kruskal-constant source is not constant in every observer's time coordinate. If $x_p=e^{\lambda\sigma}$, then $T_{\sigma\sigma}=\lambda^2x_p^2P$ and $\int T_{\sigma\sigma}d\sigma=\lambda P x_p^2/2$. At the small-$p$ hit $x_{\mathrm{hit}}\sim2y/p$, this coordinate stress integral scales as $2\lambda^3y^2/p$. Finite support in $x_p$ is not finite duration in $\sigma$. Changing the retained $t_\pm$ functions changes the result: alternate data remove mixed-ray hits for $p\le1$, with a unique positive mixed hit for $p>1$, but do not eliminate every both-positive wall. No arbitrary-state or future-boundary absorber theorem follows.
+
+Kim--Son's impulse already produces a spacelike wall on $0<y<\alpha$, so broad wall existence is not new~\cite{KimSon}. Sustained one-sided input also appears in the original RST context~\cite{RST}, and finite pulses occur in earlier dilatonic-wormhole models~\cite{HKL}. The distinct contribution here is the sustained every-ray law, its apparent-horizon corollary, the finite-support completion, and the cumulative-flux formulation. A bounded search of thirteen primary documents did not find the exact constant-Kruskal-$P$ every-ray formula in that corpus; this is absence of evidence, not priority. Potaux, Sarkar, and Solodukhin's state-dependence papers are relevant literature, not the same calculation~\cite{Potaux,PotauxIslands}. Earlier finite-pulse and impulsive collapse models supply additional precedents~\cite{HKL,Koyama}. Saito's multiple-injection RST Page curves, Esp\'indola--Jahnke--Kim bath-induced traversable wormholes, and Castro et al.'s near-AdS2 backreaction are adjacent comparisons, not proofs of the present wall criterion~\cite{Saito,Espindola,Castro}.
+
+\section{Verification}
+The package contains 138 main checks, 39 separate symbolic checks, and 32 advanced research checks. Lean 4 formalizes the algebraic core and the abstract continuous first-hit criterion: the sustained root, root factor/sign ordering, actual $y$-derivative, negative general slope, retained-state equivalence, stress scaling, and after-domain sign. It does not formalize the full measure-theoretic cumulative theorem. The source contains no \texttt{sorry}. These checks support, but do not replace, source derivation or external scientific review.
+
+\begin{thebibliography}{9}
+\bibitem{KimSon} W. T. Kim and E. J. Son, \emph{Wormhole phase in the RST model}, JHEP 0408:006 (2004), arXiv:gr-qc/0404098v2.
+\bibitem{RST} J. G. Russo, L. Susskind, and L. Thorlacius, \emph{The Endpoint of Hawking Radiation}, arXiv:hep-th/9206070.
+\bibitem{HKL} S. A. Hayward, S.-W. Kim, and H. Lee, \emph{Dilatonic wormholes: construction, operation, maintenance and collapse to black holes}, arXiv:gr-qc/0110080.
+\bibitem{Potaux} Y. Potaux, D. Sarkar, and S. N. Solodukhin, \emph{Hybrid quantum states in 2D dilaton gravity}, Phys. Rev. D 108, 125012 (2023), arXiv:2310.18745.
+\bibitem{PotauxIslands} Y. Potaux, D. Sarkar, and S. N. Solodukhin, \emph{Islands for black holes in a hybrid quantum state}, Phys. Rev. D 111, 026019 (2025), arXiv:2411.09574.
+\bibitem{Koyama} H. Koyama, S. A. Hayward and S. W. Kim, \emph{Construction and enlargement of dilatonic wormholes by impulsive radiation}, Phys. Rev. D 67, 084008 (2003), arXiv:gr-qc/0212106.
+\bibitem{Saito} Y. Saito, \emph{Page curves and island's delays in asymptotically flat 2d spacetimes with injections}, PTEP 2025, ptaf174, arXiv:2509.03997.
+\bibitem{Espindola} R. Esp\'indola, V. Jahnke and K.-Y. Kim, \emph{Islands and traversable wormholes}, JHEP 08 (2026) 035, arXiv:2510.21985.
+\bibitem{Castro} A. Castro, J. Hollander, P. J. Martinez and E. Verheijden, \emph{The Effects of Near-AdS$_2$ Backreaction on Matter Fields}, JHEP 05 (2026) 282, arXiv:2509.08046.
+\end{thebibliography}
+\end{document}
