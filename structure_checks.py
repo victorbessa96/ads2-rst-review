@@ -396,6 +396,12 @@ kruskal_limit = -lam**2 + kap / (4 * ysig**2)
 sigma_form = sp.simplify((lam * ysig) ** 2 * kruskal_limit)          # tensor law with dx^-/dsigma^- = lambda*ytilde
 check("G6 asymptotic frame: outgoing flux is kappa lambda^2/4 - lambda^4 exp(-2 lambda sigma^-), Hawking value plus decaying transient",
       sp.simplify(sigma_form.subs(ysig, sp.exp(-lam * sig)) - (kap * lam**2 / 4 - lam**4 * sp.exp(-2 * lam * sig))) == 0, group="mass")
+check("G7 Kim-Son background subtraction gives net outgoing Kruskal flux kappa/(4 (y-E_tot)^2)",
+      sp.simplify(kruskal_limit + lam**2 - kap / (4 * ysig**2)) == 0,
+      "full stress minus the incoming -lambda^2 reference background", "mass")
+check("G8 background-subtracted asymptotic net flux is the constant thermal value kappa lambda^2/4",
+      sp.simplify(sigma_form + (lam * ysig) ** 2 * lam**2 - kap * lam**2 / 4) == 0,
+      "subtract the transformed -lambda^4 exp(-2 lambda sigma^-) background", "mass")
 
 # ---------------------------------------------------------------------------
 # H. Weak-branch bounds used in the Lean affine-length theorems.

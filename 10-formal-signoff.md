@@ -19,11 +19,11 @@ type: formal-acceptance-and-signoff
 | R8 | Null affine parameter | [Affine proof](03-sustained-flux-theorem.md#4-finite-forward-null-affine-parameter) | [x] |
 | R9 | Interior-observer proper time | [Observer chart](03-sustained-flux-theorem.md#5-explicit-interior-timelike-observers) | [x] |
 | R10 | Novelty and impulsive comparison | [Impulsive wall band](05-state-frame-and-novelty.md#3-impulsive-kim-son-already-has-a-spacelike-wall-band) | [x] |
-| R11 | Bounded literature position | [Thirteen-document check](reviews/literature-check.md) | [x] |
+| R11 | Bounded literature position | [Thirteen-document check](reviews/literature-check.md) and [targeted follow-up](reviews/literature-priority-2026-11-24.md) | [x] |
 | R12 | Main reproduction | `verify.py`: 138/138 PASS | [x] |
 | R13 | Independent reproduction | `independent_symbolic.py`: 39/39 PASS | [x] |
 | R13A | Advanced consistency reproduction | `advanced_checks.py`: 22/22 PASS | [x] |
-| R13B | Structure reproduction | `structure_checks.py`: 45/45 PASS | [x] |
+| R13B | Structure reproduction | `structure_checks.py`: 47/47 PASS | [x] |
 | R13C | Lean build | Six modules, no `sorry`, 77 axiom audits standard only | [x] |
 | R14 | Red history preserved | [Red-run record](07-evidence-and-reproduction.md#4-red-run-history-and-instrument-corrections) | [x] |
 | R15 | Portable review bundle | Package-relative inputs and commands, no network | [x] |
@@ -63,7 +63,7 @@ Null affine and interior proper-time arguments checked: YES / NO
 
 Canonical battery reproduced: 138 / 138
 Independent symbolic battery reproduced: 39 / 39
-Advanced research battery reproduced: 32 / 32
+Advanced research battery reproduced: 22 / 22
 Source provenance and official links verified: YES / NO
 Manifest hashes reproduced: YES / NO
 

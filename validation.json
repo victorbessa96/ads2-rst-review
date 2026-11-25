@@ -1,7 +1,7 @@
 {
   "schema": "ads2-rst.review-package.final-validation.v1",
-  "captured_at_utc": "2026-11-24T23:07:42.650429+00:00",
-  "manifest_sha256": "1c33874f4add082dcbb76bab540aad5d920075f968085b58fdb43b4e522bd667",
+  "captured_at_utc": "2026-11-25T01:40:56.037746+00:00",
+  "manifest_sha256": "b2e228d1a43e44c0c7f7aea3e18d22f1b2c05e6e26e3d7e079e48458d1c31809",
   "checks": [
     {
       "check": "required_artifacts",
@@ -11,7 +11,7 @@
     {
       "check": "relative_markdown_links",
       "pass": true,
-      "evidence": "links=243; unresolved=[]"
+      "evidence": "links=248; unresolved=[]"
     },
     {
       "check": "main_science_counts",
@@ -31,7 +31,7 @@
     {
       "check": "structure_science_counts",
       "pass": true,
-      "evidence": "45/45 PASS; failed=0"
+      "evidence": "47/47 PASS; failed=0"
     },
     {
       "check": "source_tar_identity",
@@ -61,12 +61,12 @@
     {
       "check": "manuscript_pdf_receipt",
       "pass": true,
-      "evidence": "pdf_bytes=174976; receipt_fresh=True"
+      "evidence": "pdf_bytes=174525; receipt_fresh=True"
     },
     {
       "check": "manifest_readback",
       "pass": true,
-      "evidence": "mode=regenerated; disk_files=98; manifest_files=98; mismatches=[]"
+      "evidence": "mode=regenerated; disk_files=100; manifest_files=100; mismatches=[]"
     }
   ],
   "totals": {

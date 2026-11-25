@@ -1,7 +1,7 @@
 {
   "schema": "ads2-rst.review-package.manifest.v1",
-  "created_at_utc": "2026-11-24T23:07:34.595753+00:00",
-  "file_count": 98,
+  "created_at_utc": "2026-11-25T01:40:46.043497+00:00",
+  "file_count": 100,
   "artifacts": [
     {
       "path": ".gitignore",
@@ -11,8 +11,8 @@
     },
     {
       "path": "00-index.md",
-      "bytes": 10648,
-      "sha256": "3145c43369eae9ff0ba1008d76567f1f9132c56a9592a34cde53986082a7c02e",
+      "bytes": 10865,
+      "sha256": "a5767e154a6c2ef540651dbf2fffcfc80a9812e2307d75d72f94b5fe9033de7f",
       "role": "review-document"
     },
     {
@@ -53,8 +53,8 @@
     },
     {
       "path": "07-evidence-and-reproduction.md",
-      "bytes": 10433,
-      "sha256": "fa0de31c818f60dd00a5c51cf892145ccdf793e346fa8b45899310c15ad46930",
+      "bytes": 10651,
+      "sha256": "fc11b6a759343658d2b88f9ab072498ca8be86aeb7d7511a3154e96c189c69fa",
       "role": "review-document"
     },
     {
@@ -65,14 +65,14 @@
     },
     {
       "path": "09-independent-reviews.md",
-      "bytes": 15509,
-      "sha256": "2fe76c93a9a66fd1d30083fca7b57dd590f2658e372287d29fd66b6a2e1ebb45",
+      "bytes": 16368,
+      "sha256": "33751ce03303fed7580ba9477f0f2e4cf195b82603a5d2867a333c52e7db0dda",
       "role": "review-document"
     },
     {
       "path": "10-formal-signoff.md",
-      "bytes": 5291,
-      "sha256": "35e8844c2e255a157d4e13fbf1e1d65ef9a94a1a1b50c393fc787d46062d2c0e",
+      "bytes": 5359,
+      "sha256": "008b5515a9fb896fe788b232896cd68c4e756180a9252ca8b44dee03d1961372",
       "role": "review-document"
     },
     {
@@ -120,25 +120,25 @@
     {
       "path": "18-close-out.md",
       "bytes": 5128,
-      "sha256": "0295fab681df2b4028c87943b2bf51ebf55927a266c06afbb7828fb9c941892a",
+      "sha256": "cabfaa22e9f6c4b267418bd889339a7a60682ff1f80346d1e5205dc7d4e4d255",
       "role": "review-document"
     },
     {
       "path": "19-global-structure.md",
-      "bytes": 9611,
-      "sha256": "971e2dd17ddb184cafa01cdbbdc1e87ac8d4d39c2392f2d65fc88f48ef77da7f",
+      "bytes": 10140,
+      "sha256": "a2ccd224c552934fbb5df0356444c7fd45e600d7b3d947aacc60aceb06e83dcb",
       "role": "review-document"
     },
     {
       "path": "20-causal-structure-and-final-state.md",
-      "bytes": 9719,
-      "sha256": "037ae9e69d508892c78f6b6c7181acd42c7bdea1634f0ddd9c8ae9c9f860d62a",
+      "bytes": 10038,
+      "sha256": "0a0836229434a29e176ea9a95a3982cd60a3e2bee7ba398d76cdedb3536c8b21",
       "role": "review-document"
     },
     {
       "path": "README.md",
-      "bytes": 12791,
-      "sha256": "dd970cc2c0b5f36f6f8291e39462f9bb0206d474143fe0ada8487e65ae487b3d",
+      "bytes": 13432,
+      "sha256": "19d5bfcc1601354dd72afecb412e830c2c00ea444954b8a7b718730cf01af0e4",
       "role": "review-document"
     },
     {
@@ -281,14 +281,14 @@
     },
     {
       "path": "manuscript/ads2-rst-one-sided-flux.pdf",
-      "bytes": 174976,
-      "sha256": "51e1d5a1fc25031c7134a58dde15834c9b3ce9f37c1d9cbefbcecb140c1d3f08",
+      "bytes": 174525,
+      "sha256": "0cb7fc8ac309cc6bc2d92862f4f88d76602d520dd11bbd82e94ce38d9c69b71f",
       "role": "package-artifact"
     },
     {
       "path": "manuscript/ads2-rst-one-sided-flux.tex",
-      "bytes": 55874,
-      "sha256": "f3f0cdb52c32a0844c609151e5cd2ab824da8df587c9c953283821684f7f7257",
+      "bytes": 57245,
+      "sha256": "55b8afdca85d322208e96f5c04e96ebfaae7f916fa198fe33a505ea97cce359f",
       "role": "package-artifact"
     },
     {
@@ -318,19 +318,19 @@
     {
       "path": "outputs/lean-build.json",
       "bytes": 565,
-      "sha256": "9a16de6ca00d2cc494c56408811e796a3e5b5990362e5c98af809c1a09450bc4",
+      "sha256": "1fd5fb6ad8890b12910f8307fa9ca7e31c3737fc85301e75abbff3b631670a97",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/lean-build.out",
-      "bytes": 12311,
-      "sha256": "42fbbd7ac311dc0aa6e6a863c3d421d88d83014059e74683e7036a756878cd09",
+      "bytes": 12308,
+      "sha256": "738030b99afa041cd35015c35a00ffd612b7b1d6c5eaf70a283c1e43f32e5dc3",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/portability-receipt.json",
       "bytes": 342,
-      "sha256": "8609f79a54cb146155f74b442d8ee440c5dd276aeeb8ce06116da121ee74b72a",
+      "sha256": "42da4a67922ed12ecd7d0886702b207267acf2ef61b159c800f59532d8292dc6",
       "role": "execution-receipt"
     },
     {
@@ -365,26 +365,26 @@
     },
     {
       "path": "outputs/structure-checks-summary.json",
-      "bytes": 8746,
-      "sha256": "9e7fe6e8f6b98e7b37a13d8b94addcf8f44b90d03d958654791502be6632c76c",
+      "bytes": 9247,
+      "sha256": "8cfb6da5682eed0de5d3f5f164f60fe20473918f1b0b300e806b4d64bdc4c6ec",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/structure-checks.out",
-      "bytes": 4584,
-      "sha256": "d4660177245573d9ea5cf0d473a7508fbbfac3b2f5050381bd5f760c78c574a8",
+      "bytes": 4913,
+      "sha256": "f77ae54820c4d4ba407b6ca0de3d91227447aee749dfe2e08f194ba5cd0ee6a3",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/tectonic-build.json",
       "bytes": 479,
-      "sha256": "173800ae299553cd4dfd2a5112cd58ecd3e00d34f9175866a91874a4779a5718",
+      "sha256": "8981f2cfa83a44e3feab2d70b86ff7df52181be0d4f5dc3e0b2ef02803e2ce13",
       "role": "execution-receipt"
     },
     {
       "path": "outputs/tectonic-build.out",
-      "bytes": 10020,
-      "sha256": "05ea4b5b32b5ffb8ce8f8635dc8494e20c96c6751c0564db5a14a2848f2148e9",
+      "bytes": 10027,
+      "sha256": "405068c6e4c51b5db6c65abe8c741c68dc4022f06cf7fe9fd3c8b5b24ac43e41",
       "role": "execution-receipt"
     },
     {
@@ -418,6 +418,12 @@
       "role": "review-evidence"
     },
     {
+      "path": "reviews/final-round-2026-11-24.md",
+      "bytes": 2725,
+      "sha256": "da38e030307bfa9805a9e1c4f5aca2ba69785ecb244ecf24825e07e51fb3c1cb",
+      "role": "review-evidence"
+    },
+    {
       "path": "reviews/literature-check.md",
       "bytes": 9952,
       "sha256": "0a85ef1a727581a0feb06e59a8253916d165f58c45538d26fb8452d354ad1300",
@@ -427,6 +433,12 @@
       "path": "reviews/literature-citations.json",
       "bytes": 2872,
       "sha256": "60960e30e76df1f3ce06026adef8884c36b572083f5ce3badab6defe1a85ce3c",
+      "role": "review-evidence"
+    },
+    {
+      "path": "reviews/literature-priority-2026-11-24.md",
+      "bytes": 6226,
+      "sha256": "0dd7ce10e39eaef1d3181fa45729aa5fc05a311740dfc549edb2e24bbf8bf9f0",
       "role": "review-evidence"
     },
     {
@@ -575,14 +587,14 @@
     },
     {
       "path": "structure_checks.py",
-      "bytes": 23438,
-      "sha256": "b43c8e00b5f9786d9c48de9c0f7b3e1c426c870576bfb1de7938d05f37fb125a",
+      "bytes": 23955,
+      "sha256": "7ee467642bef09c88410018007be481ba6f6a6395d9a682708bd3a39d319caac",
       "role": "verification-producer"
     },
     {
       "path": "validate_package.py",
       "bytes": 20171,
-      "sha256": "3f139fe42d5cebdefdf440ed16a936775a55aa13dfebde2d0cee6950c36bf1ba",
+      "sha256": "debf8a256d791b06d85ad22bfd16c2be0261a0519e39035aa1e84c1b544696ac",
       "role": "verification-producer"
     },
     {
@@ -603,10 +615,10 @@
   "source_reference_sha256": "8906ec46e685404da151c8b7d52a325c4053ee8c8f17964df7264c69baf58872",
   "source_mode": "external-links",
   "linked_markdown": {
-    "links": 243,
+    "links": 248,
     "unresolved": [],
     "per_note": {
-      "00-index.md": 40,
+      "00-index.md": 42,
       "01-executive-claim.md": 7,
       "02-source-and-derivation.md": 3,
       "03-sustained-flux-theorem.md": 3,
@@ -615,8 +627,8 @@
       "06-finite-pulse.md": 1,
       "07-evidence-and-reproduction.md": 19,
       "08-review-adjudication.md": 10,
-      "09-independent-reviews.md": 34,
-      "10-formal-signoff.md": 15,
+      "09-independent-reviews.md": 38,
+      "10-formal-signoff.md": 16,
       "11-cumulative-flux-generalization.md": 5,
       "12-signed-net-focusing.md": 4,
       "13-breakthrough-program.md": 9,
@@ -625,16 +637,18 @@
       "16-conformal-matter-realization.md": 6,
       "17-observables-and-universality.md": 4,
       "18-close-out.md": 15,
-      "19-global-structure.md": 18,
+      "19-global-structure.md": 17,
       "20-causal-structure-and-final-state.md": 3,
-      "README.md": 24,
+      "README.md": 22,
       "lean/README.md": 0,
       "legacy/canonical-result-note.md": 0,
       "legacy/independent-math-review.md": 0,
       "legacy/independent-scope-review.md": 0,
       "reviews/additional-state-dependence.md": 2,
       "reviews/claude-opus-5-5-review.md": 0,
+      "reviews/final-round-2026-11-24.md": 1,
       "reviews/literature-check.md": 0,
+      "reviews/literature-priority-2026-11-24.md": 0,
       "reviews/opencode-code-review.md": 0,
       "reviews/primary-source-spot-check.md": 2,
       "reviews/recent-literature-2025-2026.md": 2,

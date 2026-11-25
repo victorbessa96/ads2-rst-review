@@ -9,9 +9,9 @@
     "lean/AdS2RST/Global.lean",
     "lean/AdS2RST/Affine.lean"
   ],
-  "created_at_utc": "2026-11-24T23:06:24.757210+00:00",
+  "created_at_utc": "2026-11-25T01:39:27.541478+00:00",
   "source_sha256": "d29056ed85ea87a7edc29cc4af31d313eb13070ccfe20c3c0e394d5b967398d4",
-  "log_sha256": "42fbbd7ac311dc0aa6e6a863c3d421d88d83014059e74683e7036a756878cd09",
+  "log_sha256": "738030b99afa041cd35015c35a00ffd612b7b1d6c5eaf70a283c1e43f32e5dc3",
   "command": "lake build",
   "status": "PASS"
 }

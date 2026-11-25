@@ -34,7 +34,7 @@ Consequences:
 2. The pre-onset, mixed and mirror sectors are regular for zero flux: `Fhat >= mu > 0`.
 3. If the boundary functions are not switched off, `Fhat = mu + (x_p - x_m)^2/2` everywhere and nothing is singular.
 
-So the wormhole collapses because the state that supports it is switched off at `x^pm = 0`. Incoming matter is not needed. Kim and Son's text attributes the black hole to the infalling shell; their own solution with `A = 0` has the same critical curve in the both-positive quadrant. The classical analogue is in Hayward, Kim and Lee (gr-qc/0110080), whose abstract states that the wormhole collapses into a black hole if the ghost field is turned off.
+So the wormhole collapses because the state that supports it is switched off at `x^pm = 0`. Incoming matter is not needed. This zero-flux sector is already implicit in Kim and Son's equations; our contribution is its explicit identification and the unified global analysis, not a new geometry. Kim and Son's text attributes the black hole to the infalling shell; their own solution with `A = 0` has the same critical curve in the both-positive quadrant. The classical analogue is in Hayward, Kim and Lee (gr-qc/0110080), whose abstract states that the wormhole collapses into a black hole if the ghost field is turned off.
 
 **Effect on earlier documents.** The headline "arbitrarily weak sustained flux terminates every ray" in [01](01-executive-claim.md) and [03](03-sustained-flux-theorem.md) is correct for mixed rays (`x_m < 0`), and should be read together with the fact that rays with `x_m > 0` terminate with no flux at all. What matter controls is which mixed rays are captured.
 
@@ -83,7 +83,7 @@ Along a null ray toward the pre-onset ends `|x_p - x_m| -> infinity`:
 - `e^{-2 phi}` diverges (weak coupling);
 - proper distance along static slices diverges logarithmically.
 
-The leading metric is `ds^2 ~ -2 dx^+ dx^- / (lambda^2 (x^+ - x^-)^2)`, Poincaré AdS2 with `z = (x^+ - x^-)/2`. The ends are at `z -> infinity`, the Poincaré-horizon side. The conformal boundary `z -> 0` would be the throat, where the geometry is not AdS2. The constructed patch has no timelike conformal boundary at these ends, and no extension is constructed.
+The leading metric is `ds^2 ~ -2 dx^+ dx^- / (lambda^2 (x^+ - x^-)^2)`, Poincaré AdS2 with `z = (x^+ - x^-)/2`. The ends are at `z -> infinity`, the Poincaré-horizon side. The conformal boundary `z -> 0` would be the throat, where the geometry is not AdS2. The constructed patch has no timelike conformal boundary at these ends, and no extension is constructed. The numerical affine bound uses `d lambda = C e^{2 rho} dx` with `C=1`; constant affine rescaling changes the number but not finiteness.
 
 **Effect on earlier documents.** Language about boundary injection, boundary observers, reflecting walls or baths ([13](13-breakthrough-program.md), [15](15-physical-boundary-injection.md), [17](17-observables-and-universality.md), [18](18-close-out.md) section 4) has no referent in this solution as it stands. Those programs first need an extension or a modified model. The title of document 15 was already qualified for this reason.
 
@@ -97,7 +97,7 @@ If `t_+` is not switched off, sustained flux `P` captures mixed rays iff `P > la
 
 ## 7. What is and is not new
 
-A bounded search (INSPIRE citation list of Kim-Son, the RST and CGHS literature cited in the manuscript, and the sources in [reviews/](reviews/literature-check.md)) found no statement of sections 2 or 5 for this solution. Section 3 is an extension of a standard result. No priority is claimed. Human scientific review is pending.
+A targeted follow-up check against Kim-Son, Kim-Son-Yoon, RST, Thorlacius, the dilatonic-wormhole literature, state-dependent RST geometries, and recent RST injection work found no complete duplicate of the unified global theorem or final identities. The zero-flux geometry is implicit in Kim-Son's equations, state switching is explicit in Kim-Son-Yoon, and the cumulative-horizon and late-time universality structures extend RST and Thorlacius. This is bounded evidence, not an exhaustive priority determination. Human scientific review is pending.
 
 The results on two-sided flux, global causal structure, the final mass parameter, horizon monotonicity and the outgoing radiation are in [20](20-causal-structure-and-final-state.md).
 

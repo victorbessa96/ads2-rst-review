@@ -57,7 +57,7 @@ The fresh adversarial passes found real defects in the first closed draft. They 
 4. **Finite-pulse no-wall controls:** the census now checks selected-hit residuals and explicit no-root sign conditions rather than only comparing a branch label to `y<E`.
 5. **Post-shutoff identity:** `x_after-s=F_during(s)/(E-y)` is tested with the whole quotient substituted, making the strict inequality and equality case explicit.
 
-The current results are **138/138 main checks**, **39/39 independent symbolic checks**, and **22/22 advanced consistency checks** (32 before ten rows that could not fail were removed on 2026-11-24), and **45/45 structure checks**. Older green and red outputs remain as history, never as substitutes for the final run.
+The current results are **138/138 main checks**, **39/39 independent symbolic checks**, and **22/22 advanced consistency checks** (32 before ten rows that could not fail were removed on 2026-11-24), and **47/47 structure checks**. Older green and red outputs remain as history, never as substitutes for the final run.
 
 ## 5. OpenCode code-and-test review
 
@@ -100,8 +100,10 @@ The 16:56–16:57 reviews are preserved in [reviewer-16-56-onset-atom-review.md]
 
 The 19:33 adversarial documentation audit is preserved in [reviewer-19-33-doc-audit.md](reviews/reviewer-19-33-doc-audit.md). It found a real algebraically ambiguous printed flux formula, overbroad Lean labels, missing finite-flux conditions, an incomplete zero-flux description, overbroad radiation language, a weak novelty fence, and imprecise null-end/autonomy wording. All eight findings were repaired in the README, manuscript, documents 19–20, and the Lean README.
 
+The final five-review round is summarized in [final-round-2026-11-24.md](reviews/final-round-2026-11-24.md). It confirmed the coherent model-specific narrative and identified the remaining radiation-background, archive-link, authorship, count-drift, and literature-position issues. The targeted literature check is preserved in [literature-priority-2026-11-24.md](reviews/literature-priority-2026-11-24.md): the zero-flux sector is implicit in Kim–Son, state switching is explicit in Kim–Son–Yoon, cumulative-horizon and late-time universality structures extend RST and Thorlacius, and no complete duplicate of the unified global theorem or final identities was found. All actionable findings were repaired.
+
 ## 7. Review discipline
 
 No AI review in this package is called external human peer review. Reviewer claims were treated as hypotheses and checked against the source. Valid findings were repaired; incorrect premises were rejected with equations; scope-mismatched work was excluded rather than cited as support.
 
-[Review adjudication](08-review-adjudication.md) · [Formal sign-off](10-formal-signoff.md).
+- [Review adjudication](08-review-adjudication.md) · [Formal sign-off](10-formal-signoff.md) · [Targeted literature-priority check](reviews/literature-priority-2026-11-24.md) · [Final review round](reviews/final-round-2026-11-24.md).

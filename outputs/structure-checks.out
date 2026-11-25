@@ -41,6 +41,8 @@ PASS | G3 impulsive shell: mu_f = mu + alpha^2/2 (m1 = 0)
 PASS | G4 F is nondecreasing along the event horizon and along the apparent horizon
 PASS | G5 outgoing flux at right future infinity: -lambda^2 + kappa/(4 (y - E_tot)^2), Kim-Son's formula with A/lambda^2 -> E_tot | residuals at x_p=1e16: ['7.49e-16', '3.51e-13', '4.86e-17'], decreasing in x_p
 PASS | G6 asymptotic frame: outgoing flux is kappa lambda^2/4 - lambda^4 exp(-2 lambda sigma^-), Hawking value plus decaying transient
+PASS | G7 Kim-Son background subtraction gives net outgoing Kruskal flux kappa/(4 (y-E_tot)^2) | full stress minus the incoming -lambda^2 reference background
+PASS | G8 background-subtracted asymptotic net flux is the constant thermal value kappa lambda^2/4 | subtract the transformed -lambda^4 exp(-2 lambda sigma^-) background
 PASS | H1 weak branch: kappa/4 + lambda^2 Fhat <= e^{-2 phi} <= 2 sqrt(kappa) Omega + (kappa/2)(ln(kappa/2) - 1)
 PASS | H2 affine length of the AdS2 end beyond unit distance is at most 2/lambda^2
-STRUCTURE: 45/45 PASS
+STRUCTURE: 47/47 PASS

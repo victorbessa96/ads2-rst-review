@@ -1,10 +1,10 @@
 {
   "schema": "ads2-rst.tectonic-build-receipt.v1",
-  "created_at_utc": "2026-11-24T23:06:28.938864+00:00",
-  "tex_sha256": "f3f0cdb52c32a0844c609151e5cd2ab824da8df587c9c953283821684f7f7257",
-  "pdf_sha256": "51e1d5a1fc25031c7134a58dde15834c9b3ce9f37c1d9cbefbcecb140c1d3f08",
-  "pdf_bytes": 174976,
-  "log_sha256": "05ea4b5b32b5ffb8ce8f8635dc8494e20c96c6751c0564db5a14a2848f2148e9",
+  "created_at_utc": "2026-11-25T01:39:32.062160+00:00",
+  "tex_sha256": "55b8afdca85d322208e96f5c04e96ebfaae7f916fa198fe33a505ea97cce359f",
+  "pdf_sha256": "0cb7fc8ac309cc6bc2d92862f4f88d76602d520dd11bbd82e94ce38d9c69b71f",
+  "pdf_bytes": 174525,
+  "log_sha256": "405068c6e4c51b5db6c65abe8c741c68dc4022f06cf7fe9fd3c8b5b24ac43e41",
   "command": "tectonic -X compile ads2-rst-one-sided-flux.tex --outdir .",
   "status": "PASS"
 }

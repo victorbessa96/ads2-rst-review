@@ -65,7 +65,7 @@ For every nonnegative one-sided flux with `E_tot < infinity` and each escaping r
 
 $$\langle T_{--}\rangle\to-\lambda^2+\frac{\kappa}{4(y-E_{\rm tot})^2},\qquad \langle T_{\sigma^-\sigma^-}\rangle\to\frac{\kappa\lambda^2}{4}-\lambda^4e^{-2\lambda\sigma^-}.$$
 
-The first form is Kim and Son's expression for the impulsive shell with `A/lambda^2` replaced by `E_tot`; they already note that the `-lambda^2` term is the background of the wormhole state and not radiation. What is added is the extension to every one-sided nonnegative flux with `E_tot < infinity` and the asymptotic-frame form. After the `E_tot`-dependent coordinate shift, the profile is matter-independent: the Hawking flux of the model, here the outgoing half of the equilibrium state, minus a negative background transient inherited from the wormhole state. The non-decaying equilibrium state supplies incoming thermal flux, so the black hole does not evaporate.
+The first form is Kim and Son's full stress expression for the impulsive shell with `A/lambda^2` replaced by `E_tot`. Kim and Son explicitly subtract their incoming reference background `T^f_{--}(I^-_L) -> -lambda^2 theta(x_0-x^-)`, giving net outgoing radiation `kappa/[4(y-E_tot)^2]`. In the asymptotically flat frame the net flux is the constant thermal value `kappa lambda^2/4`. The decaying term in the full sigma-frame stress belongs to the background subtraction, not to an independent negative-energy radiation flux. The non-decaying equilibrium state supplies incoming thermal flux, so the black hole does not evaporate.
 
 Paper argument plus script (G5, G6). Not formalized.
 
@@ -84,12 +84,12 @@ Lean: `weak_branch_lower'`, `weak_branch_upper`, `affine_finite_of_quadratic`, `
 1. **Evaporating version.** Switch the state to the future vacuum `t = 1/(4 x^2)` instead of `t = 0`. The effective flux is then not monotone, the theorem of section 2 does not apply, and a timelike critical curve with a boundary condition is expected. This is the natural next problem and the one closest to current interest in wormhole and black-hole evaporation.
 2. **Entropy.** A generalized-entropy or island computation on this background, and whether section 4 extends to it.
 3. **Energy.** Whether `mu_f` is a physical energy at the future end, given the non-decaying flux.
-4. **The state.** Hadamard admissibility of the step-function boundary functions.
+4. **The state.** Hadamard admissibility of the step-function boundary functions and robustness under smooth switches `t_before+(t_after-t_before)S((x-x0)/epsilon)` as `epsilon` tends to zero.
 5. **The ends.** Any extension beyond the null AdS2 ends.
 6. **Formalization.** Existence and continuity of the weak branch in Lean; the reduction of the RST action to the Kruskal-gauge equations.
 
 ## 8. Novelty
 
-The bounded search described in document 19 predates these results. They were checked only against the sources already collected for it (Kim-Son, RST, CGHS, Thorlacius, Strominger and the others cited in the manuscript), where sections 2 to 4 were not found stated for this solution; no new search was run. Section 2 and the first term of the mass formula extend standard classical results, and the Kruskal-frame formula of section 5 is Kim and Son's for the shell. No priority is claimed. Human scientific review is pending.
+A targeted follow-up check against Kim-Son, Kim-Son-Yoon, RST, Thorlacius, the dilatonic-wormhole literature, state-dependent RST geometries, and recent RST injection work found no complete duplicate of the unified global theorem or final identities. The zero-flux geometry is implicit in Kim-Son's equations, state switching is explicit in Kim-Son-Yoon, and the cumulative-horizon and late-time universality structures extend RST and Thorlacius. Section 2 and the first term of the mass formula extend standard classical results, and the full Kruskal stress of section 5 is Kim and Son's for the shell. The background-subtracted net flux is the constant thermal value. This is bounded evidence, not an exhaustive priority determination. Human scientific review is pending.
 
 [Back to index](00-index.md)

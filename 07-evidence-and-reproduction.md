@@ -14,7 +14,7 @@ type: evidence-and-reproduction-record
 5. **AI review** supplies scrutiny, not external human peer review. A review by an AI system that later contributed to the package is not independent evidence.
 6. **Documentation and hash gates** establish package integrity only.
 
-`independent_symbolic.py` is a second implementation of the same formulas, not an independent derivation. `structure_checks.py` (45 checks) integrates the constraints sector by sector and checks the zero-flux, symmetry and geometry statements of [document 19](19-global-structure.md) and the causal-structure, mass, monotonicity and radiation statements of [document 20](20-causal-structure-and-final-state.md). Ten rows of `advanced_checks.py` that could not fail were removed on 2026-11-24.
+`independent_symbolic.py` is a second implementation of the same formulas, not an independent derivation. `structure_checks.py` (47 checks) integrates the constraints sector by sector and checks the zero-flux, symmetry and geometry statements of [document 19](19-global-structure.md) and the causal-structure, mass, monotonicity and radiation statements of [document 20](20-causal-structure-and-final-state.md). Ten rows of `advanced_checks.py` that could not fail were removed on 2026-11-24.
 
 ## 2. Fresh executed results
 
@@ -35,7 +35,7 @@ type: evidence-and-reproduction-record
 | Interior observer | 6 | 6 | 0 |
 | **Total, `verify.py`** | **138** | **138** | **0** |
 | **Total, `independent_symbolic.py`** | **39** | **39** | **0** |
-| **Total, `advanced_checks.py`** | **32** | **32** | **0** |
+| **Total, `advanced_checks.py`** | **22** | **22** | **0** |
 
 Raw artifacts:
 
@@ -65,7 +65,7 @@ Receipt generation and read-only verification are separate:
 READ_ONLY=1 python3 validate_package.py
 ```
 
-A relocated-copy test copied the entire package to a fresh scratch directory, ran all four producers there, and obtained **138/138**, **39/39**, **22/22**, and **45/45** again. The relocated main output is byte-identical to the package output. Normal validator runs now perform this relocation fresh; `READ_ONLY=1` uses the existing receipt without executing anything. See [portability-receipt.json](outputs/portability-receipt.json). This proves same-interpreter filesystem portability, not independent environment setup or container portability.
+A relocated-copy test copied the entire package to a fresh scratch directory, ran all four producers there, and obtained **138/138**, **39/39**, **22/22**, and **47/47** again. The relocated main output is byte-identical to the package output. Normal validator runs now perform this relocation fresh; `READ_ONLY=1` uses the existing receipt without executing anything. See [portability-receipt.json](outputs/portability-receipt.json). This proves same-interpreter filesystem portability, not independent environment setup or container portability.
 
 Validated environment:
 
@@ -112,10 +112,10 @@ Package map:
 |---|---|
 | `verify.py` | Main 138-check producer |
 | `independent_symbolic.py` | Separate 39-check producer (second implementation, not a second derivation) |
-| `structure_checks.py` | 45-check producer for derivation, zero-flux structure, symmetries, geometry, global causal structure and final state |
+| `structure_checks.py` | 47-check producer for derivation, zero-flux structure, symmetries, geometry, global causal structure, final state, and full/net outgoing flux |
 | `build_archive.py` | Rebuilds `Archive.zip` and its checksum from the manifest; called by `run_verification.sh` |
-| `advanced_checks.py` | Advanced 32-check producer for state phases, onset atoms, closing-window law, matter, and universality |
-| `sources/` | Primary tar, TeX, figure, and bibliographic note |
+| `advanced_checks.py` | Advanced 22-check producer for state phases, onset atoms, closing-window law, matter, and universality |
+| `sources/` | Official primary-source links, retained equation anchors, and bibliographic note |
 | `legacy/` | Original producer, canonical outputs, red history, and internal reviews |
 | `reviews/` | Supplied AI reviews and bounded primary-literature check |
 | `outputs/` | Fresh scientific receipts and preserved development red run |
@@ -124,7 +124,7 @@ Package map:
 
 ## 7. Lean proof and LaTeX manuscript
 
-The formal Lean 4.36.0 project in `lean/AdS2RST.lean` formalizes the algebraic core and the abstract continuous first-hit criterion: sustained candidate root, uniqueness, factor/sign ordering, an actual `HasDerivAt` computation for `F_y`, negative general slope, retained-state equivalence, stress scaling, and after-shutoff sign domain. It does not formalize the full measure-theoretic cumulative theorem. Selected theorem-axiom reports contain only `propext`, `Classical.choice`, and `Quot.sound`, not `sorryAx`. Build receipt: [lean-build.out](outputs/lean-build.out). The validator checks source/log/PDF hash receipts instead of filesystem timestamps, scans the Lean code for `sorry`/`admit`/`axiom`, and verifies the archive's core files against the current sources. This avoids false freshness failures after ZIP extraction on filesystems with different timestamp behavior.
+The formal Lean 4.36.0 project in `lean/AdS2RST.lean` now has six modules covering the algebraic core, state profile and four-sector solution, arbitrary monotone cumulative flux, zero-flux structure, global causal ordering, normalized late-exterior identities, horizon monotonicity, and conditional affine-length bounds. It proves the cumulative theorem for arbitrary monotone `Q`; it does not derive the RST action, construct the weak dilaton branch, formalize the physical mass normalization, or prove every causal and asymptotic interpretation. Selected theorem-axiom reports contain only `propext`, `Classical.choice`, and `Quot.sound`, not `sorryAx`. Build receipt: [lean-build.out](outputs/lean-build.out). The validator checks source/log/PDF hash receipts instead of filesystem timestamps, scans the Lean code for `sorry`/`admit`/`axiom`, and verifies the archive's core files against the current sources.
 
 The full manuscript is [ads2-rst-one-sided-flux.tex](manuscript/ads2-rst-one-sided-flux.tex), with the compiled [PDF](manuscript/ads2-rst-one-sided-flux.pdf) and [Tectonic receipt](outputs/tectonic-build.out). It includes the cumulative-flux generalization, exact mass classification, state-pulse phase boundary, finite-null closing-window theorem, and matter realization.
 
@@ -144,7 +144,7 @@ The Python battery and PDF are offline. `run_verification.sh` defaults to `pytho
 - Source-line checks are lexical anchors for the exact `kruskal:cons` and `omegasol` equations; reviewers must read the cited equations. The package does not treat them as an independent proof of the constraint normalization.
 - Numerical grids and quadratures are controls, not general proofs.
 - The 138 checks are not 138 independent derivations.
-- The literature search is bounded to thirteen named primary documents and is not exhaustive.
+- The literature search is bounded to thirteen named primary documents plus a targeted follow-up against Kim-Son, Kim-Son-Yoon, RST, Thorlacius, state-dependent RST geometries, and recent injections. It is not exhaustive.
 - No future-asymptotic absorber or arbitrary-state completion is validated by this battery.
 
 Next: [Review adjudication](08-review-adjudication.md).

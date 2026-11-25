@@ -36,7 +36,7 @@ type: research-disposition
 - Main producer: **138/138**.
 - Separate symbolic producer: **39/39**.
 - Advanced consistency producer: **22/22** (ten rows that could not fail removed).
-- Structure producer: **45/45**.
+- Structure producer: **47/47**.
 - Package validation: **13/13**.
 - Lean: six modules, cumulative theorem for monotone `Q`, zero-flux structure, symmetries, global causal theorem, normalized late-exterior identities, `Fhat` monotonicity, conditional affine-length theorems; no placeholders; 77 axiom audits.
 - PDF: compiled manuscript with state and boundary-time results.

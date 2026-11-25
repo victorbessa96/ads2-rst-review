@@ -1,6 +1,6 @@
-# Collapse of the Kim–Son AdS₂ wormhole in the RST model
+# Global structure of the Kim–Son AdS₂ wormhole in the RST model
 
-**An exactly solvable account with machine-checked algebraic and order-theoretic components, showing how a two-dimensional semiclassical wormhole turns into a black hole.**
+**An exactly solvable account with machine-checked algebraic and order-theoretic components, covering the global structure of a two-dimensional semiclassical wormhole.**
 
 Research: **Razul autonomously executed the research workflow under Victor Bessa's direction, corrections, and release oversight**
 
@@ -29,7 +29,7 @@ All statements are theorems about the RST equations in Kruskal gauge with the Ki
 | 3 | **Global causal structure.** With nonnegative flux in both directions, the singular set is a future set: the singularity is acausal, future-trapped and never naked. | Unlike the evaporating RST black hole, no boundary condition at the singularity is needed: the exact solution is fixed by the data on the past null boundaries. | coordinate future-set/past-set/achronality core only |
 | 4 | **Final state.** After the flux ends, the exterior is again a Kim–Son zero-flux exterior with a larger parameter. The mass parameter grows by `M_inf + P_+^2/(2 lambda)`. | The first term is the classical mass. The second is the state-specific contribution from the wormhole's supporting state. | normalized late-exterior identity only; the mass conversion is paper-only |
 | 5 | **Horizon monotonicity.** `e^{-2 phi}` (the dilaton-gravity analogue of area) never decreases to the future along the event horizon, and grows outward along the apparent horizon. | An area-theorem-type statement on the event horizon for the full semiclassical solution. | `Fhat` monotonicity only; conversion to `Omega` and `e^{-2 phi}` is paper-only |
-| 6 | **Outgoing radiation.** For every nonnegative one-sided flux with `E_tot < infinity`, each escaping ray `y > E_tot` has the limiting flux found by Kim and Son for the shell, with shell strength replaced by `E_tot`. After the `E_tot`-dependent coordinate shift, the profile is matter-independent: equilibrium Hawking flux plus a negative background transient inherited from the wormhole state. | Kim and Son already identify the background as not radiation. The black hole does not evaporate because the prescribed equilibrium state supplies incoming thermal flux. | no (paper + numerics) |
+| 6 | **Full and net outgoing stress.** For every nonnegative one-sided flux with `E_tot < infinity`, each escaping ray `y > E_tot` has the full limiting stress found by Kim and Son for the shell, with shell strength replaced by `E_tot`. Subtracting Kim and Son's incoming reference background gives net outgoing radiation `kappa/[4(y-E_tot)^2]`, and in the asymptotically flat frame the constant thermal flux `kappa lambda^2/4`. | The decaying term in the full sigma-frame stress belongs to the background subtraction, not to an independent negative-energy radiation flux. Non-evaporation follows from the prescribed equilibrium state with incoming thermal flux. | no (paper + numerics) |
 | 7 | **The AdS₂ ends are null-geodesically incomplete.** Null geodesics toward the ends have finite affine length, at most `2/lambda^2` beyond unit separation. The constructed patch has no timelike conformal boundary at these ends, and no extension is constructed. | Holographic notions (boundary observers, reflecting walls, baths) have no referent in this solution without further construction. | conditional affine bounds only; curvature and boundary interpretations are not formalized |
 | 8 | **State dependence.** If the incoming part of the supporting state is kept, sustained matter closes the wormhole only above the threshold `P > lambda^2`. | The "arbitrarily weak flux closes the wormhole" statement is a property of the switch-off convention. | yes |
 
@@ -38,7 +38,7 @@ A short guide to the physics is in [19-global-structure.md](19-global-structure.
 ## What is and is not claimed
 
 - **Credit.** Results 2, 3 and the first term of 4 extend standard results of the classical model (CGHS, RST, Thorlacius, Strominger). The Kruskal-frame formula in result 6 is Kim and Son's for the shell. Result 1 is the semiclassical counterpart of a classical observation by Hayward, Kim and Lee. The manuscript states this where each result appears.
-- **Novelty.** A bounded literature search (the INSPIRE citation record of the Kim–Son paper and the RST/CGHS literature cited in the manuscript) did not find results 1, 2, 7 and 8 for this solution. Results 3 to 6 were added afterwards and were checked only against the sources already collected for that search, not by a new one. No priority is claimed beyond that search.
+- **Novelty.** A targeted follow-up literature check against Kim–Son, Kim–Son–Yoon, RST, Thorlacius, the dilatonic-wormhole literature, state-dependent RST geometries, and recent RST injection work found no complete duplicate of the unified global theorem or final identities. The zero-flux geometry is implicit in Kim–Son's equations, state switching is explicit in Kim–Son–Yoon, and the cumulative-horizon and late-time universality structures extend RST and Thorlacius. This is bounded evidence, not an exhaustive priority determination.
 - **Review.** The work was conducted autonomously by an AI agent with human oversight and checked by machine. **No independent human specialist has reviewed it.** Human oversight guided the work and release; it did not constitute an independent mathematical re-derivation. AI reviews kept under [reviews/](reviews/) are history, not peer review.
 - **Mathematical difficulty.** The theorems are elementary. Their interest is in what they say about the model.
 
@@ -60,7 +60,7 @@ Python scripts (SymPy, mpmath) integrate the constraints sector by sector, compa
 1. **Evaporation.** Replace the equilibrium state after switch-off by the future vacuum. The effective flux is then not monotone, so the hypotheses of result 3 cease to hold and the global causal structure must be reanalysed; a naked timelike singularity requiring boundary data is expected. This is the natural next step.
 2. **Entropy.** A generalized-entropy or island computation on this background, and whether result 5 extends to it.
 3. **Energy.** Whether the mass parameter of result 4 is an energy measured at the future end.
-4. **Admissibility of the state.** The Hadamard property of the step-function boundary state.
+4. **Admissibility and robustness of the state.** Establish the Hadamard property of the step-function boundary state and test smooth switches `t_before+(t_after-t_before)S((x-x0)/epsilon)` as `epsilon` tends to zero.
 5. **Beyond the null ends.** Any extension that would give the solution a timelike boundary.
 6. **Formalization.** The dilaton branch and the action reduction in Lean.
 
@@ -80,10 +80,10 @@ READ_ONLY=1 python3 validate_package.py   # validate a fresh clone without rewri
 | Main verification (`verify.py`) | **138/138 PASS** |
 | Separate symbolic checks (`independent_symbolic.py`) | **39/39 PASS** |
 | Advanced consistency checks (`advanced_checks.py`) | **22/22 PASS** |
-| Structure checks (`structure_checks.py`) | **45/45 PASS** |
+| Structure checks (`structure_checks.py`) | **47/47 PASS** |
 | Lean build | **no `sorry`; 77 axiom audits, standard axioms only** |
 | Package validation | **13/13 PASS** |
-| Markdown links | **242 resolved, 0 unresolved** |
+| Markdown links | **current validation receipt** |
 
 The validator runs a relocated reproduction, compares manifest hashes, and checks that the Lean and PDF receipts match the current sources.
 
@@ -99,7 +99,7 @@ The validator runs a relocated reproduction, compares manifest hashes, and check
 | [validate_package.py](validate_package.py), [run_verification.sh](run_verification.sh), [build_archive.py](build_archive.py) | Reproduction and integrity tooling |
 | [outputs/](outputs/) | Logs and receipts of the last run |
 | [reviews/](reviews/) | Literature checks and the AI review history |
-| [Archive.zip](Archive.zip) | Snapshot of the package with [checksum](Archive.zip.sha256) |
+| [Archive.zip](https://github.com/victorbessa96/ads2-rst-review/raw/main/Archive.zip) | Snapshot of the package with [checksum](https://github.com/victorbessa96/ads2-rst-review/raw/main/Archive.zip.sha256); absolute links remain valid when the archive itself is extracted without a sibling ZIP |
 
 Documents 01 to 18 are the dated working record. They contain the closed formulas for sustained flux, finite pulses and logarithmic-time pulses, and the history of corrections. Where their wording differs from documents 19 and 20 or from the manuscript, the later documents are authoritative.
 
@@ -115,4 +115,4 @@ Cite the original model first:
 
 Then this repository, with the commit used:
 
-> Razul autonomously executed the research workflow under V. Bessa's direction, corrections, and release oversight, *Collapse of the Kim–Son AdS₂ wormhole in the RST model: zero-flux black hole, total-flux criterion, and global causal structure*, 2026. Research manuscript, human scientific review pending.
+> V. Bessa, with autonomous AI research assistance by Razul, *Global structure of the Kim–Son AdS₂ wormhole in the RST model: zero-flux black hole, total-flux criterion, and final state*, 2026. Research manuscript, human scientific review pending. Razul is not listed as an author; Bessa is responsible for the manuscript's content and release.

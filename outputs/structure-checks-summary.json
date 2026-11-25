@@ -1,6 +1,6 @@
 {
-  "checks_total": 45,
-  "checks_passed": 45,
+  "checks_total": 47,
+  "checks_passed": 47,
   "checks_failed": 0,
   "mpmath_dps": 40,
   "checks": [
@@ -261,6 +261,18 @@
       "group": "mass",
       "status": "PASS",
       "detail": ""
+    },
+    {
+      "name": "G7 Kim-Son background subtraction gives net outgoing Kruskal flux kappa/(4 (y-E_tot)^2)",
+      "group": "mass",
+      "status": "PASS",
+      "detail": "full stress minus the incoming -lambda^2 reference background"
+    },
+    {
+      "name": "G8 background-subtracted asymptotic net flux is the constant thermal value kappa lambda^2/4",
+      "group": "mass",
+      "status": "PASS",
+      "detail": "subtract the transformed -lambda^4 exp(-2 lambda sigma^-) background"
     },
     {
       "name": "H1 weak branch: kappa/4 + lambda^2 Fhat <= e^{-2 phi} <= 2 sqrt(kappa) Omega + (kappa/2)(ln(kappa/2) - 1)",

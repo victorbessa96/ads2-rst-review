@@ -24,15 +24,15 @@ For the Kim-Son past-asymptotically-AdS2 RST branch with retained `t_pm` and one
 | Main producer | **138/138 PASS**, exit 0 | Canonical 88 checks plus 50 review-closure checks |
 | Separate symbolic producer | **39/39 PASS**, exit 0 | Separate implementation, not an independent derivation |
 | Advanced consistency producer | **22/22 PASS**, exit 0 | State phases, sigma-frame pulses, matter realization; ten rows that could not fail were removed |
-| Structure producer | **45/45 PASS**, exit 0 | Constraint integration in all sectors, zero-flux black hole, symmetries, Lambert-W geometry, affine lengths, event horizon, two-sided future-set property, mass formula, horizon monotonicity, outgoing flux |
+| Structure producer | **47/47 PASS**, exit 0 | Constraint integration in all sectors, zero-flux black hole, symmetries, Lambert-W geometry, affine lengths, event horizon, two-sided future-set property, mass formula, horizon monotonicity, full and background-subtracted outgoing flux |
 | Red-first development run | 125/129 | Four instrument errors, preserved and repaired |
 | Red-second instrument run | 128/129 | Whole-quotient substitution defect, preserved and repaired |
 | Source provenance | External arXiv links and retained anchors | Full TeX not redistributed; expected hash recorded |
 | Interior observers | Three quadrature rows | Finite `sigma_0` hit and finite proper time |
 | Finite pulse | Twelve existence rows | Exact `0<y<E` cutoff reproduced |
-| Literature | Thirteen primary documents | Exact target not found in that bounded corpus, no priority claim |
+| Literature | Thirteen primary documents plus targeted follow-up | No complete duplicate of the unified global theorem or final identities; bounded evidence, not priority |
 | Lean 4 | **Six modules, no `sorry`, 77 axiom audits** | State profile from the constraint, sector formulas, total-flux criterion for monotone `Q`, zero-flux structure, symmetries, global causal theorem for two-sided flux, normalized late-exterior identities, `Fhat` monotonicity, conditional affine-length theorems; see [lean/README.md](lean/README.md) |
-| LaTeX | **PDF compiled** | Manuscript by Razul under Victor Bessa's direction, corrections, and release oversight: derivation, zero-flux theorem, total-flux criterion, global causal structure, final state, ends and clocks, Lean correspondence table |
+| LaTeX | **PDF compiled** | Manuscript by Victor Bessa with an AI-use declaration: derivation, zero-flux theorem, total-flux criterion, global causal structure, final state, ends and clocks, Lean correspondence table |
 | Package validation | **13/13 PASS** | Includes fresh relocation, advanced and structure checks, axiom audit, Lean/PDF freshness, archive currency, links, provenance, and manifest |
 
 See [Evidence and reproduction](07-evidence-and-reproduction.md) and the raw [verification summary](outputs/verification-summary.json).
@@ -68,6 +68,8 @@ Supporting material:
 
 - [Primary source bundle](sources/README.md)
 - [Bounded literature check](reviews/literature-check.md)
+- [Targeted 2026-11-24 literature-priority check](reviews/literature-priority-2026-11-24.md)
+- [Final five-review round](reviews/final-round-2026-11-24.md)
 - [Recent 2025–2026 literature spot check](reviews/recent-literature-2025-2026.md)
 - [Original Claude review](reviews/claude-opus-5-5-review.md)
 - [Original second AI review](reviews/second-ai-review.md)

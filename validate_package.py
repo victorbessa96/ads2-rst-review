@@ -25,7 +25,7 @@ ARCHIVE_SHA = ROOT / "Archive.zip.sha256"
 LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\s]+)(?:\s+['\"][^)'\"]*['\"])?\)")
 SKIP_SCHEMES = ("http://", "https://", "mailto:", "data:")
 # Pinned acceptance contract, not a claim of independent derivations.
-EXPECTED_SCIENCE = {"verify": 138, "independent": 39, "advanced": 22, "structure": 45}
+EXPECTED_SCIENCE = {"verify": 138, "independent": 39, "advanced": 22, "structure": 47}
 LEAN_SOURCES = ("lean/AdS2RST.lean", "lean/AdS2RST/Core.lean", "lean/AdS2RST/Profile.lean", "lean/AdS2RST/Cumulative.lean", "lean/AdS2RST/Structure.lean", "lean/AdS2RST/Global.lean", "lean/AdS2RST/Affine.lean")
 
 
